@@ -1,0 +1,319 @@
+2024-06-08 08:41:53,982 INFO    StreamThr :2168 [internal.py:wandb_internal():85] W&B internal server running at pid: 2168, started at: 2024-06-08 08:41:53.981303
+2024-06-08 08:41:53,983 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: status
+2024-06-08 08:41:53,984 INFO    WriterThread:2168 [datastore.py:open_for_write():87] open: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/run-af9lqeeh.wandb
+2024-06-08 08:41:53,985 DEBUG   SenderThread:2168 [sender.py:send():379] send: header
+2024-06-08 08:41:53,986 DEBUG   SenderThread:2168 [sender.py:send():379] send: run
+2024-06-08 08:41:53,991 INFO    SenderThread:2168 [sender.py:_setup_resume():749] checking resume status for None/mp_test/af9lqeeh
+2024-06-08 08:41:54,658 INFO    SenderThread:2168 [dir_watcher.py:__init__():211] watching files in: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files
+2024-06-08 08:41:54,658 INFO    SenderThread:2168 [sender.py:_start_run_threads():1188] run started: af9lqeeh with start time 1717836113.980855
+2024-06-08 08:41:54,664 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: check_version
+2024-06-08 08:41:54,664 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: check_version
+2024-06-08 08:41:54,756 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: run_start
+2024-06-08 08:41:54,770 DEBUG   HandlerThread:2168 [system_info.py:__init__():26] System info init
+2024-06-08 08:41:54,770 DEBUG   HandlerThread:2168 [system_info.py:__init__():41] System info init done
+2024-06-08 08:41:54,771 INFO    HandlerThread:2168 [system_monitor.py:start():194] Starting system monitor
+2024-06-08 08:41:54,771 INFO    SystemMonitor:2168 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-08 08:41:54,771 INFO    HandlerThread:2168 [system_monitor.py:probe():214] Collecting system info
+2024-06-08 08:41:54,772 INFO    SystemMonitor:2168 [interfaces.py:start():188] Started cpu monitoring
+2024-06-08 08:41:54,773 INFO    SystemMonitor:2168 [interfaces.py:start():188] Started disk monitoring
+2024-06-08 08:41:54,774 INFO    SystemMonitor:2168 [interfaces.py:start():188] Started gpu monitoring
+2024-06-08 08:41:54,774 INFO    SystemMonitor:2168 [interfaces.py:start():188] Started memory monitoring
+2024-06-08 08:41:54,774 INFO    SystemMonitor:2168 [interfaces.py:start():188] Started network monitoring
+2024-06-08 08:41:54,799 DEBUG   HandlerThread:2168 [system_info.py:probe():152] Probing system
+2024-06-08 08:41:54,801 DEBUG   HandlerThread:2168 [system_info.py:_probe_git():137] Probing git
+2024-06-08 08:41:54,809 DEBUG   HandlerThread:2168 [system_info.py:_probe_git():145] Probing git done
+2024-06-08 08:41:54,809 DEBUG   HandlerThread:2168 [system_info.py:probe():200] Probing system done
+2024-06-08 08:41:54,809 DEBUG   HandlerThread:2168 [system_monitor.py:probe():223] {'os': 'Linux-6.5.0-26-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2024-06-08T08:41:54.799178', 'startedAt': '2024-06-08T08:41:53.977544', 'docker': None, 'cuda': None, 'args': ('--pretrained-root', 'checkpoints/mp-2024/20240607-225709', '--model-name', 'model-4500.pth', '--save-root', 'checkpoints', '--data-root', 'data/public', '--wandb'), 'state': 'running', 'program': '/workspace/project2/train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'git@gitlab.inf.ethz.ch:course-mp2024/StrawberryPudding.git', 'commit': '5bfb85f3941c5b196ee410d495e92d86b69cadcc'}, 'email': None, 'root': '/workspace/project2', 'host': '8d06e1c13f54', 'username': 'root', 'executable': '/usr/bin/python3', 'cpu_count': 24, 'cpu_count_logical': 48, 'cpu_freq': {'current': 2039.1038541666667, 'min': 1500.0, 'max': 2850.0}, 'cpu_freq_per_core': [{'current': 1823.609, 'min': 1500.0, 'max': 2850.0}, {'current': 2176.819, 'min': 1500.0, 'max': 2850.0}, {'current': 2371.568, 'min': 1500.0, 'max': 2850.0}, {'current': 2156.993, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 3834.585, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 3105.955, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2332.86, 'min': 1500.0, 'max': 2850.0}, {'current': 1776.819, 'min': 1500.0, 'max': 2850.0}, {'current': 1815.82, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1959.915, 'min': 1500.0, 'max': 2850.0}, {'current': 3655.809, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2301.13, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 3025.161, 'min': 1500.0, 'max': 2850.0}, {'current': 2992.9, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2830.019, 'min': 1500.0, 'max': 2850.0}, {'current': 2850.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2850.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}], 'disk': {'/': {'total': 20.0, 'used': 0.9011993408203125}}, 'gpu': 'NVIDIA GeForce RTX 4090', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}], 'memory': {'total': 251.5516700744629}}
+2024-06-08 08:41:54,809 INFO    HandlerThread:2168 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-08 08:41:54,809 INFO    HandlerThread:2168 [system_monitor.py:probe():227] Publishing system info
+2024-06-08 08:41:54,810 INFO    HandlerThread:2168 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-08 08:41:54,812 DEBUG   SenderThread:2168 [sender.py:send():379] send: files
+2024-06-08 08:41:54,812 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-06-08 08:41:54,888 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: python_packages
+2024-06-08 08:41:54,888 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: python_packages
+2024-06-08 08:41:54,888 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-08 08:41:54,889 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: stop_status
+2024-06-08 08:41:54,890 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:41:55,160 DEBUG   SenderThread:2168 [sender.py:send():379] send: telemetry
+2024-06-08 08:41:55,160 DEBUG   SenderThread:2168 [sender.py:send():379] send: telemetry
+2024-06-08 08:41:55,524 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-08 08:41:55,525 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-08 08:41:55,525 DEBUG   SenderThread:2168 [sender.py:send():379] send: telemetry
+2024-06-08 08:41:55,543 INFO    wandb-upload_0:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/6bujcl8x-wandb-metadata.json
+2024-06-08 08:41:55,659 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/requirements.txt
+2024-06-08 08:41:55,659 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log
+2024-06-08 08:41:55,660 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/wandb-metadata.json
+2024-06-08 08:41:55,889 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:41:56,889 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:41:57,659 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log
+2024-06-08 08:41:57,889 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:41:58,660 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log
+2024-06-08 08:41:58,889 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:41:59,889 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: status_report
+2024-06-08 08:41:59,890 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:00,660 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log
+2024-06-08 08:42:00,889 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:01,890 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:02,562 DEBUG   SenderThread:2168 [sender.py:send():379] send: files
+2024-06-08 08:42:02,562 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file media/images/Rendered Images_0_4770f9be898ac70a32b7.png with policy now
+2024-06-08 08:42:02,565 DEBUG   SenderThread:2168 [sender.py:send():379] send: files
+2024-06-08 08:42:02,566 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file media/images/Rendered Images_0_7ba107088f1420fc37de.png with policy now
+2024-06-08 08:42:02,567 DEBUG   SenderThread:2168 [sender.py:send():379] send: files
+2024-06-08 08:42:02,567 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file media/images/Rendered Images_0_870fba0e1415a8f330bb.png with policy now
+2024-06-08 08:42:02,568 DEBUG   SenderThread:2168 [sender.py:send():379] send: files
+2024-06-08 08:42:02,568 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file media/images/Rendered Images_0_4e566da17db8c48d75d6.png with policy now
+2024-06-08 08:42:02,572 DEBUG   SenderThread:2168 [sender.py:send():379] send: files
+2024-06-08 08:42:02,572 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file media/images/Rendered Images_0_c52585b5a6efca1502a8.png with policy now
+2024-06-08 08:42:02,576 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-08 08:42:02,577 DEBUG   SenderThread:2168 [sender.py:send():379] send: history
+2024-06-08 08:42:02,578 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: summary_record
+2024-06-08 08:42:02,578 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-06-08 08:42:02,581 DEBUG   SenderThread:2168 [sender.py:send():379] send: files
+2024-06-08 08:42:02,581 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file media/images/Ground-truth Images_8_e66caac5921126c9a542.png with policy now
+2024-06-08 08:42:02,582 DEBUG   SenderThread:2168 [sender.py:send():379] send: files
+2024-06-08 08:42:02,582 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file media/images/Ground-truth Images_8_d46094b22d91d1bd7d47.png with policy now
+2024-06-08 08:42:02,584 DEBUG   SenderThread:2168 [sender.py:send():379] send: files
+2024-06-08 08:42:02,584 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file media/images/Ground-truth Images_8_c1ae0e380e32a07032f8.png with policy now
+2024-06-08 08:42:02,589 DEBUG   SenderThread:2168 [sender.py:send():379] send: files
+2024-06-08 08:42:02,589 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file media/images/Ground-truth Images_8_b60b263c939c62f4bc58.png with policy now
+2024-06-08 08:42:02,589 DEBUG   SenderThread:2168 [sender.py:send():379] send: files
+2024-06-08 08:42:02,589 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file media/images/Ground-truth Images_8_ab3d98782f1147e7dca7.png with policy now
+2024-06-08 08:42:02,594 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-08 08:42:02,594 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-08 08:42:02,661 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log
+2024-06-08 08:42:02,661 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Rendered Images_0_4770f9be898ac70a32b7.png
+2024-06-08 08:42:02,661 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Rendered Images_0_4e566da17db8c48d75d6.png
+2024-06-08 08:42:02,662 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Ground-truth Images_8_c1ae0e380e32a07032f8.png
+2024-06-08 08:42:02,662 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Ground-truth Images_8_d46094b22d91d1bd7d47.png
+2024-06-08 08:42:02,662 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Ground-truth Images_8_ab3d98782f1147e7dca7.png
+2024-06-08 08:42:02,662 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Ground-truth Images_8_b60b263c939c62f4bc58.png
+2024-06-08 08:42:02,662 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Rendered Images_0_870fba0e1415a8f330bb.png
+2024-06-08 08:42:02,662 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/wandb-summary.json
+2024-06-08 08:42:02,663 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Rendered Images_0_c52585b5a6efca1502a8.png
+2024-06-08 08:42:02,663 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Ground-truth Images_8_e66caac5921126c9a542.png
+2024-06-08 08:42:02,663 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Rendered Images_0_7ba107088f1420fc37de.png
+2024-06-08 08:42:02,663 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media
+2024-06-08 08:42:02,663 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_created():271] file/dir created: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images
+2024-06-08 08:42:02,890 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:03,042 INFO    wandb-upload_0:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/9n1gbvpf-media/images/Rendered Images_0_4770f9be898ac70a32b7.png
+2024-06-08 08:42:03,240 INFO    wandb-upload_1:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/nsamvq5y-media/images/Rendered Images_0_7ba107088f1420fc37de.png
+2024-06-08 08:42:03,329 INFO    wandb-upload_2:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/0b676bg1-media/images/Rendered Images_0_870fba0e1415a8f330bb.png
+2024-06-08 08:42:03,388 INFO    wandb-upload_6:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/ecs8z49r-media/images/Ground-truth Images_8_d46094b22d91d1bd7d47.png
+2024-06-08 08:42:03,505 INFO    wandb-upload_4:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/ub184zet-media/images/Rendered Images_0_c52585b5a6efca1502a8.png
+2024-06-08 08:42:03,506 INFO    wandb-upload_3:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/1a9sjgqc-media/images/Rendered Images_0_4e566da17db8c48d75d6.png
+2024-06-08 08:42:03,507 INFO    wandb-upload_8:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/5tybv313-media/images/Ground-truth Images_8_b60b263c939c62f4bc58.png
+2024-06-08 08:42:03,524 INFO    wandb-upload_7:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/maphig5d-media/images/Ground-truth Images_8_c1ae0e380e32a07032f8.png
+2024-06-08 08:42:03,543 INFO    wandb-upload_9:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/he4cj3ue-media/images/Ground-truth Images_8_ab3d98782f1147e7dca7.png
+2024-06-08 08:42:03,550 INFO    wandb-upload_5:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/ys6npa57-media/images/Ground-truth Images_8_e66caac5921126c9a542.png
+2024-06-08 08:42:03,602 INFO    wandb-upload_0:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/ng7vqvkf-media/images/Rendered Images_0_4770f9be898ac70a32b7.png
+2024-06-08 08:42:03,661 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log
+2024-06-08 08:42:03,890 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:03,990 INFO    wandb-upload_1:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/7jbmwyj8-media/images/Ground-truth Images_8_d46094b22d91d1bd7d47.png
+2024-06-08 08:42:04,108 INFO    wandb-upload_6:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/olp7pm7w-media/images/Rendered Images_0_870fba0e1415a8f330bb.png
+2024-06-08 08:42:04,127 INFO    wandb-upload_4:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/2szczwiy-media/images/Rendered Images_0_c52585b5a6efca1502a8.png
+2024-06-08 08:42:04,142 INFO    wandb-upload_7:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/6wlqcrfl-media/images/Rendered Images_0_4e566da17db8c48d75d6.png
+2024-06-08 08:42:04,171 INFO    wandb-upload_8:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/276zrfyg-media/images/Rendered Images_0_7ba107088f1420fc37de.png
+2024-06-08 08:42:04,654 INFO    wandb-upload_3:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/rwnqvlq1-media/images/Ground-truth Images_8_b60b263c939c62f4bc58.png
+2024-06-08 08:42:04,662 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log
+2024-06-08 08:42:04,711 INFO    wandb-upload_2:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/8l7a8ill-media/images/Ground-truth Images_8_ab3d98782f1147e7dca7.png
+2024-06-08 08:42:04,717 INFO    wandb-upload_9:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/iwduw5dv-media/images/Ground-truth Images_8_c1ae0e380e32a07032f8.png
+2024-06-08 08:42:04,725 INFO    wandb-upload_5:2168 [upload_job.py:push():130] Uploaded file /tmp/tmprqckrbbpwandb/j3awixlz-media/images/Ground-truth Images_8_e66caac5921126c9a542.png
+2024-06-08 08:42:04,890 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: status_report
+2024-06-08 08:42:04,890 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:05,925 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:06,900 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:07,900 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:08,901 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:08,964 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-08 08:42:08,965 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-08 08:42:08,965 DEBUG   SenderThread:2168 [sender.py:send():379] send: history
+2024-06-08 08:42:08,965 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: summary_record
+2024-06-08 08:42:08,967 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-06-08 08:42:09,664 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log
+2024-06-08 08:42:09,664 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/wandb-summary.json
+2024-06-08 08:42:09,889 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-08 08:42:09,889 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: stop_status
+2024-06-08 08:42:09,900 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:10,067 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: status_report
+2024-06-08 08:42:10,901 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:11,926 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:12,904 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:13,666 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log
+2024-06-08 08:42:13,904 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:14,903 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:15,843 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: status_report
+2024-06-08 08:42:15,884 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-08 08:42:15,885 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-08 08:42:15,885 DEBUG   SenderThread:2168 [sender.py:send():379] send: history
+2024-06-08 08:42:15,885 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: summary_record
+2024-06-08 08:42:15,887 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-06-08 08:42:15,904 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:16,667 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/wandb-summary.json
+2024-06-08 08:42:16,904 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:17,668 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log
+2024-06-08 08:42:17,908 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:18,944 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:19,920 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:20,891 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: status_report
+2024-06-08 08:42:20,921 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:21,922 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:22,588 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-08 08:42:22,589 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: partial_history
+2024-06-08 08:42:22,589 DEBUG   SenderThread:2168 [sender.py:send():379] send: history
+2024-06-08 08:42:22,589 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: summary_record
+2024-06-08 08:42:22,590 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-06-08 08:42:22,670 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/wandb-summary.json
+2024-06-08 08:42:22,921 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:23,671 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log
+2024-06-08 08:42:23,833 DEBUG   SenderThread:2168 [sender.py:send():379] send: telemetry
+2024-06-08 08:42:23,876 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: server_info
+2024-06-08 08:42:23,877 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: server_info
+2024-06-08 08:42:24,026 DEBUG   SenderThread:2168 [sender.py:send():379] send: exit
+2024-06-08 08:42:24,026 INFO    SenderThread:2168 [sender.py:send_exit():586] handling exit code: 0
+2024-06-08 08:42:24,026 INFO    SenderThread:2168 [sender.py:send_exit():588] handling runtime: 29
+2024-06-08 08:42:24,026 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-06-08 08:42:24,026 INFO    SenderThread:2168 [sender.py:send_exit():594] send defer
+2024-06-08 08:42:24,027 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:24,027 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 0
+2024-06-08 08:42:24,027 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:24,027 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-06-08 08:42:24,027 INFO    SenderThread:2168 [sender.py:transition_state():614] send defer: 1
+2024-06-08 08:42:24,027 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:24,027 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 1
+2024-06-08 08:42:24,027 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:24,027 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-06-08 08:42:24,027 INFO    SenderThread:2168 [sender.py:transition_state():614] send defer: 2
+2024-06-08 08:42:24,028 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:24,028 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 2
+2024-06-08 08:42:24,028 INFO    HandlerThread:2168 [system_monitor.py:finish():203] Stopping system monitor
+2024-06-08 08:42:24,028 DEBUG   SystemMonitor:2168 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-08 08:42:24,028 DEBUG   SystemMonitor:2168 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-08 08:42:24,028 DEBUG   SystemMonitor:2168 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-08 08:42:24,029 INFO    HandlerThread:2168 [interfaces.py:finish():200] Joined cpu monitor
+2024-06-08 08:42:24,030 INFO    HandlerThread:2168 [interfaces.py:finish():200] Joined disk monitor
+2024-06-08 08:42:24,038 INFO    HandlerThread:2168 [interfaces.py:finish():200] Joined gpu monitor
+2024-06-08 08:42:24,038 INFO    HandlerThread:2168 [interfaces.py:finish():200] Joined memory monitor
+2024-06-08 08:42:24,038 INFO    HandlerThread:2168 [interfaces.py:finish():200] Joined network monitor
+2024-06-08 08:42:24,039 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:24,039 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-06-08 08:42:24,039 INFO    SenderThread:2168 [sender.py:transition_state():614] send defer: 3
+2024-06-08 08:42:24,039 DEBUG   SenderThread:2168 [sender.py:send():379] send: stats
+2024-06-08 08:42:24,039 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:24,039 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 3
+2024-06-08 08:42:24,040 DEBUG   SenderThread:2168 [sender.py:send():379] send: history
+2024-06-08 08:42:24,040 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: summary_record
+2024-06-08 08:42:24,041 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-06-08 08:42:24,041 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:24,041 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-06-08 08:42:24,041 INFO    SenderThread:2168 [sender.py:transition_state():614] send defer: 4
+2024-06-08 08:42:24,042 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:24,042 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 4
+2024-06-08 08:42:24,042 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:24,042 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-06-08 08:42:24,042 INFO    SenderThread:2168 [sender.py:transition_state():614] send defer: 5
+2024-06-08 08:42:24,042 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:24,042 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 5
+2024-06-08 08:42:24,043 DEBUG   SenderThread:2168 [sender.py:send():379] send: summary
+2024-06-08 08:42:24,043 INFO    SenderThread:2168 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-06-08 08:42:24,044 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:24,044 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-06-08 08:42:24,044 INFO    SenderThread:2168 [sender.py:transition_state():614] send defer: 6
+2024-06-08 08:42:24,044 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:24,044 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 6
+2024-06-08 08:42:24,044 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:24,045 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-06-08 08:42:24,049 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: status_report
+2024-06-08 08:42:24,276 INFO    SenderThread:2168 [sender.py:transition_state():614] send defer: 7
+2024-06-08 08:42:24,277 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:24,277 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 7
+2024-06-08 08:42:24,277 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:24,277 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-06-08 08:42:24,672 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/config.yaml
+2024-06-08 08:42:24,672 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/wandb-summary.json
+2024-06-08 08:42:25,026 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-08 08:42:25,850 INFO    SenderThread:2168 [sender.py:transition_state():614] send defer: 8
+2024-06-08 08:42:25,850 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: poll_exit
+2024-06-08 08:42:25,851 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:25,851 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 8
+2024-06-08 08:42:25,851 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:25,851 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-06-08 08:42:25,852 INFO    SenderThread:2168 [job_builder.py:build():440] Attempting to build job artifact
+2024-06-08 08:42:25,852 INFO    SenderThread:2168 [job_builder.py:_get_source_type():569] is repo sourced job
+2024-06-08 08:42:25,867 INFO    SenderThread:2168 [job_builder.py:build():545] adding wandb-job metadata file
+2024-06-08 08:42:25,870 INFO    SenderThread:2168 [sender.py:transition_state():614] send defer: 9
+2024-06-08 08:42:25,870 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:25,870 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 9
+2024-06-08 08:42:25,871 DEBUG   SenderThread:2168 [sender.py:send():379] send: artifact
+2024-06-08 08:42:26,026 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-08 08:42:26,673 INFO    Thread-12 :2168 [dir_watcher.py:_on_file_modified():288] file/dir modified: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log
+2024-06-08 08:42:27,139 INFO    wandb-upload_4:2168 [upload_job.py:push():88] Uploaded file /tmp/tmplsbm0s9s/wandb-job.json
+2024-06-08 08:42:27,738 INFO    wandb-upload_0:2168 [upload_job.py:push():88] Uploaded file /root/.local/share/wandb/artifacts/staging/tmpyuhires9
+2024-06-08 08:42:28,844 INFO    SenderThread:2168 [sender.py:send_artifact():1530] sent artifact job-git_gitlab.inf.ethz.ch_course-mp2024_StrawberryPudding.git_train.py - {'id': 'QXJ0aWZhY3Q6ODY0NjI3OTYy', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE4MzM3OTY5MQ==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODY0MjkzMTg1', 'versionIndex': 3}}}
+2024-06-08 08:42:28,844 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:28,844 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-06-08 08:42:28,844 INFO    SenderThread:2168 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-08 08:42:29,675 INFO    SenderThread:2168 [dir_watcher.py:finish():388] scan: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files
+2024-06-08 08:42:29,675 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/config.yaml config.yaml
+2024-06-08 08:42:29,675 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/wandb-metadata.json wandb-metadata.json
+2024-06-08 08:42:29,675 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/requirements.txt requirements.txt
+2024-06-08 08:42:29,677 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log output.log
+2024-06-08 08:42:29,680 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/wandb-summary.json wandb-summary.json
+2024-06-08 08:42:29,685 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Rendered Images_0_4770f9be898ac70a32b7.png media/images/Rendered Images_0_4770f9be898ac70a32b7.png
+2024-06-08 08:42:29,685 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Rendered Images_0_7ba107088f1420fc37de.png media/images/Rendered Images_0_7ba107088f1420fc37de.png
+2024-06-08 08:42:29,685 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Rendered Images_0_870fba0e1415a8f330bb.png media/images/Rendered Images_0_870fba0e1415a8f330bb.png
+2024-06-08 08:42:29,685 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Rendered Images_0_4e566da17db8c48d75d6.png media/images/Rendered Images_0_4e566da17db8c48d75d6.png
+2024-06-08 08:42:29,686 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Rendered Images_0_c52585b5a6efca1502a8.png media/images/Rendered Images_0_c52585b5a6efca1502a8.png
+2024-06-08 08:42:29,686 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Ground-truth Images_8_e66caac5921126c9a542.png media/images/Ground-truth Images_8_e66caac5921126c9a542.png
+2024-06-08 08:42:29,686 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Ground-truth Images_8_d46094b22d91d1bd7d47.png media/images/Ground-truth Images_8_d46094b22d91d1bd7d47.png
+2024-06-08 08:42:29,686 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Ground-truth Images_8_c1ae0e380e32a07032f8.png media/images/Ground-truth Images_8_c1ae0e380e32a07032f8.png
+2024-06-08 08:42:29,686 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Ground-truth Images_8_b60b263c939c62f4bc58.png media/images/Ground-truth Images_8_b60b263c939c62f4bc58.png
+2024-06-08 08:42:29,686 INFO    SenderThread:2168 [dir_watcher.py:finish():402] scan save: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/media/images/Ground-truth Images_8_ab3d98782f1147e7dca7.png media/images/Ground-truth Images_8_ab3d98782f1147e7dca7.png
+2024-06-08 08:42:29,686 INFO    SenderThread:2168 [sender.py:transition_state():614] send defer: 10
+2024-06-08 08:42:29,686 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: poll_exit
+2024-06-08 08:42:29,687 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:29,687 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 10
+2024-06-08 08:42:29,687 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:29,687 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-06-08 08:42:29,687 INFO    SenderThread:2168 [file_pusher.py:finish():169] shutting down file pusher
+2024-06-08 08:42:30,027 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-08 08:42:30,028 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: poll_exit
+2024-06-08 08:42:30,083 INFO    wandb-upload_7:2168 [upload_job.py:push():130] Uploaded file checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/config.yaml
+2024-06-08 08:42:30,090 INFO    wandb-upload_2:2168 [upload_job.py:push():130] Uploaded file checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/wandb-summary.json
+2024-06-08 08:42:30,096 INFO    wandb-upload_6:2168 [upload_job.py:push():130] Uploaded file checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/requirements.txt
+2024-06-08 08:42:30,105 INFO    wandb-upload_3:2168 [upload_job.py:push():130] Uploaded file checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/files/output.log
+2024-06-08 08:42:30,306 INFO    Thread-11 (_thread_body):2168 [sender.py:transition_state():614] send defer: 11
+2024-06-08 08:42:30,306 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:30,306 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 11
+2024-06-08 08:42:30,306 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:30,306 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-06-08 08:42:30,306 INFO    SenderThread:2168 [file_pusher.py:join():175] waiting for file pusher
+2024-06-08 08:42:30,309 INFO    SenderThread:2168 [sender.py:transition_state():614] send defer: 12
+2024-06-08 08:42:30,310 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:30,310 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 12
+2024-06-08 08:42:30,310 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:30,310 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-06-08 08:42:30,310 INFO    SenderThread:2168 [file_stream.py:finish():601] file stream finish called
+2024-06-08 08:42:30,479 INFO    SenderThread:2168 [file_stream.py:finish():605] file stream finish is done
+2024-06-08 08:42:30,480 INFO    SenderThread:2168 [sender.py:transition_state():614] send defer: 13
+2024-06-08 08:42:30,480 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:30,480 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 13
+2024-06-08 08:42:30,480 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:30,480 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-06-08 08:42:30,480 INFO    SenderThread:2168 [sender.py:transition_state():614] send defer: 14
+2024-06-08 08:42:30,480 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: defer
+2024-06-08 08:42:30,480 INFO    HandlerThread:2168 [handler.py:handle_request_defer():184] handle defer: 14
+2024-06-08 08:42:30,481 DEBUG   SenderThread:2168 [sender.py:send():379] send: final
+2024-06-08 08:42:30,481 DEBUG   SenderThread:2168 [sender.py:send():379] send: footer
+2024-06-08 08:42:30,481 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: defer
+2024-06-08 08:42:30,481 INFO    SenderThread:2168 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-06-08 08:42:30,482 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-08 08:42:30,482 DEBUG   SenderThread:2168 [sender.py:send_request():406] send_request: poll_exit
+2024-06-08 08:42:30,483 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-08 08:42:30,484 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: get_summary
+2024-06-08 08:42:30,485 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: sampled_history
+2024-06-08 08:42:30,486 DEBUG   HandlerThread:2168 [handler.py:handle_request():158] handle_request: shutdown
+2024-06-08 08:42:30,486 INFO    HandlerThread:2168 [handler.py:finish():882] shutting down handler
+2024-06-08 08:42:31,482 INFO    WriterThread:2168 [datastore.py:close():296] close: checkpoints/mp-2024/20240608-084118/wandb/run-20240608_084153-af9lqeeh/run-af9lqeeh.wandb
+2024-06-08 08:42:31,482 INFO    SenderThread:2168 [sender.py:finish():1608] shutting down sender
+2024-06-08 08:42:31,483 INFO    SenderThread:2168 [file_pusher.py:finish():169] shutting down file pusher
+2024-06-08 08:42:31,483 INFO    SenderThread:2168 [file_pusher.py:join():175] waiting for file pusher

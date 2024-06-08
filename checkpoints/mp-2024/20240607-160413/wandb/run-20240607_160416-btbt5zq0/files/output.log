@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/workspace/project2/train.py", line 148, in <module>
+    main(args)
+  File "/workspace/project2/train.py", line 124, in main
+    trainer.step(data)
+  File "/workspace/project2/lib/model/trainer.py", line 336, in step
+    self.forward()
+  File "/workspace/project2/lib/model/trainer.py", line 287, in forward
+    fine_coords, fine_z_vals = inverse_transform_sampling(
+  File "/workspace/project2/lib/model/trainer.py", line 139, in inverse_transform_sampling
+    lower_bins = torch.gather(ts_bounds, 1, lower_idxs)
+RuntimeError: Size does not match at dimension 2 expected index [2, 512, 512, 1] to be smaller than self [2, 512, 130, 1] apart from dimension 1

@@ -1,0 +1,748 @@
+2024-06-07 16:06:20,090|    INFO| STEP 0 - EPOCH 0/8000 | total loss: 6.443E-01 | rgb loss: 6.443E-01
+2024-06-07 16:06:20,520|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240607-160614/model-0.pth
+2024-06-07 16:06:20,555|    INFO| Beginning validation...
+2024-06-07 16:06:20,555|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 16:06:20,555|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+/usr/local/lib/python3.10/dist-packages/torch/functional.py:507: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3549.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+
+ 80%|███████████████████████████████████████████████████████████████████████████████████████████▏                      | 4/5 [00:02<00:00,  1.92it/s]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.09it/s]
+2024-06-07 16:06:37,113|    INFO| STEP 100 - EPOCH 12/8000 | total loss: 1.409E-01 | rgb loss: 1.409E-01
+2024-06-07 16:06:49,998|    INFO| STEP 200 - EPOCH 25/8000 | total loss: 5.555E-02 | rgb loss: 5.555E-02
+2024-06-07 16:07:02,075|    INFO| STEP 300 - EPOCH 37/8000 | total loss: 3.762E-02 | rgb loss: 3.762E-02
+2024-06-07 16:07:14,899|    INFO| STEP 400 - EPOCH 50/8000 | total loss: 2.850E-02 | rgb loss: 2.850E-02
+2024-06-07 16:07:25,765|    INFO| STEP 500 - EPOCH 62/8000 | total loss: 2.578E-02 | rgb loss: 2.578E-02
+2024-06-07 16:07:37,331|    INFO| STEP 600 - EPOCH 75/8000 | total loss: 2.202E-02 | rgb loss: 2.202E-02
+2024-06-07 16:07:49,130|    INFO| STEP 700 - EPOCH 87/8000 | total loss: 1.885E-02 | rgb loss: 1.885E-02
+2024-06-07 16:08:01,768|    INFO| STEP 800 - EPOCH 100/8000 | total loss: 1.671E-02 | rgb loss: 1.671E-02
+2024-06-07 16:08:15,283|    INFO| STEP 900 - EPOCH 112/8000 | total loss: 1.678E-02 | rgb loss: 1.678E-02
+2024-06-07 16:08:28,225|    INFO| STEP 1000 - EPOCH 125/8000 | total loss: 1.455E-02 | rgb loss: 1.455E-02
+2024-06-07 16:08:41,353|    INFO| STEP 1100 - EPOCH 137/8000 | total loss: 1.450E-02 | rgb loss: 1.450E-02
+2024-06-07 16:08:54,248|    INFO| STEP 1200 - EPOCH 150/8000 | total loss: 1.287E-02 | rgb loss: 1.287E-02
+2024-06-07 16:09:07,012|    INFO| STEP 1300 - EPOCH 162/8000 | total loss: 1.335E-02 | rgb loss: 1.335E-02
+2024-06-07 16:09:18,450|    INFO| STEP 1400 - EPOCH 175/8000 | total loss: 1.195E-02 | rgb loss: 1.195E-02
+2024-06-07 16:09:29,155|    INFO| STEP 1500 - EPOCH 187/8000 | total loss: 1.158E-02 | rgb loss: 1.158E-02
+2024-06-07 16:09:40,236|    INFO| STEP 1600 - EPOCH 200/8000 | total loss: 1.157E-02 | rgb loss: 1.157E-02
+2024-06-07 16:09:50,911|    INFO| STEP 1700 - EPOCH 212/8000 | total loss: 1.142E-02 | rgb loss: 1.142E-02
+2024-06-07 16:10:02,247|    INFO| STEP 1800 - EPOCH 225/8000 | total loss: 1.149E-02 | rgb loss: 1.149E-02
+2024-06-07 16:10:13,302|    INFO| STEP 1900 - EPOCH 237/8000 | total loss: 1.068E-02 | rgb loss: 1.068E-02
+2024-06-07 16:10:25,353|    INFO| STEP 2000 - EPOCH 250/8000 | total loss: 1.177E-02 | rgb loss: 1.177E-02
+2024-06-07 16:10:36,745|    INFO| STEP 2100 - EPOCH 262/8000 | total loss: 1.013E-02 | rgb loss: 1.013E-02
+2024-06-07 16:10:48,359|    INFO| STEP 2200 - EPOCH 275/8000 | total loss: 1.022E-02 | rgb loss: 1.022E-02
+2024-06-07 16:11:00,979|    INFO| STEP 2300 - EPOCH 287/8000 | total loss: 9.731E-03 | rgb loss: 9.731E-03
+2024-06-07 16:11:13,446|    INFO| STEP 2400 - EPOCH 300/8000 | total loss: 9.625E-03 | rgb loss: 9.625E-03
+2024-06-07 16:11:25,293|    INFO| STEP 2500 - EPOCH 312/8000 | total loss: 9.338E-03 | rgb loss: 9.338E-03
+2024-06-07 16:11:37,636|    INFO| STEP 2600 - EPOCH 325/8000 | total loss: 9.896E-03 | rgb loss: 9.896E-03
+2024-06-07 16:11:48,854|    INFO| STEP 2700 - EPOCH 337/8000 | total loss: 9.656E-03 | rgb loss: 9.656E-03
+2024-06-07 16:11:59,914|    INFO| STEP 2800 - EPOCH 350/8000 | total loss: 8.348E-03 | rgb loss: 8.348E-03
+2024-06-07 16:12:10,590|    INFO| STEP 2900 - EPOCH 362/8000 | total loss: 9.183E-03 | rgb loss: 9.183E-03
+2024-06-07 16:12:22,091|    INFO| STEP 3000 - EPOCH 375/8000 | total loss: 8.208E-03 | rgb loss: 8.208E-03
+2024-06-07 16:12:34,320|    INFO| STEP 3100 - EPOCH 387/8000 | total loss: 8.839E-03 | rgb loss: 8.839E-03
+2024-06-07 16:12:45,435|    INFO| STEP 3200 - EPOCH 400/8000 | total loss: 9.050E-03 | rgb loss: 9.050E-03
+2024-06-07 16:12:56,144|    INFO| STEP 3300 - EPOCH 412/8000 | total loss: 8.450E-03 | rgb loss: 8.450E-03
+2024-06-07 16:13:08,646|    INFO| STEP 3400 - EPOCH 425/8000 | total loss: 7.966E-03 | rgb loss: 7.966E-03
+2024-06-07 16:13:22,657|    INFO| STEP 3500 - EPOCH 437/8000 | total loss: 8.480E-03 | rgb loss: 8.480E-03
+2024-06-07 16:13:35,745|    INFO| STEP 3600 - EPOCH 450/8000 | total loss: 8.301E-03 | rgb loss: 8.301E-03
+2024-06-07 16:13:49,034|    INFO| STEP 3700 - EPOCH 462/8000 | total loss: 8.661E-03 | rgb loss: 8.661E-03
+2024-06-07 16:14:02,372|    INFO| STEP 3800 - EPOCH 475/8000 | total loss: 8.463E-03 | rgb loss: 8.463E-03
+2024-06-07 16:14:15,523|    INFO| STEP 3900 - EPOCH 487/8000 | total loss: 7.901E-03 | rgb loss: 7.901E-03
+2024-06-07 16:14:29,591|    INFO| STEP 4000 - EPOCH 500/8000 | total loss: 7.304E-03 | rgb loss: 7.304E-03
+2024-06-07 16:14:30,217|    INFO| Beginning validation...
+2024-06-07 16:14:30,217|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 16:14:30,218|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.09it/s]
+2024-06-07 16:14:34,118|    INFO| EPOCH 500/8000 PSNR | 26.63
+2024-06-07 16:14:44,994|    INFO| STEP 4100 - EPOCH 512/8000 | total loss: 7.638E-03 | rgb loss: 7.638E-03
+2024-06-07 16:14:56,118|    INFO| STEP 4200 - EPOCH 525/8000 | total loss: 7.628E-03 | rgb loss: 7.628E-03
+2024-06-07 16:15:08,534|    INFO| STEP 4300 - EPOCH 537/8000 | total loss: 7.689E-03 | rgb loss: 7.689E-03
+2024-06-07 16:15:22,338|    INFO| STEP 4400 - EPOCH 550/8000 | total loss: 7.261E-03 | rgb loss: 7.261E-03
+2024-06-07 16:15:36,424|    INFO| STEP 4500 - EPOCH 562/8000 | total loss: 7.948E-03 | rgb loss: 7.948E-03
+2024-06-07 16:15:50,866|    INFO| STEP 4600 - EPOCH 575/8000 | total loss: 7.229E-03 | rgb loss: 7.229E-03
+2024-06-07 16:16:04,890|    INFO| STEP 4700 - EPOCH 587/8000 | total loss: 7.023E-03 | rgb loss: 7.023E-03
+2024-06-07 16:16:18,357|    INFO| STEP 4800 - EPOCH 600/8000 | total loss: 7.517E-03 | rgb loss: 7.517E-03
+2024-06-07 16:16:31,791|    INFO| STEP 4900 - EPOCH 612/8000 | total loss: 6.756E-03 | rgb loss: 6.756E-03
+2024-06-07 16:16:45,821|    INFO| STEP 5000 - EPOCH 625/8000 | total loss: 6.701E-03 | rgb loss: 6.701E-03
+2024-06-07 16:16:59,141|    INFO| STEP 5100 - EPOCH 637/8000 | total loss: 6.751E-03 | rgb loss: 6.751E-03
+2024-06-07 16:17:10,642|    INFO| STEP 5200 - EPOCH 650/8000 | total loss: 6.926E-03 | rgb loss: 6.926E-03
+2024-06-07 16:17:22,068|    INFO| STEP 5300 - EPOCH 662/8000 | total loss: 7.063E-03 | rgb loss: 7.063E-03
+2024-06-07 16:17:35,311|    INFO| STEP 5400 - EPOCH 675/8000 | total loss: 6.701E-03 | rgb loss: 6.701E-03
+2024-06-07 16:17:48,972|    INFO| STEP 5500 - EPOCH 687/8000 | total loss: 6.538E-03 | rgb loss: 6.538E-03
+2024-06-07 16:18:02,990|    INFO| STEP 5600 - EPOCH 700/8000 | total loss: 6.486E-03 | rgb loss: 6.486E-03
+2024-06-07 16:18:16,794|    INFO| STEP 5700 - EPOCH 712/8000 | total loss: 6.615E-03 | rgb loss: 6.615E-03
+2024-06-07 16:18:31,785|    INFO| STEP 5800 - EPOCH 725/8000 | total loss: 6.401E-03 | rgb loss: 6.401E-03
+2024-06-07 16:18:46,447|    INFO| STEP 5900 - EPOCH 737/8000 | total loss: 6.821E-03 | rgb loss: 6.821E-03
+2024-06-07 16:19:00,170|    INFO| STEP 6000 - EPOCH 750/8000 | total loss: 6.837E-03 | rgb loss: 6.837E-03
+2024-06-07 16:19:12,424|    INFO| STEP 6100 - EPOCH 762/8000 | total loss: 6.559E-03 | rgb loss: 6.559E-03
+2024-06-07 16:19:23,515|    INFO| STEP 6200 - EPOCH 775/8000 | total loss: 6.288E-03 | rgb loss: 6.288E-03
+2024-06-07 16:19:34,298|    INFO| STEP 6300 - EPOCH 787/8000 | total loss: 6.357E-03 | rgb loss: 6.357E-03
+2024-06-07 16:19:45,411|    INFO| STEP 6400 - EPOCH 800/8000 | total loss: 6.519E-03 | rgb loss: 6.519E-03
+2024-06-07 16:19:57,502|    INFO| STEP 6500 - EPOCH 812/8000 | total loss: 6.115E-03 | rgb loss: 6.115E-03
+2024-06-07 16:20:10,866|    INFO| STEP 6600 - EPOCH 825/8000 | total loss: 5.702E-03 | rgb loss: 5.702E-03
+2024-06-07 16:20:24,067|    INFO| STEP 6700 - EPOCH 837/8000 | total loss: 6.280E-03 | rgb loss: 6.280E-03
+2024-06-07 16:20:37,350|    INFO| STEP 6800 - EPOCH 850/8000 | total loss: 6.477E-03 | rgb loss: 6.477E-03
+2024-06-07 16:20:49,121|    INFO| STEP 6900 - EPOCH 862/8000 | total loss: 6.008E-03 | rgb loss: 6.008E-03
+2024-06-07 16:21:02,386|    INFO| STEP 7000 - EPOCH 875/8000 | total loss: 6.563E-03 | rgb loss: 6.563E-03
+2024-06-07 16:21:15,784|    INFO| STEP 7100 - EPOCH 887/8000 | total loss: 6.070E-03 | rgb loss: 6.070E-03
+2024-06-07 16:21:27,882|    INFO| STEP 7200 - EPOCH 900/8000 | total loss: 6.233E-03 | rgb loss: 6.233E-03
+2024-06-07 16:21:38,687|    INFO| STEP 7300 - EPOCH 912/8000 | total loss: 6.248E-03 | rgb loss: 6.248E-03
+2024-06-07 16:21:49,992|    INFO| STEP 7400 - EPOCH 925/8000 | total loss: 5.903E-03 | rgb loss: 5.903E-03
+2024-06-07 16:22:01,850|    INFO| STEP 7500 - EPOCH 937/8000 | total loss: 5.655E-03 | rgb loss: 5.655E-03
+2024-06-07 16:22:15,087|    INFO| STEP 7600 - EPOCH 950/8000 | total loss: 5.877E-03 | rgb loss: 5.877E-03
+2024-06-07 16:22:28,685|    INFO| STEP 7700 - EPOCH 962/8000 | total loss: 5.273E-03 | rgb loss: 5.273E-03
+2024-06-07 16:22:42,483|    INFO| STEP 7800 - EPOCH 975/8000 | total loss: 6.162E-03 | rgb loss: 6.162E-03
+2024-06-07 16:22:55,356|    INFO| STEP 7900 - EPOCH 987/8000 | total loss: 5.761E-03 | rgb loss: 5.761E-03
+2024-06-07 16:23:08,877|    INFO| STEP 8000 - EPOCH 1000/8000 | total loss: 5.847E-03 | rgb loss: 5.847E-03
+2024-06-07 16:23:09,788|    INFO| Beginning validation...
+2024-06-07 16:23:09,789|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 16:23:09,789|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+ 60%|████████████████████████████████████████████████████████████████████▍                                             | 3/5 [00:01<00:01,  1.98it/s]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.12it/s]
+2024-06-07 16:23:25,370|    INFO| STEP 8100 - EPOCH 1012/8000 | total loss: 5.994E-03 | rgb loss: 5.994E-03
+2024-06-07 16:23:39,523|    INFO| STEP 8200 - EPOCH 1025/8000 | total loss: 5.620E-03 | rgb loss: 5.620E-03
+2024-06-07 16:23:53,231|    INFO| STEP 8300 - EPOCH 1037/8000 | total loss: 5.420E-03 | rgb loss: 5.420E-03
+2024-06-07 16:24:07,181|    INFO| STEP 8400 - EPOCH 1050/8000 | total loss: 5.576E-03 | rgb loss: 5.576E-03
+2024-06-07 16:24:20,699|    INFO| STEP 8500 - EPOCH 1062/8000 | total loss: 5.735E-03 | rgb loss: 5.735E-03
+2024-06-07 16:24:34,426|    INFO| STEP 8600 - EPOCH 1075/8000 | total loss: 5.159E-03 | rgb loss: 5.159E-03
+2024-06-07 16:24:48,150|    INFO| STEP 8700 - EPOCH 1087/8000 | total loss: 5.750E-03 | rgb loss: 5.750E-03
+2024-06-07 16:25:02,203|    INFO| STEP 8800 - EPOCH 1100/8000 | total loss: 5.284E-03 | rgb loss: 5.284E-03
+2024-06-07 16:25:15,096|    INFO| STEP 8900 - EPOCH 1112/8000 | total loss: 5.936E-03 | rgb loss: 5.936E-03
+2024-06-07 16:25:28,205|    INFO| STEP 9000 - EPOCH 1125/8000 | total loss: 5.404E-03 | rgb loss: 5.404E-03
+2024-06-07 16:25:41,155|    INFO| STEP 9100 - EPOCH 1137/8000 | total loss: 5.705E-03 | rgb loss: 5.705E-03
+2024-06-07 16:25:52,478|    INFO| STEP 9200 - EPOCH 1150/8000 | total loss: 5.821E-03 | rgb loss: 5.821E-03
+2024-06-07 16:26:04,174|    INFO| STEP 9300 - EPOCH 1162/8000 | total loss: 5.249E-03 | rgb loss: 5.249E-03
+2024-06-07 16:26:17,031|    INFO| STEP 9400 - EPOCH 1175/8000 | total loss: 5.516E-03 | rgb loss: 5.516E-03
+2024-06-07 16:26:30,548|    INFO| STEP 9500 - EPOCH 1187/8000 | total loss: 5.219E-03 | rgb loss: 5.219E-03
+2024-06-07 16:26:43,742|    INFO| STEP 9600 - EPOCH 1200/8000 | total loss: 5.068E-03 | rgb loss: 5.068E-03
+2024-06-07 16:26:56,979|    INFO| STEP 9700 - EPOCH 1212/8000 | total loss: 5.328E-03 | rgb loss: 5.328E-03
+2024-06-07 16:27:10,314|    INFO| STEP 9800 - EPOCH 1225/8000 | total loss: 5.271E-03 | rgb loss: 5.271E-03
+2024-06-07 16:27:23,270|    INFO| STEP 9900 - EPOCH 1237/8000 | total loss: 5.043E-03 | rgb loss: 5.043E-03
+2024-06-07 16:27:35,932|    INFO| STEP 10000 - EPOCH 1250/8000 | total loss: 5.249E-03 | rgb loss: 5.249E-03
+2024-06-07 16:27:49,560|    INFO| STEP 10100 - EPOCH 1262/8000 | total loss: 5.020E-03 | rgb loss: 5.020E-03
+2024-06-07 16:28:03,017|    INFO| STEP 10200 - EPOCH 1275/8000 | total loss: 5.342E-03 | rgb loss: 5.342E-03
+2024-06-07 16:28:15,709|    INFO| STEP 10300 - EPOCH 1287/8000 | total loss: 5.260E-03 | rgb loss: 5.260E-03
+2024-06-07 16:28:28,359|    INFO| STEP 10400 - EPOCH 1300/8000 | total loss: 4.740E-03 | rgb loss: 4.740E-03
+2024-06-07 16:28:40,710|    INFO| STEP 10500 - EPOCH 1312/8000 | total loss: 5.217E-03 | rgb loss: 5.217E-03
+2024-06-07 16:28:53,443|    INFO| STEP 10600 - EPOCH 1325/8000 | total loss: 5.169E-03 | rgb loss: 5.169E-03
+2024-06-07 16:29:04,848|    INFO| STEP 10700 - EPOCH 1337/8000 | total loss: 5.139E-03 | rgb loss: 5.139E-03
+2024-06-07 16:29:17,464|    INFO| STEP 10800 - EPOCH 1350/8000 | total loss: 5.165E-03 | rgb loss: 5.165E-03
+2024-06-07 16:29:29,985|    INFO| STEP 10900 - EPOCH 1362/8000 | total loss: 5.174E-03 | rgb loss: 5.174E-03
+2024-06-07 16:29:42,762|    INFO| STEP 11000 - EPOCH 1375/8000 | total loss: 4.937E-03 | rgb loss: 4.937E-03
+2024-06-07 16:29:55,671|    INFO| STEP 11100 - EPOCH 1387/8000 | total loss: 4.906E-03 | rgb loss: 4.906E-03
+2024-06-07 16:30:07,162|    INFO| STEP 11200 - EPOCH 1400/8000 | total loss: 5.034E-03 | rgb loss: 5.034E-03
+2024-06-07 16:30:17,938|    INFO| STEP 11300 - EPOCH 1412/8000 | total loss: 4.784E-03 | rgb loss: 4.784E-03
+2024-06-07 16:30:29,284|    INFO| STEP 11400 - EPOCH 1425/8000 | total loss: 4.682E-03 | rgb loss: 4.682E-03
+2024-06-07 16:30:41,163|    INFO| STEP 11500 - EPOCH 1437/8000 | total loss: 4.863E-03 | rgb loss: 4.863E-03
+2024-06-07 16:30:53,991|    INFO| STEP 11600 - EPOCH 1450/8000 | total loss: 5.006E-03 | rgb loss: 5.006E-03
+2024-06-07 16:31:06,281|    INFO| STEP 11700 - EPOCH 1462/8000 | total loss: 4.793E-03 | rgb loss: 4.793E-03
+2024-06-07 16:31:18,793|    INFO| STEP 11800 - EPOCH 1475/8000 | total loss: 5.046E-03 | rgb loss: 5.046E-03
+2024-06-07 16:31:30,756|    INFO| STEP 11900 - EPOCH 1487/8000 | total loss: 5.062E-03 | rgb loss: 5.062E-03
+2024-06-07 16:31:43,703|    INFO| STEP 12000 - EPOCH 1500/8000 | total loss: 4.981E-03 | rgb loss: 4.981E-03
+2024-06-07 16:31:44,549|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240607-160614/model-1500.pth
+2024-06-07 16:31:44,604|    INFO| Beginning validation...
+2024-06-07 16:31:44,604|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 16:31:44,604|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+ 60%|████████████████████████████████████████████████████████████████████▍                                             | 3/5 [00:01<00:00,  2.01it/s]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.11it/s]
+2024-06-07 16:31:59,339|    INFO| STEP 12100 - EPOCH 1512/8000 | total loss: 4.596E-03 | rgb loss: 4.596E-03
+2024-06-07 16:32:12,526|    INFO| STEP 12200 - EPOCH 1525/8000 | total loss: 5.166E-03 | rgb loss: 5.166E-03
+2024-06-07 16:32:26,038|    INFO| STEP 12300 - EPOCH 1537/8000 | total loss: 4.793E-03 | rgb loss: 4.793E-03
+2024-06-07 16:32:39,429|    INFO| STEP 12400 - EPOCH 1550/8000 | total loss: 4.410E-03 | rgb loss: 4.410E-03
+2024-06-07 16:32:51,576|    INFO| STEP 12500 - EPOCH 1562/8000 | total loss: 4.717E-03 | rgb loss: 4.717E-03
+2024-06-07 16:33:04,421|    INFO| STEP 12600 - EPOCH 1575/8000 | total loss: 4.565E-03 | rgb loss: 4.565E-03
+2024-06-07 16:33:17,446|    INFO| STEP 12700 - EPOCH 1587/8000 | total loss: 4.289E-03 | rgb loss: 4.289E-03
+2024-06-07 16:33:30,624|    INFO| STEP 12800 - EPOCH 1600/8000 | total loss: 4.699E-03 | rgb loss: 4.699E-03
+2024-06-07 16:33:42,758|    INFO| STEP 12900 - EPOCH 1612/8000 | total loss: 4.636E-03 | rgb loss: 4.636E-03
+2024-06-07 16:33:55,664|    INFO| STEP 13000 - EPOCH 1625/8000 | total loss: 4.543E-03 | rgb loss: 4.543E-03
+2024-06-07 16:34:09,325|    INFO| STEP 13100 - EPOCH 1637/8000 | total loss: 4.612E-03 | rgb loss: 4.612E-03
+2024-06-07 16:34:22,086|    INFO| STEP 13200 - EPOCH 1650/8000 | total loss: 4.757E-03 | rgb loss: 4.757E-03
+2024-06-07 16:34:34,791|    INFO| STEP 13300 - EPOCH 1662/8000 | total loss: 4.537E-03 | rgb loss: 4.537E-03
+2024-06-07 16:34:46,223|    INFO| STEP 13400 - EPOCH 1675/8000 | total loss: 4.639E-03 | rgb loss: 4.639E-03
+2024-06-07 16:34:57,050|    INFO| STEP 13500 - EPOCH 1687/8000 | total loss: 4.716E-03 | rgb loss: 4.716E-03
+2024-06-07 16:35:08,085|    INFO| STEP 13600 - EPOCH 1700/8000 | total loss: 4.749E-03 | rgb loss: 4.749E-03
+2024-06-07 16:35:18,851|    INFO| STEP 13700 - EPOCH 1712/8000 | total loss: 4.598E-03 | rgb loss: 4.598E-03
+2024-06-07 16:35:29,959|    INFO| STEP 13800 - EPOCH 1725/8000 | total loss: 4.286E-03 | rgb loss: 4.286E-03
+2024-06-07 16:35:41,216|    INFO| STEP 13900 - EPOCH 1737/8000 | total loss: 4.462E-03 | rgb loss: 4.462E-03
+2024-06-07 16:35:52,714|    INFO| STEP 14000 - EPOCH 1750/8000 | total loss: 4.447E-03 | rgb loss: 4.447E-03
+2024-06-07 16:36:05,467|    INFO| STEP 14100 - EPOCH 1762/8000 | total loss: 4.604E-03 | rgb loss: 4.604E-03
+2024-06-07 16:36:18,486|    INFO| STEP 14200 - EPOCH 1775/8000 | total loss: 4.349E-03 | rgb loss: 4.349E-03
+2024-06-07 16:36:31,432|    INFO| STEP 14300 - EPOCH 1787/8000 | total loss: 4.323E-03 | rgb loss: 4.323E-03
+2024-06-07 16:36:44,198|    INFO| STEP 14400 - EPOCH 1800/8000 | total loss: 4.258E-03 | rgb loss: 4.258E-03
+2024-06-07 16:36:56,717|    INFO| STEP 14500 - EPOCH 1812/8000 | total loss: 4.240E-03 | rgb loss: 4.240E-03
+2024-06-07 16:37:09,039|    INFO| STEP 14600 - EPOCH 1825/8000 | total loss: 4.279E-03 | rgb loss: 4.279E-03
+2024-06-07 16:37:21,493|    INFO| STEP 14700 - EPOCH 1837/8000 | total loss: 4.059E-03 | rgb loss: 4.059E-03
+2024-06-07 16:37:34,359|    INFO| STEP 14800 - EPOCH 1850/8000 | total loss: 4.311E-03 | rgb loss: 4.311E-03
+2024-06-07 16:37:47,004|    INFO| STEP 14900 - EPOCH 1862/8000 | total loss: 4.375E-03 | rgb loss: 4.375E-03
+2024-06-07 16:37:59,236|    INFO| STEP 15000 - EPOCH 1875/8000 | total loss: 4.176E-03 | rgb loss: 4.176E-03
+2024-06-07 16:38:12,817|    INFO| STEP 15100 - EPOCH 1887/8000 | total loss: 4.700E-03 | rgb loss: 4.700E-03
+2024-06-07 16:38:26,112|    INFO| STEP 15200 - EPOCH 1900/8000 | total loss: 4.226E-03 | rgb loss: 4.226E-03
+2024-06-07 16:38:39,246|    INFO| STEP 15300 - EPOCH 1912/8000 | total loss: 4.442E-03 | rgb loss: 4.442E-03
+2024-06-07 16:38:52,258|    INFO| STEP 15400 - EPOCH 1925/8000 | total loss: 4.304E-03 | rgb loss: 4.304E-03
+2024-06-07 16:39:04,884|    INFO| STEP 15500 - EPOCH 1937/8000 | total loss: 3.998E-03 | rgb loss: 3.998E-03
+2024-06-07 16:39:18,071|    INFO| STEP 15600 - EPOCH 1950/8000 | total loss: 4.289E-03 | rgb loss: 4.289E-03
+2024-06-07 16:39:30,572|    INFO| STEP 15700 - EPOCH 1962/8000 | total loss: 4.282E-03 | rgb loss: 4.282E-03
+2024-06-07 16:39:42,795|    INFO| STEP 15800 - EPOCH 1975/8000 | total loss: 3.943E-03 | rgb loss: 3.943E-03
+2024-06-07 16:39:54,881|    INFO| STEP 15900 - EPOCH 1987/8000 | total loss: 3.816E-03 | rgb loss: 3.816E-03
+2024-06-07 16:40:08,807|    INFO| STEP 16000 - EPOCH 2000/8000 | total loss: 4.194E-03 | rgb loss: 4.194E-03
+2024-06-07 16:40:09,731|    INFO| Beginning validation...
+2024-06-07 16:40:09,732|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 16:40:09,732|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+ 40%|█████████████████████████████████████████████▌                                                                    | 2/5 [00:00<00:01,  2.37it/s]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.11it/s]
+2024-06-07 16:40:25,788|    INFO| STEP 16100 - EPOCH 2012/8000 | total loss: 4.226E-03 | rgb loss: 4.226E-03
+2024-06-07 16:40:40,558|    INFO| STEP 16200 - EPOCH 2025/8000 | total loss: 4.030E-03 | rgb loss: 4.030E-03
+2024-06-07 16:40:51,840|    INFO| STEP 16300 - EPOCH 2037/8000 | total loss: 4.038E-03 | rgb loss: 4.038E-03
+2024-06-07 16:41:05,093|    INFO| STEP 16400 - EPOCH 2050/8000 | total loss: 4.118E-03 | rgb loss: 4.118E-03
+2024-06-07 16:41:19,690|    INFO| STEP 16500 - EPOCH 2062/8000 | total loss: 4.133E-03 | rgb loss: 4.133E-03
+2024-06-07 16:41:32,810|    INFO| STEP 16600 - EPOCH 2075/8000 | total loss: 4.253E-03 | rgb loss: 4.253E-03
+2024-06-07 16:41:45,529|    INFO| STEP 16700 - EPOCH 2087/8000 | total loss: 4.187E-03 | rgb loss: 4.187E-03
+2024-06-07 16:41:59,767|    INFO| STEP 16800 - EPOCH 2100/8000 | total loss: 3.950E-03 | rgb loss: 3.950E-03
+2024-06-07 16:42:10,763|    INFO| STEP 16900 - EPOCH 2112/8000 | total loss: 4.123E-03 | rgb loss: 4.123E-03
+2024-06-07 16:42:24,818|    INFO| STEP 17000 - EPOCH 2125/8000 | total loss: 3.899E-03 | rgb loss: 3.899E-03
+2024-06-07 16:42:36,731|    INFO| STEP 17100 - EPOCH 2137/8000 | total loss: 4.089E-03 | rgb loss: 4.089E-03
+2024-06-07 16:42:50,049|    INFO| STEP 17200 - EPOCH 2150/8000 | total loss: 3.809E-03 | rgb loss: 3.809E-03
+2024-06-07 16:43:04,262|    INFO| STEP 17300 - EPOCH 2162/8000 | total loss: 4.376E-03 | rgb loss: 4.376E-03
+2024-06-07 16:43:19,111|    INFO| STEP 17400 - EPOCH 2175/8000 | total loss: 3.872E-03 | rgb loss: 3.872E-03
+2024-06-07 16:43:30,794|    INFO| STEP 17500 - EPOCH 2187/8000 | total loss: 4.111E-03 | rgb loss: 4.111E-03
+2024-06-07 16:43:43,887|    INFO| STEP 17600 - EPOCH 2200/8000 | total loss: 3.795E-03 | rgb loss: 3.795E-03
+2024-06-07 16:43:58,693|    INFO| STEP 17700 - EPOCH 2212/8000 | total loss: 4.144E-03 | rgb loss: 4.144E-03
+2024-06-07 16:44:11,689|    INFO| STEP 17800 - EPOCH 2225/8000 | total loss: 3.911E-03 | rgb loss: 3.911E-03
+2024-06-07 16:44:22,919|    INFO| STEP 17900 - EPOCH 2237/8000 | total loss: 3.695E-03 | rgb loss: 3.695E-03
+2024-06-07 16:44:35,513|    INFO| STEP 18000 - EPOCH 2250/8000 | total loss: 3.688E-03 | rgb loss: 3.688E-03
+2024-06-07 16:44:47,948|    INFO| STEP 18100 - EPOCH 2262/8000 | total loss: 3.871E-03 | rgb loss: 3.871E-03
+2024-06-07 16:44:59,719|    INFO| STEP 18200 - EPOCH 2275/8000 | total loss: 3.698E-03 | rgb loss: 3.698E-03
+2024-06-07 16:45:13,084|    INFO| STEP 18300 - EPOCH 2287/8000 | total loss: 3.834E-03 | rgb loss: 3.834E-03
+2024-06-07 16:45:26,770|    INFO| STEP 18400 - EPOCH 2300/8000 | total loss: 3.981E-03 | rgb loss: 3.981E-03
+2024-06-07 16:45:38,146|    INFO| STEP 18500 - EPOCH 2312/8000 | total loss: 3.858E-03 | rgb loss: 3.858E-03
+2024-06-07 16:45:51,903|    INFO| STEP 18600 - EPOCH 2325/8000 | total loss: 3.860E-03 | rgb loss: 3.860E-03
+2024-06-07 16:46:06,313|    INFO| STEP 18700 - EPOCH 2337/8000 | total loss: 4.045E-03 | rgb loss: 4.045E-03
+2024-06-07 16:46:20,018|    INFO| STEP 18800 - EPOCH 2350/8000 | total loss: 3.963E-03 | rgb loss: 3.963E-03
+2024-06-07 16:46:32,283|    INFO| STEP 18900 - EPOCH 2362/8000 | total loss: 3.899E-03 | rgb loss: 3.899E-03
+2024-06-07 16:46:45,991|    INFO| STEP 19000 - EPOCH 2375/8000 | total loss: 3.965E-03 | rgb loss: 3.965E-03
+2024-06-07 16:46:58,777|    INFO| STEP 19100 - EPOCH 2387/8000 | total loss: 3.673E-03 | rgb loss: 3.673E-03
+2024-06-07 16:47:09,867|    INFO| STEP 19200 - EPOCH 2400/8000 | total loss: 3.567E-03 | rgb loss: 3.567E-03
+2024-06-07 16:47:20,680|    INFO| STEP 19300 - EPOCH 2412/8000 | total loss: 3.560E-03 | rgb loss: 3.560E-03
+2024-06-07 16:47:33,058|    INFO| STEP 19400 - EPOCH 2425/8000 | total loss: 4.009E-03 | rgb loss: 4.009E-03
+2024-06-07 16:47:46,473|    INFO| STEP 19500 - EPOCH 2437/8000 | total loss: 3.640E-03 | rgb loss: 3.640E-03
+2024-06-07 16:48:00,260|    INFO| STEP 19600 - EPOCH 2450/8000 | total loss: 3.753E-03 | rgb loss: 3.753E-03
+2024-06-07 16:48:13,392|    INFO| STEP 19700 - EPOCH 2462/8000 | total loss: 3.745E-03 | rgb loss: 3.745E-03
+2024-06-07 16:48:26,749|    INFO| STEP 19800 - EPOCH 2475/8000 | total loss: 3.473E-03 | rgb loss: 3.473E-03
+2024-06-07 16:48:40,145|    INFO| STEP 19900 - EPOCH 2487/8000 | total loss: 4.067E-03 | rgb loss: 4.067E-03
+2024-06-07 16:48:53,669|    INFO| STEP 20000 - EPOCH 2500/8000 | total loss: 3.486E-03 | rgb loss: 3.486E-03
+2024-06-07 16:48:54,482|    INFO| Beginning validation...
+2024-06-07 16:48:54,483|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 16:48:54,483|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.15it/s]
+2024-06-07 16:48:58,510|    INFO| EPOCH 2500/8000 PSNR | 30.18
+2024-06-07 16:49:11,558|    INFO| STEP 20100 - EPOCH 2512/8000 | total loss: 3.758E-03 | rgb loss: 3.758E-03
+2024-06-07 16:49:25,992|    INFO| STEP 20200 - EPOCH 2525/8000 | total loss: 3.946E-03 | rgb loss: 3.946E-03
+2024-06-07 16:49:40,784|    INFO| STEP 20300 - EPOCH 2537/8000 | total loss: 3.309E-03 | rgb loss: 3.309E-03
+2024-06-07 16:49:53,079|    INFO| STEP 20400 - EPOCH 2550/8000 | total loss: 3.472E-03 | rgb loss: 3.472E-03
+2024-06-07 16:50:06,444|    INFO| STEP 20500 - EPOCH 2562/8000 | total loss: 3.384E-03 | rgb loss: 3.384E-03
+2024-06-07 16:50:20,590|    INFO| STEP 20600 - EPOCH 2575/8000 | total loss: 3.618E-03 | rgb loss: 3.618E-03
+2024-06-07 16:50:32,470|    INFO| STEP 20700 - EPOCH 2587/8000 | total loss: 3.588E-03 | rgb loss: 3.588E-03
+2024-06-07 16:50:46,926|    INFO| STEP 20800 - EPOCH 2600/8000 | total loss: 3.638E-03 | rgb loss: 3.638E-03
+2024-06-07 16:51:01,957|    INFO| STEP 20900 - EPOCH 2612/8000 | total loss: 3.722E-03 | rgb loss: 3.722E-03
+2024-06-07 16:51:15,158|    INFO| STEP 21000 - EPOCH 2625/8000 | total loss: 3.451E-03 | rgb loss: 3.451E-03
+2024-06-07 16:51:26,490|    INFO| STEP 21100 - EPOCH 2637/8000 | total loss: 3.685E-03 | rgb loss: 3.685E-03
+2024-06-07 16:51:40,299|    INFO| STEP 21200 - EPOCH 2650/8000 | total loss: 3.953E-03 | rgb loss: 3.953E-03
+2024-06-07 16:51:54,448|    INFO| STEP 21300 - EPOCH 2662/8000 | total loss: 3.586E-03 | rgb loss: 3.586E-03
+2024-06-07 16:52:08,042|    INFO| STEP 21400 - EPOCH 2675/8000 | total loss: 3.374E-03 | rgb loss: 3.374E-03
+2024-06-07 16:52:20,065|    INFO| STEP 21500 - EPOCH 2687/8000 | total loss: 3.739E-03 | rgb loss: 3.739E-03
+2024-06-07 16:52:34,556|    INFO| STEP 21600 - EPOCH 2700/8000 | total loss: 3.317E-03 | rgb loss: 3.317E-03
+2024-06-07 16:52:47,688|    INFO| STEP 21700 - EPOCH 2712/8000 | total loss: 3.621E-03 | rgb loss: 3.621E-03
+2024-06-07 16:52:58,755|    INFO| STEP 21800 - EPOCH 2725/8000 | total loss: 3.433E-03 | rgb loss: 3.433E-03
+2024-06-07 16:53:09,703|    INFO| STEP 21900 - EPOCH 2737/8000 | total loss: 3.735E-03 | rgb loss: 3.735E-03
+2024-06-07 16:53:21,106|    INFO| STEP 22000 - EPOCH 2750/8000 | total loss: 3.470E-03 | rgb loss: 3.470E-03
+2024-06-07 16:53:34,447|    INFO| STEP 22100 - EPOCH 2762/8000 | total loss: 3.592E-03 | rgb loss: 3.592E-03
+2024-06-07 16:53:47,270|    INFO| STEP 22200 - EPOCH 2775/8000 | total loss: 3.280E-03 | rgb loss: 3.280E-03
+2024-06-07 16:54:00,195|    INFO| STEP 22300 - EPOCH 2787/8000 | total loss: 3.409E-03 | rgb loss: 3.409E-03
+2024-06-07 16:54:13,237|    INFO| STEP 22400 - EPOCH 2800/8000 | total loss: 3.438E-03 | rgb loss: 3.438E-03
+2024-06-07 16:54:25,713|    INFO| STEP 22500 - EPOCH 2812/8000 | total loss: 3.298E-03 | rgb loss: 3.298E-03
+2024-06-07 16:54:37,941|    INFO| STEP 22600 - EPOCH 2825/8000 | total loss: 3.294E-03 | rgb loss: 3.294E-03
+2024-06-07 16:54:49,573|    INFO| STEP 22700 - EPOCH 2837/8000 | total loss: 3.369E-03 | rgb loss: 3.369E-03
+2024-06-07 16:55:01,888|    INFO| STEP 22800 - EPOCH 2850/8000 | total loss: 3.390E-03 | rgb loss: 3.390E-03
+2024-06-07 16:55:13,621|    INFO| STEP 22900 - EPOCH 2862/8000 | total loss: 3.870E-03 | rgb loss: 3.870E-03
+2024-06-07 16:55:26,505|    INFO| STEP 23000 - EPOCH 2875/8000 | total loss: 3.414E-03 | rgb loss: 3.414E-03
+2024-06-07 16:55:39,728|    INFO| STEP 23100 - EPOCH 2887/8000 | total loss: 3.488E-03 | rgb loss: 3.488E-03
+2024-06-07 16:55:50,825|    INFO| STEP 23200 - EPOCH 2900/8000 | total loss: 3.712E-03 | rgb loss: 3.712E-03
+2024-06-07 16:56:02,242|    INFO| STEP 23300 - EPOCH 2912/8000 | total loss: 3.594E-03 | rgb loss: 3.594E-03
+2024-06-07 16:56:14,430|    INFO| STEP 23400 - EPOCH 2925/8000 | total loss: 3.539E-03 | rgb loss: 3.539E-03
+2024-06-07 16:56:27,305|    INFO| STEP 23500 - EPOCH 2937/8000 | total loss: 3.496E-03 | rgb loss: 3.496E-03
+2024-06-07 16:56:40,458|    INFO| STEP 23600 - EPOCH 2950/8000 | total loss: 3.530E-03 | rgb loss: 3.530E-03
+2024-06-07 16:56:52,851|    INFO| STEP 23700 - EPOCH 2962/8000 | total loss: 3.571E-03 | rgb loss: 3.571E-03
+2024-06-07 16:57:05,340|    INFO| STEP 23800 - EPOCH 2975/8000 | total loss: 3.668E-03 | rgb loss: 3.668E-03
+2024-06-07 16:57:19,079|    INFO| STEP 23900 - EPOCH 2987/8000 | total loss: 3.277E-03 | rgb loss: 3.277E-03
+2024-06-07 16:57:31,958|    INFO| STEP 24000 - EPOCH 3000/8000 | total loss: 3.361E-03 | rgb loss: 3.361E-03
+2024-06-07 16:57:32,603|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240607-160614/model-3000.pth
+2024-06-07 16:57:32,659|    INFO| Beginning validation...
+2024-06-07 16:57:32,659|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 16:57:32,659|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+ 40%|█████████████████████████████████████████████▌                                                                    | 2/5 [00:00<00:01,  2.14it/s]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.12it/s]
+2024-06-07 16:57:49,985|    INFO| STEP 24100 - EPOCH 3012/8000 | total loss: 3.365E-03 | rgb loss: 3.365E-03
+2024-06-07 16:58:04,282|    INFO| STEP 24200 - EPOCH 3025/8000 | total loss: 3.384E-03 | rgb loss: 3.384E-03
+2024-06-07 16:58:17,622|    INFO| STEP 24300 - EPOCH 3037/8000 | total loss: 3.238E-03 | rgb loss: 3.238E-03
+2024-06-07 16:58:31,129|    INFO| STEP 24400 - EPOCH 3050/8000 | total loss: 3.253E-03 | rgb loss: 3.253E-03
+2024-06-07 16:58:44,514|    INFO| STEP 24500 - EPOCH 3062/8000 | total loss: 3.244E-03 | rgb loss: 3.244E-03
+2024-06-07 16:58:58,801|    INFO| STEP 24600 - EPOCH 3075/8000 | total loss: 3.176E-03 | rgb loss: 3.176E-03
+2024-06-07 16:59:13,301|    INFO| STEP 24700 - EPOCH 3087/8000 | total loss: 3.179E-03 | rgb loss: 3.179E-03
+2024-06-07 16:59:25,151|    INFO| STEP 24800 - EPOCH 3100/8000 | total loss: 3.336E-03 | rgb loss: 3.336E-03
+2024-06-07 16:59:37,059|    INFO| STEP 24900 - EPOCH 3112/8000 | total loss: 3.476E-03 | rgb loss: 3.476E-03
+2024-06-07 16:59:50,369|    INFO| STEP 25000 - EPOCH 3125/8000 | total loss: 3.493E-03 | rgb loss: 3.493E-03
+2024-06-07 17:00:03,689|    INFO| STEP 25100 - EPOCH 3137/8000 | total loss: 3.078E-03 | rgb loss: 3.078E-03
+2024-06-07 17:00:15,174|    INFO| STEP 25200 - EPOCH 3150/8000 | total loss: 3.336E-03 | rgb loss: 3.336E-03
+2024-06-07 17:00:25,966|    INFO| STEP 25300 - EPOCH 3162/8000 | total loss: 3.204E-03 | rgb loss: 3.204E-03
+2024-06-07 17:00:37,618|    INFO| STEP 25400 - EPOCH 3175/8000 | total loss: 3.171E-03 | rgb loss: 3.171E-03
+2024-06-07 17:00:50,109|    INFO| STEP 25500 - EPOCH 3187/8000 | total loss: 3.110E-03 | rgb loss: 3.110E-03
+2024-06-07 17:01:03,238|    INFO| STEP 25600 - EPOCH 3200/8000 | total loss: 2.944E-03 | rgb loss: 2.944E-03
+2024-06-07 17:01:15,338|    INFO| STEP 25700 - EPOCH 3212/8000 | total loss: 3.340E-03 | rgb loss: 3.340E-03
+2024-06-07 17:01:27,649|    INFO| STEP 25800 - EPOCH 3225/8000 | total loss: 3.199E-03 | rgb loss: 3.199E-03
+2024-06-07 17:01:39,765|    INFO| STEP 25900 - EPOCH 3237/8000 | total loss: 3.423E-03 | rgb loss: 3.423E-03
+2024-06-07 17:01:52,522|    INFO| STEP 26000 - EPOCH 3250/8000 | total loss: 3.000E-03 | rgb loss: 3.000E-03
+2024-06-07 17:02:05,698|    INFO| STEP 26100 - EPOCH 3262/8000 | total loss: 3.073E-03 | rgb loss: 3.073E-03
+2024-06-07 17:02:18,504|    INFO| STEP 26200 - EPOCH 3275/8000 | total loss: 3.245E-03 | rgb loss: 3.245E-03
+2024-06-07 17:02:31,385|    INFO| STEP 26300 - EPOCH 3287/8000 | total loss: 3.263E-03 | rgb loss: 3.263E-03
+2024-06-07 17:02:44,576|    INFO| STEP 26400 - EPOCH 3300/8000 | total loss: 3.223E-03 | rgb loss: 3.223E-03
+2024-06-07 17:02:57,288|    INFO| STEP 26500 - EPOCH 3312/8000 | total loss: 3.244E-03 | rgb loss: 3.244E-03
+2024-06-07 17:03:10,314|    INFO| STEP 26600 - EPOCH 3325/8000 | total loss: 3.044E-03 | rgb loss: 3.044E-03
+2024-06-07 17:03:22,757|    INFO| STEP 26700 - EPOCH 3337/8000 | total loss: 3.171E-03 | rgb loss: 3.171E-03
+2024-06-07 17:03:35,332|    INFO| STEP 26800 - EPOCH 3350/8000 | total loss: 3.284E-03 | rgb loss: 3.284E-03
+2024-06-07 17:03:47,840|    INFO| STEP 26900 - EPOCH 3362/8000 | total loss: 3.217E-03 | rgb loss: 3.217E-03
+2024-06-07 17:04:00,403|    INFO| STEP 27000 - EPOCH 3375/8000 | total loss: 3.288E-03 | rgb loss: 3.288E-03
+2024-06-07 17:04:13,840|    INFO| STEP 27100 - EPOCH 3387/8000 | total loss: 3.133E-03 | rgb loss: 3.133E-03
+2024-06-07 17:04:26,489|    INFO| STEP 27200 - EPOCH 3400/8000 | total loss: 3.319E-03 | rgb loss: 3.319E-03
+2024-06-07 17:04:39,419|    INFO| STEP 27300 - EPOCH 3412/8000 | total loss: 3.350E-03 | rgb loss: 3.350E-03
+2024-06-07 17:04:52,388|    INFO| STEP 27400 - EPOCH 3425/8000 | total loss: 3.064E-03 | rgb loss: 3.064E-03
+2024-06-07 17:05:04,198|    INFO| STEP 27500 - EPOCH 3437/8000 | total loss: 3.319E-03 | rgb loss: 3.319E-03
+2024-06-07 17:05:16,433|    INFO| STEP 27600 - EPOCH 3450/8000 | total loss: 3.125E-03 | rgb loss: 3.125E-03
+2024-06-07 17:05:28,269|    INFO| STEP 27700 - EPOCH 3462/8000 | total loss: 3.077E-03 | rgb loss: 3.077E-03
+2024-06-07 17:05:40,385|    INFO| STEP 27800 - EPOCH 3475/8000 | total loss: 3.339E-03 | rgb loss: 3.339E-03
+2024-06-07 17:05:54,027|    INFO| STEP 27900 - EPOCH 3487/8000 | total loss: 3.159E-03 | rgb loss: 3.159E-03
+2024-06-07 17:06:07,317|    INFO| STEP 28000 - EPOCH 3500/8000 | total loss: 2.949E-03 | rgb loss: 2.949E-03
+2024-06-07 17:06:08,237|    INFO| Beginning validation...
+2024-06-07 17:06:08,238|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 17:06:08,238|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+
+ 80%|███████████████████████████████████████████████████████████████████████████████████████████▏                      | 4/5 [00:01<00:00,  2.23it/s]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.08it/s]
+2024-06-07 17:06:25,408|    INFO| STEP 28100 - EPOCH 3512/8000 | total loss: 3.147E-03 | rgb loss: 3.147E-03
+2024-06-07 17:06:38,372|    INFO| STEP 28200 - EPOCH 3525/8000 | total loss: 3.390E-03 | rgb loss: 3.390E-03
+2024-06-07 17:06:52,606|    INFO| STEP 28300 - EPOCH 3537/8000 | total loss: 3.000E-03 | rgb loss: 3.000E-03
+2024-06-07 17:07:05,136|    INFO| STEP 28400 - EPOCH 3550/8000 | total loss: 2.796E-03 | rgb loss: 2.796E-03
+2024-06-07 17:07:17,710|    INFO| STEP 28500 - EPOCH 3562/8000 | total loss: 3.033E-03 | rgb loss: 3.033E-03
+2024-06-07 17:07:31,917|    INFO| STEP 28600 - EPOCH 3575/8000 | total loss: 3.027E-03 | rgb loss: 3.027E-03
+2024-06-07 17:07:43,761|    INFO| STEP 28700 - EPOCH 3587/8000 | total loss: 3.166E-03 | rgb loss: 3.166E-03
+2024-06-07 17:07:58,242|    INFO| STEP 28800 - EPOCH 3600/8000 | total loss: 3.006E-03 | rgb loss: 3.006E-03
+2024-06-07 17:08:10,289|    INFO| STEP 28900 - EPOCH 3612/8000 | total loss: 3.294E-03 | rgb loss: 3.294E-03
+2024-06-07 17:08:25,016|    INFO| STEP 29000 - EPOCH 3625/8000 | total loss: 2.986E-03 | rgb loss: 2.986E-03
+2024-06-07 17:08:37,002|    INFO| STEP 29100 - EPOCH 3637/8000 | total loss: 3.067E-03 | rgb loss: 3.067E-03
+2024-06-07 17:08:51,147|    INFO| STEP 29200 - EPOCH 3650/8000 | total loss: 3.168E-03 | rgb loss: 3.168E-03
+2024-06-07 17:09:04,391|    INFO| STEP 29300 - EPOCH 3662/8000 | total loss: 3.152E-03 | rgb loss: 3.152E-03
+2024-06-07 17:09:17,109|    INFO| STEP 29400 - EPOCH 3675/8000 | total loss: 2.966E-03 | rgb loss: 2.966E-03
+2024-06-07 17:09:31,207|    INFO| STEP 29500 - EPOCH 3687/8000 | total loss: 2.806E-03 | rgb loss: 2.806E-03
+2024-06-07 17:09:43,250|    INFO| STEP 29600 - EPOCH 3700/8000 | total loss: 3.182E-03 | rgb loss: 3.182E-03
+2024-06-07 17:09:57,606|    INFO| STEP 29700 - EPOCH 3712/8000 | total loss: 2.995E-03 | rgb loss: 2.995E-03
+2024-06-07 17:10:10,983|    INFO| STEP 29800 - EPOCH 3725/8000 | total loss: 2.994E-03 | rgb loss: 2.994E-03
+2024-06-07 17:10:24,263|    INFO| STEP 29900 - EPOCH 3737/8000 | total loss: 3.187E-03 | rgb loss: 3.187E-03
+2024-06-07 17:10:37,239|    INFO| STEP 30000 - EPOCH 3750/8000 | total loss: 3.017E-03 | rgb loss: 3.017E-03
+2024-06-07 17:10:49,763|    INFO| STEP 30100 - EPOCH 3762/8000 | total loss: 3.036E-03 | rgb loss: 3.036E-03
+2024-06-07 17:11:04,543|    INFO| STEP 30200 - EPOCH 3775/8000 | total loss: 2.985E-03 | rgb loss: 2.985E-03
+2024-06-07 17:11:16,786|    INFO| STEP 30300 - EPOCH 3787/8000 | total loss: 3.173E-03 | rgb loss: 3.173E-03
+2024-06-07 17:11:31,516|    INFO| STEP 30400 - EPOCH 3800/8000 | total loss: 3.100E-03 | rgb loss: 3.100E-03
+2024-06-07 17:11:44,048|    INFO| STEP 30500 - EPOCH 3812/8000 | total loss: 2.827E-03 | rgb loss: 2.827E-03
+2024-06-07 17:11:57,242|    INFO| STEP 30600 - EPOCH 3825/8000 | total loss: 3.021E-03 | rgb loss: 3.021E-03
+2024-06-07 17:12:11,261|    INFO| STEP 30700 - EPOCH 3837/8000 | total loss: 3.111E-03 | rgb loss: 3.111E-03
+2024-06-07 17:12:23,480|    INFO| STEP 30800 - EPOCH 3850/8000 | total loss: 3.172E-03 | rgb loss: 3.172E-03
+2024-06-07 17:12:37,628|    INFO| STEP 30900 - EPOCH 3862/8000 | total loss: 2.819E-03 | rgb loss: 2.819E-03
+2024-06-07 17:12:50,287|    INFO| STEP 31000 - EPOCH 3875/8000 | total loss: 2.953E-03 | rgb loss: 2.953E-03
+2024-06-07 17:13:03,021|    INFO| STEP 31100 - EPOCH 3887/8000 | total loss: 2.984E-03 | rgb loss: 2.984E-03
+2024-06-07 17:13:14,133|    INFO| STEP 31200 - EPOCH 3900/8000 | total loss: 2.820E-03 | rgb loss: 2.820E-03
+2024-06-07 17:13:25,370|    INFO| STEP 31300 - EPOCH 3912/8000 | total loss: 2.983E-03 | rgb loss: 2.983E-03
+2024-06-07 17:13:37,606|    INFO| STEP 31400 - EPOCH 3925/8000 | total loss: 3.210E-03 | rgb loss: 3.210E-03
+2024-06-07 17:13:49,337|    INFO| STEP 31500 - EPOCH 3937/8000 | total loss: 2.868E-03 | rgb loss: 2.868E-03
+2024-06-07 17:14:02,688|    INFO| STEP 31600 - EPOCH 3950/8000 | total loss: 3.107E-03 | rgb loss: 3.107E-03
+2024-06-07 17:14:16,136|    INFO| STEP 31700 - EPOCH 3962/8000 | total loss: 2.833E-03 | rgb loss: 2.833E-03
+2024-06-07 17:14:29,800|    INFO| STEP 31800 - EPOCH 3975/8000 | total loss: 2.971E-03 | rgb loss: 2.971E-03
+2024-06-07 17:14:42,954|    INFO| STEP 31900 - EPOCH 3987/8000 | total loss: 2.862E-03 | rgb loss: 2.862E-03
+2024-06-07 17:14:55,932|    INFO| STEP 32000 - EPOCH 4000/8000 | total loss: 2.928E-03 | rgb loss: 2.928E-03
+2024-06-07 17:14:56,676|    INFO| Beginning validation...
+2024-06-07 17:14:56,676|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 17:14:56,676|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+
+ 80%|███████████████████████████████████████████████████████████████████████████████████████████▏                      | 4/5 [00:01<00:00,  2.25it/s]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.14it/s]
+2024-06-07 17:15:14,637|    INFO| STEP 32100 - EPOCH 4012/8000 | total loss: 2.815E-03 | rgb loss: 2.815E-03
+2024-06-07 17:15:29,415|    INFO| STEP 32200 - EPOCH 4025/8000 | total loss: 2.808E-03 | rgb loss: 2.808E-03
+2024-06-07 17:15:42,976|    INFO| STEP 32300 - EPOCH 4037/8000 | total loss: 3.193E-03 | rgb loss: 3.193E-03
+2024-06-07 17:15:56,557|    INFO| STEP 32400 - EPOCH 4050/8000 | total loss: 2.788E-03 | rgb loss: 2.788E-03
+2024-06-07 17:16:10,224|    INFO| STEP 32500 - EPOCH 4062/8000 | total loss: 3.010E-03 | rgb loss: 3.010E-03
+2024-06-07 17:16:24,699|    INFO| STEP 32600 - EPOCH 4075/8000 | total loss: 3.082E-03 | rgb loss: 3.082E-03
+2024-06-07 17:16:38,658|    INFO| STEP 32700 - EPOCH 4087/8000 | total loss: 3.049E-03 | rgb loss: 3.049E-03
+2024-06-07 17:16:52,894|    INFO| STEP 32800 - EPOCH 4100/8000 | total loss: 2.799E-03 | rgb loss: 2.799E-03
+2024-06-07 17:17:06,974|    INFO| STEP 32900 - EPOCH 4112/8000 | total loss: 2.737E-03 | rgb loss: 2.737E-03
+2024-06-07 17:17:21,788|    INFO| STEP 33000 - EPOCH 4125/8000 | total loss: 2.797E-03 | rgb loss: 2.797E-03
+2024-06-07 17:17:32,898|    INFO| STEP 33100 - EPOCH 4137/8000 | total loss: 3.066E-03 | rgb loss: 3.066E-03
+2024-06-07 17:17:45,623|    INFO| STEP 33200 - EPOCH 4150/8000 | total loss: 2.793E-03 | rgb loss: 2.793E-03
+2024-06-07 17:17:59,541|    INFO| STEP 33300 - EPOCH 4162/8000 | total loss: 2.688E-03 | rgb loss: 2.688E-03
+2024-06-07 17:18:13,992|    INFO| STEP 33400 - EPOCH 4175/8000 | total loss: 2.923E-03 | rgb loss: 2.923E-03
+2024-06-07 17:18:26,935|    INFO| STEP 33500 - EPOCH 4187/8000 | total loss: 2.772E-03 | rgb loss: 2.772E-03
+2024-06-07 17:18:38,284|    INFO| STEP 33600 - EPOCH 4200/8000 | total loss: 2.997E-03 | rgb loss: 2.997E-03
+2024-06-07 17:18:51,044|    INFO| STEP 33700 - EPOCH 4212/8000 | total loss: 2.927E-03 | rgb loss: 2.927E-03
+2024-06-07 17:19:04,003|    INFO| STEP 33800 - EPOCH 4225/8000 | total loss: 2.741E-03 | rgb loss: 2.741E-03
+2024-06-07 17:19:17,680|    INFO| STEP 33900 - EPOCH 4237/8000 | total loss: 2.765E-03 | rgb loss: 2.765E-03
+2024-06-07 17:19:30,469|    INFO| STEP 34000 - EPOCH 4250/8000 | total loss: 2.912E-03 | rgb loss: 2.912E-03
+2024-06-07 17:19:43,483|    INFO| STEP 34100 - EPOCH 4262/8000 | total loss: 2.594E-03 | rgb loss: 2.594E-03
+2024-06-07 17:19:56,833|    INFO| STEP 34200 - EPOCH 4275/8000 | total loss: 2.751E-03 | rgb loss: 2.751E-03
+2024-06-07 17:20:09,269|    INFO| STEP 34300 - EPOCH 4287/8000 | total loss: 2.791E-03 | rgb loss: 2.791E-03
+2024-06-07 17:20:22,639|    INFO| STEP 34400 - EPOCH 4300/8000 | total loss: 2.869E-03 | rgb loss: 2.869E-03
+2024-06-07 17:20:35,827|    INFO| STEP 34500 - EPOCH 4312/8000 | total loss: 2.622E-03 | rgb loss: 2.622E-03
+2024-06-07 17:20:49,140|    INFO| STEP 34600 - EPOCH 4325/8000 | total loss: 2.831E-03 | rgb loss: 2.831E-03
+2024-06-07 17:21:02,186|    INFO| STEP 34700 - EPOCH 4337/8000 | total loss: 2.960E-03 | rgb loss: 2.960E-03
+2024-06-07 17:21:15,560|    INFO| STEP 34800 - EPOCH 4350/8000 | total loss: 2.979E-03 | rgb loss: 2.979E-03
+2024-06-07 17:21:28,202|    INFO| STEP 34900 - EPOCH 4362/8000 | total loss: 2.788E-03 | rgb loss: 2.788E-03
+2024-06-07 17:21:41,640|    INFO| STEP 35000 - EPOCH 4375/8000 | total loss: 2.802E-03 | rgb loss: 2.802E-03
+2024-06-07 17:21:54,481|    INFO| STEP 35100 - EPOCH 4387/8000 | total loss: 2.663E-03 | rgb loss: 2.663E-03
+2024-06-07 17:22:05,518|    INFO| STEP 35200 - EPOCH 4400/8000 | total loss: 2.828E-03 | rgb loss: 2.828E-03
+2024-06-07 17:22:16,285|    INFO| STEP 35300 - EPOCH 4412/8000 | total loss: 2.861E-03 | rgb loss: 2.861E-03
+2024-06-07 17:22:27,428|    INFO| STEP 35400 - EPOCH 4425/8000 | total loss: 2.930E-03 | rgb loss: 2.930E-03
+2024-06-07 17:22:38,603|    INFO| STEP 35500 - EPOCH 4437/8000 | total loss: 2.709E-03 | rgb loss: 2.709E-03
+2024-06-07 17:22:51,230|    INFO| STEP 35600 - EPOCH 4450/8000 | total loss: 2.835E-03 | rgb loss: 2.835E-03
+2024-06-07 17:23:03,631|    INFO| STEP 35700 - EPOCH 4462/8000 | total loss: 2.923E-03 | rgb loss: 2.923E-03
+2024-06-07 17:23:14,734|    INFO| STEP 35800 - EPOCH 4475/8000 | total loss: 2.748E-03 | rgb loss: 2.748E-03
+2024-06-07 17:23:27,502|    INFO| STEP 35900 - EPOCH 4487/8000 | total loss: 2.626E-03 | rgb loss: 2.626E-03
+2024-06-07 17:23:41,418|    INFO| STEP 36000 - EPOCH 4500/8000 | total loss: 2.864E-03 | rgb loss: 2.864E-03
+2024-06-07 17:23:42,149|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240607-160614/model-4500.pth
+2024-06-07 17:23:42,204|    INFO| Beginning validation...
+2024-06-07 17:23:42,204|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 17:23:42,205|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+ 40%|█████████████████████████████████████████████▌                                                                    | 2/5 [00:00<00:01,  2.18it/s]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.14it/s]
+2024-06-07 17:23:59,584|    INFO| STEP 36100 - EPOCH 4512/8000 | total loss: 2.874E-03 | rgb loss: 2.874E-03
+2024-06-07 17:24:11,097|    INFO| STEP 36200 - EPOCH 4525/8000 | total loss: 2.808E-03 | rgb loss: 2.808E-03
+2024-06-07 17:24:23,900|    INFO| STEP 36300 - EPOCH 4537/8000 | total loss: 2.881E-03 | rgb loss: 2.881E-03
+2024-06-07 17:24:37,854|    INFO| STEP 36400 - EPOCH 4550/8000 | total loss: 2.681E-03 | rgb loss: 2.681E-03
+2024-06-07 17:24:51,832|    INFO| STEP 36500 - EPOCH 4562/8000 | total loss: 3.079E-03 | rgb loss: 3.079E-03
+2024-06-07 17:25:06,246|    INFO| STEP 36600 - EPOCH 4575/8000 | total loss: 2.781E-03 | rgb loss: 2.781E-03
+2024-06-07 17:25:19,943|    INFO| STEP 36700 - EPOCH 4587/8000 | total loss: 2.750E-03 | rgb loss: 2.750E-03
+2024-06-07 17:25:33,742|    INFO| STEP 36800 - EPOCH 4600/8000 | total loss: 3.111E-03 | rgb loss: 3.111E-03
+2024-06-07 17:25:47,868|    INFO| STEP 36900 - EPOCH 4612/8000 | total loss: 2.749E-03 | rgb loss: 2.749E-03
+2024-06-07 17:26:01,957|    INFO| STEP 37000 - EPOCH 4625/8000 | total loss: 2.879E-03 | rgb loss: 2.879E-03
+2024-06-07 17:26:14,312|    INFO| STEP 37100 - EPOCH 4637/8000 | total loss: 2.849E-03 | rgb loss: 2.849E-03
+2024-06-07 17:26:27,165|    INFO| STEP 37200 - EPOCH 4650/8000 | total loss: 2.729E-03 | rgb loss: 2.729E-03
+2024-06-07 17:26:39,496|    INFO| STEP 37300 - EPOCH 4662/8000 | total loss: 2.902E-03 | rgb loss: 2.902E-03
+2024-06-07 17:26:52,899|    INFO| STEP 37400 - EPOCH 4675/8000 | total loss: 2.821E-03 | rgb loss: 2.821E-03
+2024-06-07 17:27:05,420|    INFO| STEP 37500 - EPOCH 4687/8000 | total loss: 2.533E-03 | rgb loss: 2.533E-03
+2024-06-07 17:27:17,198|    INFO| STEP 37600 - EPOCH 4700/8000 | total loss: 2.635E-03 | rgb loss: 2.635E-03
+2024-06-07 17:27:28,060|    INFO| STEP 37700 - EPOCH 4712/8000 | total loss: 2.911E-03 | rgb loss: 2.911E-03
+2024-06-07 17:27:40,114|    INFO| STEP 37800 - EPOCH 4725/8000 | total loss: 2.876E-03 | rgb loss: 2.876E-03
+2024-06-07 17:27:51,879|    INFO| STEP 37900 - EPOCH 4737/8000 | total loss: 2.782E-03 | rgb loss: 2.782E-03
+2024-06-07 17:28:04,758|    INFO| STEP 38000 - EPOCH 4750/8000 | total loss: 2.792E-03 | rgb loss: 2.792E-03
+2024-06-07 17:28:18,009|    INFO| STEP 38100 - EPOCH 4762/8000 | total loss: 2.709E-03 | rgb loss: 2.709E-03
+2024-06-07 17:28:29,024|    INFO| STEP 38200 - EPOCH 4775/8000 | total loss: 2.671E-03 | rgb loss: 2.671E-03
+2024-06-07 17:28:39,804|    INFO| STEP 38300 - EPOCH 4787/8000 | total loss: 2.452E-03 | rgb loss: 2.452E-03
+2024-06-07 17:28:50,891|    INFO| STEP 38400 - EPOCH 4800/8000 | total loss: 2.751E-03 | rgb loss: 2.751E-03
+2024-06-07 17:29:02,008|    INFO| STEP 38500 - EPOCH 4812/8000 | total loss: 2.682E-03 | rgb loss: 2.682E-03
+2024-06-07 17:29:14,497|    INFO| STEP 38600 - EPOCH 4825/8000 | total loss: 2.878E-03 | rgb loss: 2.878E-03
+2024-06-07 17:29:26,768|    INFO| STEP 38700 - EPOCH 4837/8000 | total loss: 2.808E-03 | rgb loss: 2.808E-03
+2024-06-07 17:29:39,028|    INFO| STEP 38800 - EPOCH 4850/8000 | total loss: 2.710E-03 | rgb loss: 2.710E-03
+2024-06-07 17:29:51,182|    INFO| STEP 38900 - EPOCH 4862/8000 | total loss: 2.576E-03 | rgb loss: 2.576E-03
+2024-06-07 17:30:04,843|    INFO| STEP 39000 - EPOCH 4875/8000 | total loss: 2.848E-03 | rgb loss: 2.848E-03
+2024-06-07 17:30:18,697|    INFO| STEP 39100 - EPOCH 4887/8000 | total loss: 2.642E-03 | rgb loss: 2.642E-03
+2024-06-07 17:30:30,657|    INFO| STEP 39200 - EPOCH 4900/8000 | total loss: 2.775E-03 | rgb loss: 2.775E-03
+2024-06-07 17:30:41,678|    INFO| STEP 39300 - EPOCH 4912/8000 | total loss: 2.620E-03 | rgb loss: 2.620E-03
+2024-06-07 17:30:52,774|    INFO| STEP 39400 - EPOCH 4925/8000 | total loss: 2.490E-03 | rgb loss: 2.490E-03
+2024-06-07 17:31:04,492|    INFO| STEP 39500 - EPOCH 4937/8000 | total loss: 2.767E-03 | rgb loss: 2.767E-03
+2024-06-07 17:31:16,851|    INFO| STEP 39600 - EPOCH 4950/8000 | total loss: 2.581E-03 | rgb loss: 2.581E-03
+2024-06-07 17:31:30,996|    INFO| STEP 39700 - EPOCH 4962/8000 | total loss: 2.741E-03 | rgb loss: 2.741E-03
+2024-06-07 17:31:44,553|    INFO| STEP 39800 - EPOCH 4975/8000 | total loss: 2.805E-03 | rgb loss: 2.805E-03
+2024-06-07 17:31:58,306|    INFO| STEP 39900 - EPOCH 4987/8000 | total loss: 2.459E-03 | rgb loss: 2.459E-03
+2024-06-07 17:32:11,999|    INFO| STEP 40000 - EPOCH 5000/8000 | total loss: 2.790E-03 | rgb loss: 2.790E-03
+2024-06-07 17:32:12,766|    INFO| Beginning validation...
+2024-06-07 17:32:12,766|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 17:32:12,766|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+ 40%|█████████████████████████████████████████████▌                                                                    | 2/5 [00:00<00:01,  2.16it/s]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.12it/s]
+2024-06-07 17:32:30,416|    INFO| STEP 40100 - EPOCH 5012/8000 | total loss: 2.757E-03 | rgb loss: 2.757E-03
+2024-06-07 17:32:42,877|    INFO| STEP 40200 - EPOCH 5025/8000 | total loss: 2.604E-03 | rgb loss: 2.604E-03
+2024-06-07 17:32:54,004|    INFO| STEP 40300 - EPOCH 5037/8000 | total loss: 2.728E-03 | rgb loss: 2.728E-03
+2024-06-07 17:33:05,737|    INFO| STEP 40400 - EPOCH 5050/8000 | total loss: 2.747E-03 | rgb loss: 2.747E-03
+2024-06-07 17:33:17,564|    INFO| STEP 40500 - EPOCH 5062/8000 | total loss: 2.594E-03 | rgb loss: 2.594E-03
+2024-06-07 17:33:29,452|    INFO| STEP 40600 - EPOCH 5075/8000 | total loss: 2.502E-03 | rgb loss: 2.502E-03
+2024-06-07 17:33:41,174|    INFO| STEP 40700 - EPOCH 5087/8000 | total loss: 2.684E-03 | rgb loss: 2.684E-03
+2024-06-07 17:33:54,577|    INFO| STEP 40800 - EPOCH 5100/8000 | total loss: 2.696E-03 | rgb loss: 2.696E-03
+2024-06-07 17:34:06,884|    INFO| STEP 40900 - EPOCH 5112/8000 | total loss: 2.455E-03 | rgb loss: 2.455E-03
+2024-06-07 17:34:20,024|    INFO| STEP 41000 - EPOCH 5125/8000 | total loss: 2.650E-03 | rgb loss: 2.650E-03
+2024-06-07 17:34:33,179|    INFO| STEP 41100 - EPOCH 5137/8000 | total loss: 2.727E-03 | rgb loss: 2.727E-03
+2024-06-07 17:34:44,928|    INFO| STEP 41200 - EPOCH 5150/8000 | total loss: 2.498E-03 | rgb loss: 2.498E-03
+2024-06-07 17:34:55,689|    INFO| STEP 41300 - EPOCH 5162/8000 | total loss: 2.543E-03 | rgb loss: 2.543E-03
+2024-06-07 17:35:07,548|    INFO| STEP 41400 - EPOCH 5175/8000 | total loss: 2.496E-03 | rgb loss: 2.496E-03
+2024-06-07 17:35:19,254|    INFO| STEP 41500 - EPOCH 5187/8000 | total loss: 2.735E-03 | rgb loss: 2.735E-03
+2024-06-07 17:35:32,443|    INFO| STEP 41600 - EPOCH 5200/8000 | total loss: 2.596E-03 | rgb loss: 2.596E-03
+2024-06-07 17:35:45,458|    INFO| STEP 41700 - EPOCH 5212/8000 | total loss: 2.603E-03 | rgb loss: 2.603E-03
+2024-06-07 17:35:58,570|    INFO| STEP 41800 - EPOCH 5225/8000 | total loss: 2.954E-03 | rgb loss: 2.954E-03
+2024-06-07 17:36:10,857|    INFO| STEP 41900 - EPOCH 5237/8000 | total loss: 2.390E-03 | rgb loss: 2.390E-03
+2024-06-07 17:36:23,580|    INFO| STEP 42000 - EPOCH 5250/8000 | total loss: 2.458E-03 | rgb loss: 2.458E-03
+2024-06-07 17:36:37,503|    INFO| STEP 42100 - EPOCH 5262/8000 | total loss: 2.451E-03 | rgb loss: 2.451E-03
+2024-06-07 17:36:49,337|    INFO| STEP 42200 - EPOCH 5275/8000 | total loss: 2.574E-03 | rgb loss: 2.574E-03
+2024-06-07 17:37:00,188|    INFO| STEP 42300 - EPOCH 5287/8000 | total loss: 2.560E-03 | rgb loss: 2.560E-03
+2024-06-07 17:37:12,293|    INFO| STEP 42400 - EPOCH 5300/8000 | total loss: 2.726E-03 | rgb loss: 2.726E-03
+2024-06-07 17:37:24,901|    INFO| STEP 42500 - EPOCH 5312/8000 | total loss: 2.439E-03 | rgb loss: 2.439E-03
+2024-06-07 17:37:37,835|    INFO| STEP 42600 - EPOCH 5325/8000 | total loss: 2.761E-03 | rgb loss: 2.761E-03
+2024-06-07 17:37:49,895|    INFO| STEP 42700 - EPOCH 5337/8000 | total loss: 2.496E-03 | rgb loss: 2.496E-03
+2024-06-07 17:38:02,406|    INFO| STEP 42800 - EPOCH 5350/8000 | total loss: 2.489E-03 | rgb loss: 2.489E-03
+2024-06-07 17:38:14,893|    INFO| STEP 42900 - EPOCH 5362/8000 | total loss: 3.077E-03 | rgb loss: 3.077E-03
+2024-06-07 17:38:28,789|    INFO| STEP 43000 - EPOCH 5375/8000 | total loss: 2.672E-03 | rgb loss: 2.672E-03
+2024-06-07 17:38:42,087|    INFO| STEP 43100 - EPOCH 5387/8000 | total loss: 2.441E-03 | rgb loss: 2.441E-03
+2024-06-07 17:38:53,988|    INFO| STEP 43200 - EPOCH 5400/8000 | total loss: 2.398E-03 | rgb loss: 2.398E-03
+2024-06-07 17:39:06,137|    INFO| STEP 43300 - EPOCH 5412/8000 | total loss: 2.593E-03 | rgb loss: 2.593E-03
+2024-06-07 17:39:17,303|    INFO| STEP 43400 - EPOCH 5425/8000 | total loss: 2.408E-03 | rgb loss: 2.408E-03
+2024-06-07 17:39:28,106|    INFO| STEP 43500 - EPOCH 5437/8000 | total loss: 2.552E-03 | rgb loss: 2.552E-03
+2024-06-07 17:39:40,082|    INFO| STEP 43600 - EPOCH 5450/8000 | total loss: 2.465E-03 | rgb loss: 2.465E-03
+2024-06-07 17:39:50,797|    INFO| STEP 43700 - EPOCH 5462/8000 | total loss: 2.515E-03 | rgb loss: 2.515E-03
+2024-06-07 17:40:02,105|    INFO| STEP 43800 - EPOCH 5475/8000 | total loss: 2.489E-03 | rgb loss: 2.489E-03
+2024-06-07 17:40:13,932|    INFO| STEP 43900 - EPOCH 5487/8000 | total loss: 2.497E-03 | rgb loss: 2.497E-03
+2024-06-07 17:40:27,459|    INFO| STEP 44000 - EPOCH 5500/8000 | total loss: 2.689E-03 | rgb loss: 2.689E-03
+2024-06-07 17:40:28,300|    INFO| Beginning validation...
+2024-06-07 17:40:28,300|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 17:40:28,300|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+
+ 80%|███████████████████████████████████████████████████████████████████████████████████████████▏                      | 4/5 [00:01<00:00,  2.33it/s]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.14it/s]
+2024-06-07 17:40:45,247|    INFO| STEP 44100 - EPOCH 5512/8000 | total loss: 2.575E-03 | rgb loss: 2.575E-03
+2024-06-07 17:40:59,079|    INFO| STEP 44200 - EPOCH 5525/8000 | total loss: 2.494E-03 | rgb loss: 2.494E-03
+2024-06-07 17:41:12,572|    INFO| STEP 44300 - EPOCH 5537/8000 | total loss: 2.587E-03 | rgb loss: 2.587E-03
+2024-06-07 17:41:26,335|    INFO| STEP 44400 - EPOCH 5550/8000 | total loss: 2.423E-03 | rgb loss: 2.423E-03
+2024-06-07 17:41:40,020|    INFO| STEP 44500 - EPOCH 5562/8000 | total loss: 2.433E-03 | rgb loss: 2.433E-03
+2024-06-07 17:41:53,191|    INFO| STEP 44600 - EPOCH 5575/8000 | total loss: 2.441E-03 | rgb loss: 2.441E-03
+2024-06-07 17:42:05,420|    INFO| STEP 44700 - EPOCH 5587/8000 | total loss: 2.591E-03 | rgb loss: 2.591E-03
+2024-06-07 17:42:18,643|    INFO| STEP 44800 - EPOCH 5600/8000 | total loss: 2.525E-03 | rgb loss: 2.525E-03
+2024-06-07 17:42:31,915|    INFO| STEP 44900 - EPOCH 5612/8000 | total loss: 2.419E-03 | rgb loss: 2.419E-03
+2024-06-07 17:42:45,800|    INFO| STEP 45000 - EPOCH 5625/8000 | total loss: 2.592E-03 | rgb loss: 2.592E-03
+2024-06-07 17:42:59,432|    INFO| STEP 45100 - EPOCH 5637/8000 | total loss: 2.493E-03 | rgb loss: 2.493E-03
+2024-06-07 17:43:10,733|    INFO| STEP 45200 - EPOCH 5650/8000 | total loss: 2.472E-03 | rgb loss: 2.472E-03
+2024-06-07 17:43:23,987|    INFO| STEP 45300 - EPOCH 5662/8000 | total loss: 2.445E-03 | rgb loss: 2.445E-03
+2024-06-07 17:43:38,126|    INFO| STEP 45400 - EPOCH 5675/8000 | total loss: 2.645E-03 | rgb loss: 2.645E-03
+2024-06-07 17:43:52,158|    INFO| STEP 45500 - EPOCH 5687/8000 | total loss: 2.385E-03 | rgb loss: 2.385E-03
+2024-06-07 17:44:06,646|    INFO| STEP 45600 - EPOCH 5700/8000 | total loss: 2.636E-03 | rgb loss: 2.636E-03
+2024-06-07 17:44:20,931|    INFO| STEP 45700 - EPOCH 5712/8000 | total loss: 2.343E-03 | rgb loss: 2.343E-03
+2024-06-07 17:44:35,403|    INFO| STEP 45800 - EPOCH 5725/8000 | total loss: 2.386E-03 | rgb loss: 2.386E-03
+2024-06-07 17:44:49,086|    INFO| STEP 45900 - EPOCH 5737/8000 | total loss: 2.380E-03 | rgb loss: 2.380E-03
+2024-06-07 17:45:00,607|    INFO| STEP 46000 - EPOCH 5750/8000 | total loss: 2.432E-03 | rgb loss: 2.432E-03
+2024-06-07 17:45:14,469|    INFO| STEP 46100 - EPOCH 5762/8000 | total loss: 2.421E-03 | rgb loss: 2.421E-03
+2024-06-07 17:45:28,690|    INFO| STEP 46200 - EPOCH 5775/8000 | total loss: 2.476E-03 | rgb loss: 2.476E-03
+2024-06-07 17:45:42,296|    INFO| STEP 46300 - EPOCH 5787/8000 | total loss: 2.332E-03 | rgb loss: 2.332E-03
+2024-06-07 17:45:56,832|    INFO| STEP 46400 - EPOCH 5800/8000 | total loss: 2.172E-03 | rgb loss: 2.172E-03
+2024-06-07 17:46:08,818|    INFO| STEP 46500 - EPOCH 5812/8000 | total loss: 2.417E-03 | rgb loss: 2.417E-03
+2024-06-07 17:46:20,833|    INFO| STEP 46600 - EPOCH 5825/8000 | total loss: 2.495E-03 | rgb loss: 2.495E-03
+2024-06-07 17:46:31,701|    INFO| STEP 46700 - EPOCH 5837/8000 | total loss: 2.315E-03 | rgb loss: 2.315E-03
+2024-06-07 17:46:42,983|    INFO| STEP 46800 - EPOCH 5850/8000 | total loss: 2.385E-03 | rgb loss: 2.385E-03
+2024-06-07 17:46:54,803|    INFO| STEP 46900 - EPOCH 5862/8000 | total loss: 2.459E-03 | rgb loss: 2.459E-03
+2024-06-07 17:47:07,651|    INFO| STEP 47000 - EPOCH 5875/8000 | total loss: 2.368E-03 | rgb loss: 2.368E-03
+2024-06-07 17:47:21,139|    INFO| STEP 47100 - EPOCH 5887/8000 | total loss: 2.396E-03 | rgb loss: 2.396E-03
+2024-06-07 17:47:34,092|    INFO| STEP 47200 - EPOCH 5900/8000 | total loss: 2.370E-03 | rgb loss: 2.370E-03
+2024-06-07 17:47:45,475|    INFO| STEP 47300 - EPOCH 5912/8000 | total loss: 2.350E-03 | rgb loss: 2.350E-03
+2024-06-07 17:47:57,860|    INFO| STEP 47400 - EPOCH 5925/8000 | total loss: 2.513E-03 | rgb loss: 2.513E-03
+2024-06-07 17:48:10,039|    INFO| STEP 47500 - EPOCH 5937/8000 | total loss: 2.442E-03 | rgb loss: 2.442E-03
+2024-06-07 17:48:23,726|    INFO| STEP 47600 - EPOCH 5950/8000 | total loss: 2.452E-03 | rgb loss: 2.452E-03
+2024-06-07 17:48:35,745|    INFO| STEP 47700 - EPOCH 5962/8000 | total loss: 2.474E-03 | rgb loss: 2.474E-03
+2024-06-07 17:48:46,755|    INFO| STEP 47800 - EPOCH 5975/8000 | total loss: 2.600E-03 | rgb loss: 2.600E-03
+2024-06-07 17:48:57,767|    INFO| STEP 47900 - EPOCH 5987/8000 | total loss: 2.364E-03 | rgb loss: 2.364E-03
+2024-06-07 17:49:09,226|    INFO| STEP 48000 - EPOCH 6000/8000 | total loss: 2.464E-03 | rgb loss: 2.464E-03
+2024-06-07 17:49:09,792|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240607-160614/model-6000.pth
+2024-06-07 17:49:09,848|    INFO| Beginning validation...
+2024-06-07 17:49:09,848|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 17:49:09,848|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+ 40%|█████████████████████████████████████████████▌                                                                    | 2/5 [00:01<00:01,  1.88it/s]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.09it/s]
+2024-06-07 17:49:24,407|    INFO| STEP 48100 - EPOCH 6012/8000 | total loss: 2.592E-03 | rgb loss: 2.592E-03
+2024-06-07 17:49:37,162|    INFO| STEP 48200 - EPOCH 6025/8000 | total loss: 2.461E-03 | rgb loss: 2.461E-03
+2024-06-07 17:49:51,368|    INFO| STEP 48300 - EPOCH 6037/8000 | total loss: 2.358E-03 | rgb loss: 2.358E-03
+2024-06-07 17:50:06,339|    INFO| STEP 48400 - EPOCH 6050/8000 | total loss: 2.570E-03 | rgb loss: 2.570E-03
+2024-06-07 17:50:18,797|    INFO| STEP 48500 - EPOCH 6062/8000 | total loss: 2.351E-03 | rgb loss: 2.351E-03
+2024-06-07 17:50:30,986|    INFO| STEP 48600 - EPOCH 6075/8000 | total loss: 2.311E-03 | rgb loss: 2.311E-03
+2024-06-07 17:50:45,056|    INFO| STEP 48700 - EPOCH 6087/8000 | total loss: 2.377E-03 | rgb loss: 2.377E-03
+2024-06-07 17:50:59,322|    INFO| STEP 48800 - EPOCH 6100/8000 | total loss: 2.439E-03 | rgb loss: 2.439E-03
+2024-06-07 17:51:10,231|    INFO| STEP 48900 - EPOCH 6112/8000 | total loss: 2.507E-03 | rgb loss: 2.507E-03
+2024-06-07 17:51:23,667|    INFO| STEP 49000 - EPOCH 6125/8000 | total loss: 2.310E-03 | rgb loss: 2.310E-03
+2024-06-07 17:51:35,923|    INFO| STEP 49100 - EPOCH 6137/8000 | total loss: 2.320E-03 | rgb loss: 2.320E-03
+2024-06-07 17:51:48,396|    INFO| STEP 49200 - EPOCH 6150/8000 | total loss: 2.502E-03 | rgb loss: 2.502E-03
+2024-06-07 17:52:02,296|    INFO| STEP 49300 - EPOCH 6162/8000 | total loss: 2.355E-03 | rgb loss: 2.355E-03
+2024-06-07 17:52:16,920|    INFO| STEP 49400 - EPOCH 6175/8000 | total loss: 2.198E-03 | rgb loss: 2.198E-03
+2024-06-07 17:52:29,611|    INFO| STEP 49500 - EPOCH 6187/8000 | total loss: 2.473E-03 | rgb loss: 2.473E-03
+2024-06-07 17:52:42,164|    INFO| STEP 49600 - EPOCH 6200/8000 | total loss: 2.290E-03 | rgb loss: 2.290E-03
+2024-06-07 17:52:55,543|    INFO| STEP 49700 - EPOCH 6212/8000 | total loss: 2.304E-03 | rgb loss: 2.304E-03
+2024-06-07 17:53:09,190|    INFO| STEP 49800 - EPOCH 6225/8000 | total loss: 2.510E-03 | rgb loss: 2.510E-03
+2024-06-07 17:53:21,974|    INFO| STEP 49900 - EPOCH 6237/8000 | total loss: 2.386E-03 | rgb loss: 2.386E-03
+2024-06-07 17:53:35,349|    INFO| STEP 50000 - EPOCH 6250/8000 | total loss: 2.261E-03 | rgb loss: 2.261E-03
+2024-06-07 17:53:48,246|    INFO| STEP 50100 - EPOCH 6262/8000 | total loss: 2.169E-03 | rgb loss: 2.169E-03
+2024-06-07 17:53:59,354|    INFO| STEP 50200 - EPOCH 6275/8000 | total loss: 2.352E-03 | rgb loss: 2.352E-03
+2024-06-07 17:54:11,404|    INFO| STEP 50300 - EPOCH 6287/8000 | total loss: 2.372E-03 | rgb loss: 2.372E-03
+2024-06-07 17:54:24,122|    INFO| STEP 50400 - EPOCH 6300/8000 | total loss: 2.626E-03 | rgb loss: 2.626E-03
+2024-06-07 17:54:36,810|    INFO| STEP 50500 - EPOCH 6312/8000 | total loss: 2.325E-03 | rgb loss: 2.325E-03
+2024-06-07 17:54:49,387|    INFO| STEP 50600 - EPOCH 6325/8000 | total loss: 2.250E-03 | rgb loss: 2.250E-03
+2024-06-07 17:55:01,994|    INFO| STEP 50700 - EPOCH 6337/8000 | total loss: 2.409E-03 | rgb loss: 2.409E-03
+2024-06-07 17:55:15,310|    INFO| STEP 50800 - EPOCH 6350/8000 | total loss: 2.259E-03 | rgb loss: 2.259E-03
+2024-06-07 17:55:27,574|    INFO| STEP 50900 - EPOCH 6362/8000 | total loss: 2.211E-03 | rgb loss: 2.211E-03
+2024-06-07 17:55:40,392|    INFO| STEP 51000 - EPOCH 6375/8000 | total loss: 2.512E-03 | rgb loss: 2.512E-03
+2024-06-07 17:55:54,235|    INFO| STEP 51100 - EPOCH 6387/8000 | total loss: 2.344E-03 | rgb loss: 2.344E-03
+2024-06-07 17:56:06,694|    INFO| STEP 51200 - EPOCH 6400/8000 | total loss: 2.699E-03 | rgb loss: 2.699E-03
+2024-06-07 17:56:17,776|    INFO| STEP 51300 - EPOCH 6412/8000 | total loss: 2.272E-03 | rgb loss: 2.272E-03
+2024-06-07 17:56:28,884|    INFO| STEP 51400 - EPOCH 6425/8000 | total loss: 2.497E-03 | rgb loss: 2.497E-03
+2024-06-07 17:56:41,184|    INFO| STEP 51500 - EPOCH 6437/8000 | total loss: 2.454E-03 | rgb loss: 2.454E-03
+2024-06-07 17:56:55,301|    INFO| STEP 51600 - EPOCH 6450/8000 | total loss: 2.248E-03 | rgb loss: 2.248E-03
+2024-06-07 17:57:09,354|    INFO| STEP 51700 - EPOCH 6462/8000 | total loss: 2.294E-03 | rgb loss: 2.294E-03
+2024-06-07 17:57:23,119|    INFO| STEP 51800 - EPOCH 6475/8000 | total loss: 2.209E-03 | rgb loss: 2.209E-03
+2024-06-07 17:57:36,596|    INFO| STEP 51900 - EPOCH 6487/8000 | total loss: 2.308E-03 | rgb loss: 2.308E-03
+2024-06-07 17:57:50,208|    INFO| STEP 52000 - EPOCH 6500/8000 | total loss: 2.416E-03 | rgb loss: 2.416E-03
+2024-06-07 17:57:51,016|    INFO| Beginning validation...
+2024-06-07 17:57:51,017|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 17:57:51,017|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.12it/s]
+2024-06-07 17:57:55,109|    INFO| EPOCH 6500/8000 PSNR | 30.77
+2024-06-07 17:58:08,410|    INFO| STEP 52100 - EPOCH 6512/8000 | total loss: 2.375E-03 | rgb loss: 2.375E-03
+2024-06-07 17:58:22,234|    INFO| STEP 52200 - EPOCH 6525/8000 | total loss: 2.460E-03 | rgb loss: 2.460E-03
+2024-06-07 17:58:35,836|    INFO| STEP 52300 - EPOCH 6537/8000 | total loss: 2.385E-03 | rgb loss: 2.385E-03
+2024-06-07 17:58:50,591|    INFO| STEP 52400 - EPOCH 6550/8000 | total loss: 2.125E-03 | rgb loss: 2.125E-03
+2024-06-07 17:59:04,543|    INFO| STEP 52500 - EPOCH 6562/8000 | total loss: 2.410E-03 | rgb loss: 2.410E-03
+2024-06-07 17:59:18,804|    INFO| STEP 52600 - EPOCH 6575/8000 | total loss: 2.342E-03 | rgb loss: 2.342E-03
+2024-06-07 17:59:29,728|    INFO| STEP 52700 - EPOCH 6587/8000 | total loss: 2.179E-03 | rgb loss: 2.179E-03
+2024-06-07 17:59:41,081|    INFO| STEP 52800 - EPOCH 6600/8000 | total loss: 2.382E-03 | rgb loss: 2.382E-03
+2024-06-07 17:59:53,318|    INFO| STEP 52900 - EPOCH 6612/8000 | total loss: 2.388E-03 | rgb loss: 2.388E-03
+2024-06-07 18:00:05,689|    INFO| STEP 53000 - EPOCH 6625/8000 | total loss: 2.469E-03 | rgb loss: 2.469E-03
+2024-06-07 18:00:19,373|    INFO| STEP 53100 - EPOCH 6637/8000 | total loss: 2.266E-03 | rgb loss: 2.266E-03
+2024-06-07 18:00:32,659|    INFO| STEP 53200 - EPOCH 6650/8000 | total loss: 2.420E-03 | rgb loss: 2.420E-03
+2024-06-07 18:00:45,429|    INFO| STEP 53300 - EPOCH 6662/8000 | total loss: 2.433E-03 | rgb loss: 2.433E-03
+2024-06-07 18:00:58,579|    INFO| STEP 53400 - EPOCH 6675/8000 | total loss: 2.173E-03 | rgb loss: 2.173E-03
+2024-06-07 18:01:11,808|    INFO| STEP 53500 - EPOCH 6687/8000 | total loss: 2.553E-03 | rgb loss: 2.553E-03
+2024-06-07 18:01:24,304|    INFO| STEP 53600 - EPOCH 6700/8000 | total loss: 2.252E-03 | rgb loss: 2.252E-03
+2024-06-07 18:01:35,739|    INFO| STEP 53700 - EPOCH 6712/8000 | total loss: 2.200E-03 | rgb loss: 2.200E-03
+2024-06-07 18:01:47,632|    INFO| STEP 53800 - EPOCH 6725/8000 | total loss: 2.262E-03 | rgb loss: 2.262E-03
+2024-06-07 18:01:58,743|    INFO| STEP 53900 - EPOCH 6737/8000 | total loss: 2.318E-03 | rgb loss: 2.318E-03
+2024-06-07 18:02:11,074|    INFO| STEP 54000 - EPOCH 6750/8000 | total loss: 2.584E-03 | rgb loss: 2.584E-03
+2024-06-07 18:02:24,785|    INFO| STEP 54100 - EPOCH 6762/8000 | total loss: 2.261E-03 | rgb loss: 2.261E-03
+2024-06-07 18:02:36,332|    INFO| STEP 54200 - EPOCH 6775/8000 | total loss: 2.214E-03 | rgb loss: 2.214E-03
+2024-06-07 18:02:47,065|    INFO| STEP 54300 - EPOCH 6787/8000 | total loss: 2.302E-03 | rgb loss: 2.302E-03
+2024-06-07 18:02:58,205|    INFO| STEP 54400 - EPOCH 6800/8000 | total loss: 2.345E-03 | rgb loss: 2.345E-03
+2024-06-07 18:03:09,124|    INFO| STEP 54500 - EPOCH 6812/8000 | total loss: 2.315E-03 | rgb loss: 2.315E-03
+2024-06-07 18:03:20,270|    INFO| STEP 54600 - EPOCH 6825/8000 | total loss: 2.246E-03 | rgb loss: 2.246E-03
+2024-06-07 18:03:31,784|    INFO| STEP 54700 - EPOCH 6837/8000 | total loss: 2.259E-03 | rgb loss: 2.259E-03
+2024-06-07 18:03:45,046|    INFO| STEP 54800 - EPOCH 6850/8000 | total loss: 2.253E-03 | rgb loss: 2.253E-03
+2024-06-07 18:03:57,219|    INFO| STEP 54900 - EPOCH 6862/8000 | total loss: 2.106E-03 | rgb loss: 2.106E-03
+2024-06-07 18:04:10,218|    INFO| STEP 55000 - EPOCH 6875/8000 | total loss: 2.329E-03 | rgb loss: 2.329E-03
+2024-06-07 18:04:23,255|    INFO| STEP 55100 - EPOCH 6887/8000 | total loss: 2.220E-03 | rgb loss: 2.220E-03
+2024-06-07 18:04:34,291|    INFO| STEP 55200 - EPOCH 6900/8000 | total loss: 2.338E-03 | rgb loss: 2.338E-03
+2024-06-07 18:04:45,055|    INFO| STEP 55300 - EPOCH 6912/8000 | total loss: 2.111E-03 | rgb loss: 2.111E-03
+2024-06-07 18:04:56,177|    INFO| STEP 55400 - EPOCH 6925/8000 | total loss: 2.152E-03 | rgb loss: 2.152E-03
+2024-06-07 18:05:07,723|    INFO| STEP 55500 - EPOCH 6937/8000 | total loss: 2.255E-03 | rgb loss: 2.255E-03
+2024-06-07 18:05:19,155|    INFO| STEP 55600 - EPOCH 6950/8000 | total loss: 2.285E-03 | rgb loss: 2.285E-03
+2024-06-07 18:05:29,891|    INFO| STEP 55700 - EPOCH 6962/8000 | total loss: 2.315E-03 | rgb loss: 2.315E-03
+2024-06-07 18:05:41,511|    INFO| STEP 55800 - EPOCH 6975/8000 | total loss: 2.306E-03 | rgb loss: 2.306E-03
+2024-06-07 18:05:53,656|    INFO| STEP 55900 - EPOCH 6987/8000 | total loss: 2.393E-03 | rgb loss: 2.393E-03
+2024-06-07 18:06:06,356|    INFO| STEP 56000 - EPOCH 7000/8000 | total loss: 2.400E-03 | rgb loss: 2.400E-03
+2024-06-07 18:06:07,274|    INFO| Beginning validation...
+2024-06-07 18:06:07,274|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 18:06:07,274|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+ 20%|██████████████████████▊                                                                                           | 1/5 [00:00<00:02,  1.99it/s]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.07it/s]
+2024-06-07 18:06:24,462|    INFO| STEP 56100 - EPOCH 7012/8000 | total loss: 2.237E-03 | rgb loss: 2.237E-03
+2024-06-07 18:06:37,615|    INFO| STEP 56200 - EPOCH 7025/8000 | total loss: 2.315E-03 | rgb loss: 2.315E-03
+2024-06-07 18:06:49,914|    INFO| STEP 56300 - EPOCH 7037/8000 | total loss: 2.306E-03 | rgb loss: 2.306E-03
+2024-06-07 18:07:04,668|    INFO| STEP 56400 - EPOCH 7050/8000 | total loss: 2.251E-03 | rgb loss: 2.251E-03
+2024-06-07 18:07:15,935|    INFO| STEP 56500 - EPOCH 7062/8000 | total loss: 2.376E-03 | rgb loss: 2.376E-03
+2024-06-07 18:07:29,985|    INFO| STEP 56600 - EPOCH 7075/8000 | total loss: 2.368E-03 | rgb loss: 2.368E-03
+2024-06-07 18:07:42,031|    INFO| STEP 56700 - EPOCH 7087/8000 | total loss: 2.080E-03 | rgb loss: 2.080E-03
+2024-06-07 18:07:56,203|    INFO| STEP 56800 - EPOCH 7100/8000 | total loss: 2.082E-03 | rgb loss: 2.082E-03
+2024-06-07 18:08:09,787|    INFO| STEP 56900 - EPOCH 7112/8000 | total loss: 2.160E-03 | rgb loss: 2.160E-03
+2024-06-07 18:08:22,531|    INFO| STEP 57000 - EPOCH 7125/8000 | total loss: 2.394E-03 | rgb loss: 2.394E-03
+2024-06-07 18:08:34,757|    INFO| STEP 57100 - EPOCH 7137/8000 | total loss: 2.369E-03 | rgb loss: 2.369E-03
+2024-06-07 18:08:49,233|    INFO| STEP 57200 - EPOCH 7150/8000 | total loss: 2.144E-03 | rgb loss: 2.144E-03
+2024-06-07 18:09:01,546|    INFO| STEP 57300 - EPOCH 7162/8000 | total loss: 2.318E-03 | rgb loss: 2.318E-03
+2024-06-07 18:09:15,188|    INFO| STEP 57400 - EPOCH 7175/8000 | total loss: 2.244E-03 | rgb loss: 2.244E-03
+2024-06-07 18:09:27,214|    INFO| STEP 57500 - EPOCH 7187/8000 | total loss: 2.077E-03 | rgb loss: 2.077E-03
+2024-06-07 18:09:40,451|    INFO| STEP 57600 - EPOCH 7200/8000 | total loss: 2.083E-03 | rgb loss: 2.083E-03
+2024-06-07 18:09:54,069|    INFO| STEP 57700 - EPOCH 7212/8000 | total loss: 2.001E-03 | rgb loss: 2.001E-03
+2024-06-07 18:10:07,391|    INFO| STEP 57800 - EPOCH 7225/8000 | total loss: 2.190E-03 | rgb loss: 2.190E-03
+2024-06-07 18:10:20,131|    INFO| STEP 57900 - EPOCH 7237/8000 | total loss: 2.093E-03 | rgb loss: 2.093E-03
+2024-06-07 18:10:34,147|    INFO| STEP 58000 - EPOCH 7250/8000 | total loss: 2.381E-03 | rgb loss: 2.381E-03
+2024-06-07 18:10:48,320|    INFO| STEP 58100 - EPOCH 7262/8000 | total loss: 2.266E-03 | rgb loss: 2.266E-03
+2024-06-07 18:11:00,851|    INFO| STEP 58200 - EPOCH 7275/8000 | total loss: 2.261E-03 | rgb loss: 2.261E-03
+2024-06-07 18:11:14,253|    INFO| STEP 58300 - EPOCH 7287/8000 | total loss: 2.349E-03 | rgb loss: 2.349E-03
+2024-06-07 18:11:27,456|    INFO| STEP 58400 - EPOCH 7300/8000 | total loss: 2.423E-03 | rgb loss: 2.423E-03
+2024-06-07 18:11:41,305|    INFO| STEP 58500 - EPOCH 7312/8000 | total loss: 2.355E-03 | rgb loss: 2.355E-03
+2024-06-07 18:11:54,311|    INFO| STEP 58600 - EPOCH 7325/8000 | total loss: 2.467E-03 | rgb loss: 2.467E-03
+2024-06-07 18:12:07,149|    INFO| STEP 58700 - EPOCH 7337/8000 | total loss: 2.387E-03 | rgb loss: 2.387E-03
+2024-06-07 18:12:20,745|    INFO| STEP 58800 - EPOCH 7350/8000 | total loss: 2.113E-03 | rgb loss: 2.113E-03
+2024-06-07 18:12:33,582|    INFO| STEP 58900 - EPOCH 7362/8000 | total loss: 2.057E-03 | rgb loss: 2.057E-03
+2024-06-07 18:12:47,980|    INFO| STEP 59000 - EPOCH 7375/8000 | total loss: 2.289E-03 | rgb loss: 2.289E-03
+2024-06-07 18:12:59,102|    INFO| STEP 59100 - EPOCH 7387/8000 | total loss: 2.413E-03 | rgb loss: 2.413E-03
+2024-06-07 18:13:10,431|    INFO| STEP 59200 - EPOCH 7400/8000 | total loss: 2.188E-03 | rgb loss: 2.188E-03
+2024-06-07 18:13:23,156|    INFO| STEP 59300 - EPOCH 7412/8000 | total loss: 2.295E-03 | rgb loss: 2.295E-03
+2024-06-07 18:13:37,199|    INFO| STEP 59400 - EPOCH 7425/8000 | total loss: 2.067E-03 | rgb loss: 2.067E-03
+2024-06-07 18:13:50,912|    INFO| STEP 59500 - EPOCH 7437/8000 | total loss: 2.135E-03 | rgb loss: 2.135E-03
+2024-06-07 18:14:03,656|    INFO| STEP 59600 - EPOCH 7450/8000 | total loss: 2.311E-03 | rgb loss: 2.311E-03
+2024-06-07 18:14:16,587|    INFO| STEP 59700 - EPOCH 7462/8000 | total loss: 2.155E-03 | rgb loss: 2.155E-03
+2024-06-07 18:14:29,421|    INFO| STEP 59800 - EPOCH 7475/8000 | total loss: 2.345E-03 | rgb loss: 2.345E-03
+2024-06-07 18:14:42,826|    INFO| STEP 59900 - EPOCH 7487/8000 | total loss: 2.193E-03 | rgb loss: 2.193E-03
+2024-06-07 18:14:56,520|    INFO| STEP 60000 - EPOCH 7500/8000 | total loss: 2.388E-03 | rgb loss: 2.388E-03
+2024-06-07 18:14:57,298|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240607-160614/model-7500.pth
+2024-06-07 18:14:57,353|    INFO| Beginning validation...
+2024-06-07 18:14:57,353|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-07 18:14:57,353|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240607-160614/mesh
+ 40%|█████████████████████████████████████████████▌                                                                    | 2/5 [00:00<00:01,  2.13it/s]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:02<00:00,  2.10it/s]
+2024-06-07 18:15:13,726|    INFO| STEP 60100 - EPOCH 7512/8000 | total loss: 1.958E-03 | rgb loss: 1.958E-03
+2024-06-07 18:15:27,720|    INFO| STEP 60200 - EPOCH 7525/8000 | total loss: 2.362E-03 | rgb loss: 2.362E-03
+2024-06-07 18:15:42,020|    INFO| STEP 60300 - EPOCH 7537/8000 | total loss: 2.140E-03 | rgb loss: 2.140E-03
+2024-06-07 18:15:56,218|    INFO| STEP 60400 - EPOCH 7550/8000 | total loss: 2.296E-03 | rgb loss: 2.296E-03
+2024-06-07 18:16:07,296|    INFO| STEP 60500 - EPOCH 7562/8000 | total loss: 2.179E-03 | rgb loss: 2.179E-03
+2024-06-07 18:16:18,804|    INFO| STEP 60600 - EPOCH 7575/8000 | total loss: 2.150E-03 | rgb loss: 2.150E-03
+2024-06-07 18:16:31,283|    INFO| STEP 60700 - EPOCH 7587/8000 | total loss: 2.204E-03 | rgb loss: 2.204E-03
+2024-06-07 18:16:45,070|    INFO| STEP 60800 - EPOCH 7600/8000 | total loss: 2.254E-03 | rgb loss: 2.254E-03
+2024-06-07 18:16:59,341|    INFO| STEP 60900 - EPOCH 7612/8000 | total loss: 2.118E-03 | rgb loss: 2.118E-03
+2024-06-07 18:17:12,991|    INFO| STEP 61000 - EPOCH 7625/8000 | total loss: 2.105E-03 | rgb loss: 2.105E-03
+2024-06-07 18:17:26,755|    INFO| STEP 61100 - EPOCH 7637/8000 | total loss: 2.101E-03 | rgb loss: 2.101E-03
+2024-06-07 18:17:40,803|    INFO| STEP 61200 - EPOCH 7650/8000 | total loss: 2.164E-03 | rgb loss: 2.164E-03
+2024-06-07 18:17:54,223|    INFO| STEP 61300 - EPOCH 7662/8000 | total loss: 2.156E-03 | rgb loss: 2.156E-03
+2024-06-07 18:18:06,132|    INFO| STEP 61400 - EPOCH 7675/8000 | total loss: 2.011E-03 | rgb loss: 2.011E-03
+2024-06-07 18:18:19,167|    INFO| STEP 61500 - EPOCH 7687/8000 | total loss: 2.185E-03 | rgb loss: 2.185E-03
+2024-06-07 18:18:33,470|    INFO| STEP 61600 - EPOCH 7700/8000 | total loss: 2.165E-03 | rgb loss: 2.165E-03
+2024-06-07 18:18:47,443|    INFO| STEP 61700 - EPOCH 7712/8000 | total loss: 2.169E-03 | rgb loss: 2.169E-03
+2024-06-07 18:19:01,731|    INFO| STEP 61800 - EPOCH 7725/8000 | total loss: 2.300E-03 | rgb loss: 2.300E-03
+2024-06-07 18:19:15,088|    INFO| STEP 61900 - EPOCH 7737/8000 | total loss: 1.958E-03 | rgb loss: 1.958E-03
+2024-06-07 18:19:27,696|    INFO| STEP 62000 - EPOCH 7750/8000 | total loss: 1.962E-03 | rgb loss: 1.962E-03
+2024-06-07 18:19:40,123|    INFO| STEP 62100 - EPOCH 7762/8000 | total loss: 2.112E-03 | rgb loss: 2.112E-03
+2024-06-07 18:19:51,737|    INFO| STEP 62200 - EPOCH 7775/8000 | total loss: 2.092E-03 | rgb loss: 2.092E-03
+2024-06-07 18:20:03,657|    INFO| STEP 62300 - EPOCH 7787/8000 | total loss: 2.043E-03 | rgb loss: 2.043E-03
+2024-06-07 18:20:17,132|    INFO| STEP 62400 - EPOCH 7800/8000 | total loss: 2.155E-03 | rgb loss: 2.155E-03
+2024-06-07 18:20:30,287|    INFO| STEP 62500 - EPOCH 7812/8000 | total loss: 2.280E-03 | rgb loss: 2.280E-03
+2024-06-07 18:20:43,265|    INFO| STEP 62600 - EPOCH 7825/8000 | total loss: 1.974E-03 | rgb loss: 1.974E-03
+2024-06-07 18:20:55,742|    INFO| STEP 62700 - EPOCH 7837/8000 | total loss: 1.987E-03 | rgb loss: 1.987E-03
+2024-06-07 18:21:08,372|    INFO| STEP 62800 - EPOCH 7850/8000 | total loss: 2.079E-03 | rgb loss: 2.079E-03
+2024-06-07 18:21:21,503|    INFO| STEP 62900 - EPOCH 7862/8000 | total loss: 2.073E-03 | rgb loss: 2.073E-03
+2024-06-07 18:21:34,964|    INFO| STEP 63000 - EPOCH 7875/8000 | total loss: 1.971E-03 | rgb loss: 1.971E-03
+2024-06-07 18:21:47,799|    INFO| STEP 63100 - EPOCH 7887/8000 | total loss: 2.275E-03 | rgb loss: 2.275E-03
+2024-06-07 18:21:58,871|    INFO| STEP 63200 - EPOCH 7900/8000 | total loss: 2.127E-03 | rgb loss: 2.127E-03
+2024-06-07 18:22:08,682|    INFO| STEP 63300 - EPOCH 7912/8000 | total loss: 2.210E-03 | rgb loss: 2.210E-03
+2024-06-07 18:22:17,848|    INFO| STEP 63400 - EPOCH 7925/8000 | total loss: 2.265E-03 | rgb loss: 2.265E-03
+2024-06-07 18:22:26,708|    INFO| STEP 63500 - EPOCH 7937/8000 | total loss: 2.289E-03 | rgb loss: 2.289E-03
+2024-06-07 18:22:35,790|    INFO| STEP 63600 - EPOCH 7950/8000 | total loss: 2.166E-03 | rgb loss: 2.166E-03
+2024-06-07 18:22:44,627|    INFO| STEP 63700 - EPOCH 7962/8000 | total loss: 2.034E-03 | rgb loss: 2.034E-03
+2024-06-07 18:22:53,729|    INFO| STEP 63800 - EPOCH 7975/8000 | total loss: 2.186E-03 | rgb loss: 2.186E-03
+2024-06-07 18:23:02,551|    INFO| STEP 63900 - EPOCH 7987/8000 | total loss: 2.227E-03 | rgb loss: 2.227E-03

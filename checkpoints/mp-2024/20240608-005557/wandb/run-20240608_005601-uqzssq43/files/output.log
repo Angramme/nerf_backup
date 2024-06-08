@@ -1,0 +1,34 @@
+2024-06-08 00:56:02,830|    INFO| STEP 0 - EPOCH 0/8020 | total loss: 4.485E-01 | rgb loss: 4.485E-01
+2024-06-08 00:56:03,155|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240608-005557/model-0.pth
+2024-06-08 00:56:03,183|    INFO| Beginning validation...
+2024-06-08 00:56:03,183|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-08 00:56:03,183|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240608-005557/mesh
+/usr/local/lib/python3.10/dist-packages/torch/functional.py:507: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3549.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+
+
+ 80%|███████████████████████████████████████████████████████████████████████████████████████████▏                      | 4/5 [00:04<00:01,  1.05s/it]
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:05<00:00,  1.05s/it]
+2024-06-08 00:56:17,172|    INFO| STEP 100 - EPOCH 12/8020 | total loss: 1.159E-01 | rgb loss: 1.159E-01
+2024-06-08 00:56:25,273|    INFO| STEP 200 - EPOCH 25/8020 | total loss: 4.659E-02 | rgb loss: 4.659E-02
+2024-06-08 00:56:33,070|    INFO| STEP 300 - EPOCH 37/8020 | total loss: 3.219E-02 | rgb loss: 3.219E-02
+2024-06-08 00:56:41,133|    INFO| STEP 400 - EPOCH 50/8020 | total loss: 2.217E-02 | rgb loss: 2.217E-02
+2024-06-08 00:56:48,876|    INFO| STEP 500 - EPOCH 62/8020 | total loss: 1.834E-02 | rgb loss: 1.834E-02
+2024-06-08 00:56:57,001|    INFO| STEP 600 - EPOCH 75/8020 | total loss: 1.625E-02 | rgb loss: 1.625E-02
+2024-06-08 00:57:04,777|    INFO| STEP 700 - EPOCH 87/8020 | total loss: 1.455E-02 | rgb loss: 1.455E-02
+2024-06-08 00:57:12,926|    INFO| STEP 800 - EPOCH 100/8020 | total loss: 1.422E-02 | rgb loss: 1.422E-02
+2024-06-08 00:57:20,510|    INFO| STEP 900 - EPOCH 112/8020 | total loss: 1.245E-02 | rgb loss: 1.245E-02
+2024-06-08 00:57:28,499|    INFO| STEP 1000 - EPOCH 125/8020 | total loss: 1.213E-02 | rgb loss: 1.213E-02
+2024-06-08 00:57:36,170|    INFO| STEP 1100 - EPOCH 137/8020 | total loss: 1.210E-02 | rgb loss: 1.210E-02
+2024-06-08 00:57:44,214|    INFO| STEP 1200 - EPOCH 150/8020 | total loss: 1.136E-02 | rgb loss: 1.136E-02
+Traceback (most recent call last):
+  File "/workspace/project2/train.py", line 148, in <module>
+    main(args)
+  File "/workspace/project2/train.py", line 124, in main
+    trainer.step(data)
+  File "/workspace/project2/lib/model/trainer.py", line 279, in step
+    self.backward()
+  File "/workspace/project2/lib/model/trainer.py", line 262, in backward
+    self.log_dict['rgb_loss'] += rgb_loss.item()
+KeyboardInterrupt

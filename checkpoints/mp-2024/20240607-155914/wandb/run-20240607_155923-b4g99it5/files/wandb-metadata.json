@@ -1,0 +1,148 @@
+{
+    "os": "Linux-5.15.0-105-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-06-07T13:59:25.287219",
+    "startedAt": "2024-06-07T13:59:23.521234",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--save-root",
+        "checkpoints",
+        "--data-root",
+        "data/private",
+        "--wandb"
+    ],
+    "state": "running",
+    "program": "/home/georye/project2/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "host": "studgpu-node01.inf.ethz.ch",
+    "username": "georye",
+    "executable": "/cluster/courses/machine_perception/project2/project2_venv/bin/python3",
+    "cpu_count": 20,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 1820.1391499999997,
+        "min": 1200.0,
+        "max": 3100.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2199.922,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 2897.932,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 2897.587,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 2651.86,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 3100.0,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 2729.231,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 2718.157,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 2729.883,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 2730.071,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3100.0
+        },
+        {
+            "current": 1200.0,
+            "min": 1200.0,
+            "max": 3100.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 68.78854751586914,
+            "used": 25.655773162841797
+        }
+    },
+    "gpu": "NVIDIA GeForce GTX 1080 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1080 Ti",
+            "memory_total": 11811160064
+        }
+    ],
+    "memory": {
+        "total": 251.78023529052734
+    }
+}

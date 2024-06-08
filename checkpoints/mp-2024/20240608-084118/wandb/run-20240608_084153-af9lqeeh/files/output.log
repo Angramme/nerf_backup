@@ -1,0 +1,16 @@
+2024-06-08 08:41:55,480|    INFO| STEP 0 - EPOCH 0/40 | total loss: 2.255E-03 | rgb loss: 2.255E-03
+2024-06-08 08:41:55,779|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240608-084118/model-0.pth
+2024-06-08 08:41:55,807|    INFO| Beginning validation...
+2024-06-08 08:41:55,807|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-08 08:41:55,807|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240608-084118/mesh
+/usr/local/lib/python3.10/dist-packages/torch/functional.py:507: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3549.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+
+
+ 80%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍                                | 4/5 [00:04<00:01,  1.08s/it]
+
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:05<00:00,  1.08s/it]
+2024-06-08 08:42:08,916|    INFO| STEP 100 - EPOCH 12/40 | total loss: 3.259E-03 | rgb loss: 3.259E-03
+2024-06-08 08:42:13,454|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240608-084118/model-20.pth
+2024-06-08 08:42:15,842|    INFO| STEP 200 - EPOCH 25/40 | total loss: 3.257E-03 | rgb loss: 3.257E-03
+2024-06-08 08:42:22,541|    INFO| STEP 300 - EPOCH 37/40 | total loss: 3.146E-03 | rgb loss: 3.146E-03
