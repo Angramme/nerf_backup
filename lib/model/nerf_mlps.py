@@ -35,33 +35,33 @@ class NeRFModel(nn.Module):
         self.direction_dim = direction_dim
         # first MLP is a simple multi-layer perceptron 
         self.mlp = nn.Sequential(
-            nn.Linear(self.position_dim, 128),
+            nn.Linear(self.position_dim, 256),
             nn.ReLU(),
-            nn.Linear(128, 128),
+            nn.Linear(256, 256),
             nn.ReLU(),
-            nn.Linear(128, 128),
+            nn.Linear(256, 256),
             nn.ReLU(),
-            nn.Linear(128, 128),
+            nn.Linear(256, 256),
             nn.ReLU()
         )
 
         self.feature_fn = nn.Sequential(
-            nn.Linear(128 + self.position_dim, 128),
+            nn.Linear(256 + self.position_dim, 256),
             nn.ReLU(),
-            nn.Linear(128, 128),
-            nn.ReLU(),
-            nn.Linear(128, 128),
+            nn.Linear(256, 256),
+            # nn.ReLU(),
+            # nn.Linear(128, 128),
         )
 
         self.density_fn = nn.Sequential(
-            nn.Linear(128, 1),
+            nn.Linear(256, 1),
             nn.ReLU() # rectified to ensure nonnegative density
         )
 
         self.rgb_fn = nn.Sequential(
-            nn.Linear(128 + self.direction_dim, 128),
+            nn.Linear(256 + self.direction_dim, 256),
             nn.ReLU(),
-            nn.Linear(128, 3),
+            nn.Linear(256, 3),
             nn.Sigmoid()
         )
 

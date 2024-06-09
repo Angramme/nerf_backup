@@ -197,16 +197,15 @@ class Trainer(nn.Module):
             ray_dir = self.pos_enc(ray_dir)
         else:
             ray_dir = ray_dir / torch.linalg.norm(ray_dir, dim=-1, keepdim=True)  # unit direction
-            ray_dir = ray_dir.unsqueeze(2)  # Adds an extra dimensione)
-            ray_dir = ray_dir.expand(*ray_dir.shape[:-2], coords.shape[-2], ray_dir.shape[-1])
+            ray_dir = ray_dir.unsqueeze(2).repeat(1, 1, coords.shape[-2], 1)
+            # ray_dir = ray_dir.unsqueeze(2)  # Adds an extra dimensione
+            # ray_dir = ray_dir.expand(*ray_dir.shape[:-2], coords.shape[-2], ray_dir.shape[-1])
             input_shape = coords.shape
             input_shape_ray_dir = ray_dir.shape
 
             coords = self.pos_enc(coords.view(-1, 3)).view(*input_shape[:-1], -1)
             ray_dir = self.pos_enc(ray_dir.contiguous().view(-1, 3)).view(*input_shape_ray_dir[:-1], -1)
         rgb, sigma = model(coords, ray_dir)
-        # rgb = torch.sigmoid(pred[..., :3])
-        # sigma = torch.relu(pred[..., 3:])
 
         return rgb, sigma
 
@@ -435,8 +434,8 @@ class Trainer(nn.Module):
         """Save the model checkpoint.
         """
 
-        fname = os.path.join(self.log_dir, f'model-{epoch}.pth')
-        log.info(f'Saving model checkpoint to: {fname}')
-        torch.save(self.fine_model, fname)
-
-    
+        fine_fname = os.path.join(self.log_dir, f'fine_model-{epoch}.pth')
+        coarse_fname = os.path.join(self.log_dir, f'coarse_model-{epoch}.pth')
+        log.info(f'Saving model checkpoint to: {fine_fname}')
+        torch.save(self.coarse_model, coarse_fname)
+        torch.save(self.fine_model, fine_fname)

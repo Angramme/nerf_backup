@@ -7,8 +7,9 @@ class MLP(nn.Module):
     """Super basic but super useful MLP class.
     """
     def __init__(self, 
-        input_dim, 
-        output_dim, 
+        pos_enc_samples_dim,
+        pos_enc_ray_dir_dim,
+        output_dim,
         activation = torch.relu,
         bias = True,
         layer = nn.Linear,
@@ -34,7 +35,8 @@ class MLP(nn.Module):
         """
         super().__init__()
 
-        self.input_dim = input_dim
+        self.pos_enc_samples_dim = pos_enc_samples_dim
+        self.pos_enc_ray_dir_dim = pos_enc_ray_dir_dim
         self.output_dim = output_dim   
         self.activation = activation
         self.bias = bias
@@ -49,21 +51,34 @@ class MLP(nn.Module):
 
         self.make()
 
+        self.density_fn = nn.Sequential(
+            nn.Linear(128, 1),
+            nn.ReLU() # rectified to ensure nonnegative density
+        )
+
+        self.rgb_fn = nn.Sequential(
+            nn.Linear(128 + self.pos_enc_ray_dir_dim, 128),
+            nn.ReLU(),
+            nn.Linear(128, 3),
+            nn.Sigmoid()
+        )
+
     def make(self, ):
         """Builds the actual MLP.
         """
         layers = []
         for i in range(self.num_layers):
             if i == 0:
-                layers.append(self.layer(self.input_dim, self.hidden_dim, bias=self.bias))
+                layers.append(self.layer(self.pos_enc_samples_dim, self.hidden_dim, bias=self.bias))
             elif i in self.skip:
-                layers.append(self.layer(self.hidden_dim+self.input_dim, self.hidden_dim, bias=self.bias))
+                layers.append(self.layer(self.hidden_dim+self.pos_enc_samples_dim, self.hidden_dim, bias=self.bias))
             else:
                 layers.append(self.layer(self.hidden_dim, self.hidden_dim, bias=self.bias))
         self.layers = nn.ModuleList(layers)
-        self.lout = self.layer(self.hidden_dim, self.output_dim, bias=self.bias)
+        # self.lout = self.layer(self.hidden_dim, self.output_dim, bias=self.bias)
 
-    def forward(self, x, return_h=False):
+
+    def forward(self, pos_enc_samples, pos_enc_ray_dir):
         """Run the MLP!
 
         Args:
@@ -75,23 +90,22 @@ class MLP(nn.Module):
                 - The output tensor of shape [batch, ..., output_dim]
                 - The last hidden layer of shape [batch, ..., hidden_dim]
         """
-        N = x.shape[0]
+        N = pos_enc_samples.shape[0]
 
         for i, l in enumerate(self.layers):
             if i == 0:
-                h = self.activation(l(x))
+                h = self.activation(l(pos_enc_samples))
             elif i in self.skip:
-                h = torch.cat([x, h], dim=-1)
+                h = torch.cat([pos_enc_samples, h], dim=-1)
                 h = self.activation(l(h))
             else:
                 h = self.activation(l(h))
         
-        out = self.lout(h)
+        # out = self.lout(h)
 
-        if return_h:
-            return out, h
-        else:
-            return out
+        sigma = self.density_fn(h)
+        rgb = self.rgb_fn(torch.cat((h, pos_enc_ray_dir), dim=-1))
+        return rgb, sigma
 
 
 def get_activation_class(activation_type):
