@@ -18,7 +18,7 @@ from lib.datasets.multiview_dataset import MultiviewDataset
 from lib.model.trainer import Trainer
 from lib.model.mlps import MLP, get_activation_class
 from lib.model.positional_encoding import PositionalEncoding
-
+from lib.model.nerf_mlps import NeRFModel
 from lib.utils.config import *
 
 def create_archive(save_dir, config):
@@ -41,7 +41,7 @@ def create_archive(save_dir, config):
 
 
 def main(config):
-
+    torch.cuda.empty_cache()
     # Set random seed.
     random.seed(config.seed)
     np.random.seed(config.seed)
@@ -90,12 +90,14 @@ def main(config):
         coarse_network = torch.load(os.path.join(config.pretrained_root, config.model_name))
         fine_network = torch.load(os.path.join(config.pretrained_root, config.model_name))
     else:
-        coarse_network = MLP(pe.out_dim, config.out_dim, activation=get_activation_class(config.activation), 
-                    num_layers= config.num_layers , hidden_dim=config.hidden_dim,
-                    skip=[config.skip])
-        fine_network = MLP(pe.out_dim, config.out_dim, activation=get_activation_class(config.activation), 
-                    num_layers= config.num_layers , hidden_dim=config.hidden_dim,
-                    skip=[config.skip])
+        # coarse_network = MLP(pe.out_dim, config.out_dim, activation=get_activation_class(config.activation), 
+        #             num_layers= config.num_layers , hidden_dim=config.hidden_dim,
+        #             skip=[config.skip])
+        # fine_network = MLP(pe.out_dim, config.out_dim, activation=get_activation_class(config.activation), 
+        #             num_layers= config.num_layers , hidden_dim=config.hidden_dim,
+        #             skip=[config.skip])
+        coarse_network = NeRFModel(pe.out_dim, pe.out_dim)
+        fine_network = NeRFModel(pe.out_dim, pe.out_dim)
 
 
     trainer = Trainer(config, coarse_network, fine_network, pe, log_dir)

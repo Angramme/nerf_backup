@@ -154,7 +154,7 @@ class Trainer(nn.Module):
         coarse_coords, coarse_z_vals, coarse_deltas = points, z_vals[..., None], deltas[..., None]
 
         # Step 2 : Predict radiance and volume density at the sampled points
-        rgb, sigma = self.predict_radience(coarse_coords, model=self.coarse_model)
+        rgb, sigma = self.predict_radience(coarse_coords, ray_dir, model=self.coarse_model)
             
         # Step 3 : Volume rendering to compute the RGB color at the given rays
         ray_colors, ray_depth, ray_alpha, ray_weights = self.volume_render(rgb, sigma, coarse_z_vals, coarse_deltas)
@@ -170,12 +170,14 @@ class Trainer(nn.Module):
             ray_orig, ray_dir, ray_weights, coarse_z_vals, 2 * num_points, near, far)
         return fine_coords, fine_z_vals, fine_deltas, coarse_rgb
 
-    def predict_radience(self, coords, model=None):
+    def predict_radience(self, coords, ray_dir, model=None):
         """Predict radiance at the given coordinates.
         TODO: You can adjust the network architecture according to your needs. You may also 
         try to use additional raydirections inputs to predict the radiance.
 
         Args:
+        # pos B, Nr, Np, 3
+        # dir B, Nr, 3
             coords (torch.FloatTensor): 3D coordinates of the points of shape [..., 3].
 
         Returns:
@@ -183,17 +185,28 @@ class Trainer(nn.Module):
             sigma (torch.FloatTensor): volume density at the given coordinates of shape [..., 1].
 
         """
+        # direction needs to be broadcasted since it hasn't been sampled
+        # ray_dir = torch.broadcast_to(ray_dir, coords.shape)
+
+        # ray_dir = torch.broadcast_to(ray_dir[:, None, :], (ray_dir.shape[0], coords.shape[1], ray_dir.shape[-1]))
+
         if model is None:
             model = self.fine_model
         if len(coords.shape) == 2:
             coords = self.pos_enc(coords)
+            ray_dir = self.pos_enc(ray_dir)
         else:
+            ray_dir = ray_dir / torch.linalg.norm(ray_dir, dim=-1, keepdim=True)  # unit direction
+            ray_dir = ray_dir.unsqueeze(2)  # Adds an extra dimensione)
+            ray_dir = ray_dir.expand(*ray_dir.shape[:-2], coords.shape[-2], ray_dir.shape[-1])
             input_shape = coords.shape
-            coords = self.pos_enc(coords.view(-1, 3)).view(*input_shape[:-1], -1)
+            input_shape_ray_dir = ray_dir.shape
 
-        pred = model(coords)
-        rgb = torch.sigmoid(pred[..., :3])
-        sigma = torch.relu(pred[..., 3:])
+            coords = self.pos_enc(coords.view(-1, 3)).view(*input_shape[:-1], -1)
+            ray_dir = self.pos_enc(ray_dir.contiguous().view(-1, 3)).view(*input_shape_ray_dir[:-1], -1)
+        rgb, sigma = model(coords, ray_dir)
+        # rgb = torch.sigmoid(pred[..., :3])
+        # sigma = torch.relu(pred[..., 3:])
 
         return rgb, sigma
 
@@ -227,15 +240,15 @@ class Trainer(nn.Module):
 
         """
         B, Nr = self.ray_orig.shape[:2]
-
+        ray_dir = self.ray_dir
         # Step 1 : Sample points along the rays
         fine_coords, fine_z_vals, fine_deltas, coarse_rgb = self.sample_points(
-                                self.ray_orig, self.ray_dir, near=self.cfg.near, far=self.cfg.far,
+                                self.ray_orig, ray_dir, near=self.cfg.near, far=self.cfg.far,
                                 num_points=self.cfg.num_pts_per_ray)
 
         self.coarse_rgb = coarse_rgb
 
-        rgb, sigma = self.predict_radience(fine_coords, model=self.fine_model)
+        rgb, sigma = self.predict_radience(fine_coords, ray_dir, model=self.fine_model)
         ray_colors, ray_depth, ray_alpha, _ = self.volume_render(rgb, sigma, fine_z_vals, fine_deltas)
 
         # Step 4 : Compositing with background color
@@ -287,7 +300,7 @@ class Trainer(nn.Module):
         B, Nr = ray_orig.shape[:2]
         coords, depth, deltas, _ = self.sample_points(ray_orig, ray_dir, near=self.cfg.near, far=self.cfg.far,
                                 num_points=self.cfg.num_pts_per_ray_render)
-        rgb, sigma = self.predict_radience(coords)
+        rgb, sigma = self.predict_radience(coords, ray_dir)
         ray_colors, ray_depth, ray_alpha, _ = self.volume_render(rgb, sigma, depth, deltas)
 
         if self.cfg.bg_color == 'white':
@@ -308,11 +321,13 @@ class Trainer(nn.Module):
         window_z = torch.linspace(-1., 1., steps=RES, device='cuda')
         
         coord = torch.stack(torch.meshgrid(window_x, window_y, window_z)).permute(1, 2, 3, 0).reshape(-1, 3).contiguous()
-
+        ray_dir = torch.zeros_like(coord)
         _points = torch.split(coord, int(chunk_size), dim=0)
+        _ray_dirs = torch.split(ray_dir, int(chunk_size), dim=0)
+
         voxels = []
-        for _p in _points:
-            _, sigma = self.predict_radience(_p) 
+        for _p, _ray_dir in zip(_points, _ray_dirs):
+            _, sigma = self.predict_radience(_p, _ray_dir)
             voxels.append(sigma)
         voxels = torch.cat(voxels, dim=0)
 

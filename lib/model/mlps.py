@@ -14,7 +14,8 @@ class MLP(nn.Module):
         layer = nn.Linear,
         num_layers = 4, 
         hidden_dim = 128, 
-        skip       = [2]
+        skip       = [2],
+        output_activation = None
     ):
         """Initialize the MLP.
 
@@ -32,26 +33,28 @@ class MLP(nn.Module):
             (void): Initializes the class.
         """
         super().__init__()
-        
+
         self.input_dim = input_dim
-        self.output_dim = output_dim        
+        self.output_dim = output_dim   
         self.activation = activation
         self.bias = bias
         self.layer = layer
         self.num_layers = num_layers
         self.hidden_dim = hidden_dim
         self.skip = skip
+        self.output_activation = output_activation
+
         if self.skip is None:
             self.skip = []
-        
+
         self.make()
 
-    def make(self):
+    def make(self, ):
         """Builds the actual MLP.
         """
         layers = []
         for i in range(self.num_layers):
-            if i == 0: 
+            if i == 0:
                 layers.append(self.layer(self.input_dim, self.hidden_dim, bias=self.bias))
             elif i in self.skip:
                 layers.append(self.layer(self.hidden_dim+self.input_dim, self.hidden_dim, bias=self.bias))
@@ -84,7 +87,7 @@ class MLP(nn.Module):
                 h = self.activation(l(h))
         
         out = self.lout(h)
-        
+
         if return_h:
             return out, h
         else:
@@ -108,5 +111,7 @@ def get_activation_class(activation_type):
         return torch.nn.functional.softplus
     elif activation_type == 'lrelu':
         return torch.nn.functional.leaky_relu
+    elif activation_type == 'identity':
+        return lambda x: x
     else:
         assert False and "activation type does not exist"
