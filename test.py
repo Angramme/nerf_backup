@@ -31,9 +31,10 @@ def main(config):
     pe = PositionalEncoding (config.num_freq, config.max_freq)
 
 
-    network = torch.load(os.path.join(config.pretrained_root, config.model_name))
+    coarse_network = torch.load(os.path.join(config.pretrained_root, 'coarse_' + config.model_name))
+    fine_network = torch.load(os.path.join(config.pretrained_root, 'fine_' + config.model_name))
 
-    trainer = Trainer(config, network, network, pe, config.pretrained_root)
+    trainer = Trainer(config, coarse_network, fine_network, pe, config.pretrained_root)
     test_save_path = os.path.join(config.pretrained_root, 'test')
     if not os.path.exists(test_save_path):
             os.makedirs(test_save_path)
