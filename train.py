@@ -96,8 +96,8 @@ def main(config):
         # fine_network = MLP(pe.out_dim, pe.out_dim, config.out_dim, activation=get_activation_class(config.activation), 
         #             num_layers= config.num_layers , hidden_dim=config.hidden_dim,
         #             skip=[config.skip])
-        coarse_network = NeRFModel(pe.out_dim, pe.out_dim)
-        fine_network = NeRFModel(pe.out_dim, pe.out_dim)
+        coarse_network = NeRFModel(pe.out_dim, pe.out_dim, hidden_dim=config.hidden_dim)
+        fine_network = NeRFModel(pe.out_dim, pe.out_dim, hidden_dim=config.hidden_dim)
 
 
     trainer = Trainer(config, coarse_network, fine_network, pe, log_dir)
@@ -144,7 +144,6 @@ def main(config):
     wandb.finish()
 
 if __name__ == "__main__":
-    print('hi')
     parser = parse_options()
     parser.add_argument('--pretrained-root', type=str, required=False, help='pretrained model path')
     parser.add_argument('--model-name', type=str, required=False, help='load model name')

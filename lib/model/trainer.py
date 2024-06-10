@@ -143,7 +143,6 @@ class Trainer(nn.Module):
             
         # Step 3 : Volume rendering to compute the RGB color at the given rays
         ray_colors, coarse_ray_depth, coarse_ray_alpha, ray_weights = self.volume_render(rgb, sigma, coarse_z_vals, coarse_deltas)
-        print(coarse_ray_depth.shape)
         # Step 4 : Compositing with background color
         if self.cfg.bg_color == 'white':
             bg = torch.ones(B, Nr, 3, device=ray_colors.device)
@@ -152,7 +151,7 @@ class Trainer(nn.Module):
             coarse_rgb = coarse_ray_alpha * ray_colors
 
         fine_coords, fine_z_vals, fine_deltas = inverse_transform_sampling(
-            ray_orig, ray_dir, ray_weights, coarse_z_vals, 2 * num_points, near, far)
+            ray_orig, ray_dir, ray_weights, coarse_z_vals, num_points, near, far)
         return fine_coords, fine_z_vals, fine_deltas, coarse_rgb, coarse_ray_depth, coarse_ray_alpha
 
     def predict_radience(self, coords, ray_dir, model=None):
@@ -319,7 +318,6 @@ class Trainer(nn.Module):
             _, sigma = self.predict_radience(_p, _ray_dir)
             voxels.append(sigma)
         voxels = torch.cat(voxels, dim=0)
-
         np_sigma = torch.clip(voxels, 0.0).reshape(RES, RES, RES).cpu().numpy()
 
         vertices, faces = mcubes.marching_cubes(np_sigma, sigma_threshold)
