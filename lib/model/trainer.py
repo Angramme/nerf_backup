@@ -98,9 +98,11 @@ class Trainer(nn.Module):
         self.init_log_dict()
 
     def init_optimizer(self):
-        self.optimizer = torch.optim.Adam(self.parameters(), lr=self.cfg.lr, 
+        self.optimizer = torch.optim.Adam(self.parameters(), lr=self.cfg.lr_start, 
                                     betas=(self.cfg.beta1, self.cfg.beta2),
                                     weight_decay=self.cfg.weight_decay)
+        gamma = (self.cfg.lr_end / self.cfg.lr_start) ** (1 / self.cfg.epochs)
+        self.scheduler = torch.optim.lr_scheduler.ExponentialLR(self.optimizer, gamma=self.cfg.lr_decay_rate)
 
     def init_log_dict(self):
         """Custom log dict.

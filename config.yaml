@@ -9,13 +9,15 @@ dataset:
   
 
 optimizer:
-  lr: 0.001
-  beta1: 0.5
+  # lr: 0.001
+  lr_start: 0.0005
+  lr_end: 0.00005
+  beta1: 0.9
   beta2: 0.999
 
 
 train:
-  epochs: 5020
+  epochs: 20020
   # epochs: 40
   batch_size: 2
   workers: 4

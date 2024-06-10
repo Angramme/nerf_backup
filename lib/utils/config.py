@@ -43,6 +43,10 @@ def parse_options():
     optim_group = parser.add_argument_group('optimizer')
     optim_group.add_argument('--lr', type=float, default=0.001, 
                              help='Learning rate.')
+    optim_group.add_argument('--lr-start', type=float, default=0.001, 
+                             help='Learning rate.')
+    optim_group.add_argument('--lr-end', type=float, default=0.001, 
+                             help='Learning rate.')
     optim_group.add_argument('--beta1', type=float, default=0.5,
                                 help='Beta1.')
     optim_group.add_argument('--beta2', type=float, default=0.999,
@@ -94,6 +98,14 @@ def parse_options():
     net_group.add_argument('--num-freq', type=int, default=5,
                             help='The number of frequency bands to sample.')
     net_group.add_argument('--max-freq', type=int, default=5,
+                            help='The maximum frequency.')
+    net_group.add_argument('--num-freq-coord', type=int, default=10,
+                            help='The number of frequency bands to sample.')
+    net_group.add_argument('--max-freq-coord', type=int, default=9,
+                            help='The maximum frequency.')
+    net_group.add_argument('--num-freq-ray-dir', type=int, default=4,
+                            help='The number of frequency bands to sample.')
+    net_group.add_argument('--max-freq-ray-dir', type=int, default=3,
                             help='The maximum frequency.')
 
    ###################

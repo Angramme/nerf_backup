@@ -141,6 +141,7 @@ def main(config):
             trainer.validate(valid_loader, rander_shape, step=global_step, epoch=epoch, 
                              sigma_threshold=config.sigma_thres,
                              chunk_size=config.chunk_size, save_img=config.save_img)
+        trainer.scheduler.step()
 
     wandb.finish()
 
