@@ -9,47 +9,12 @@ from PIL import Image
 import trimesh
 import mcubes
 import wandb
-from scipy.ndimage import gaussian_filter
 
 from .ray import exponential_integration
-from .realnvp import RealNVP
 from ..utils.metrics import psnr
 
 # Warning: you MUST NOT change the resolution of marching cube
 RES = 256
-lambda_D: 0.1
-lambda_N: 1e-6
-
-def depth_smoothness_loss(depth, patch_size=8):
-    """Compute depth smoothness loss."""
-    B, Nr, Np, _ = depth.shape
-    depth = depth.view(B, Nr, Np // patch_size, patch_size, -1)
-    loss = torch.mean((depth[:, :, 1:, :, :] - depth[:, :, :-1, :, :])**2) + \
-           torch.mean((depth[:, :, :, 1:, :] - depth[:, :, :, :-1, :])**2)
-    return loss
-
-def color_flow_loss(rgb_patches):
-    """Compute color normalizing flow loss."""
-    B, Nr, Np, C = rgb_patches.shape
-    rgb_patches = rgb_patches.view(-1, Np, C)
-    log_prob = self.flow_model.log_prob(rgb_patches)
-    return -log_prob.mean()
-
-def generate_deltas(ts: torch.Tensor):
-    """Calculates the difference between each 'time' in ray samples.
-
-    Rays will go to infinity unless obstructed. Therefore, the delta
-    between the ts and infinity is expressed as 1e10
-
-    Args:
-        ts: [B x N x num_samples x 1] tensor of times. The values are increasing from [near,far] along
-            the num_samples dimension.
-    Returns:
-        deltas: [B x N x num_samples x 1]  where delta_i = t_i+1 - t_i.
-    """
-    B, N, _, _ = ts.shape
-    deltas = torch.cat([ts[:, :, 1:, :] - ts[:, :, :-1, :], torch.full((B, N, 1, 1), 1e10, device=ts.device)], dim=2)
-    return deltas
 
 def inverse_transform_sampling(ray_orig: torch.Tensor, ray_dir: torch.Tensor, weights, ts,
                                num_points: int=128, near=1.0, far=3.0):
@@ -63,20 +28,20 @@ def inverse_transform_sampling(ray_orig: torch.Tensor, ray_dir: torch.Tensor, we
     I don't have to be rigorous. 
 
     Args:
-        ray_orig: [B x N x 3] coordinates of the ray origin.
-        ray_dir: [B x N x 3] directions of the ray.
-        weights: [B x N x C x 1] tensor of weights calculated as 
+        ray_orig: [B x Nr x 3] coordinates of the ray origin.
+        ray_dir: [B x Nr x 3] directions of the ray.
+        weights: [B x Nr x Np x 1] tensor of weights calculated as 
                  w = T(1 - exp(- density * delta)). N is the batch size, and C 
                  is the number of coarse samples.
-        ts: [B x N x C x 1] is the increment between each sample. N is the batch 
-            size, and C is the number of coarse samples. 
+        ts: [B x Nr x Np x 1] is the increment between each sample. N is the batch 
+            size, and Np is the number of coarse samples. 
         num_points: number of samples to return per ray.
         near/far: near/far bounds for sampling. 
     Returns:
-        fine_samples: [B x N x num_points x 3] tensor sampled according to weights.
+        fine_samples: [B x Nr x num_points x 3] tensor sampled according to weights.
                       Instead of using the same values as in ts, we pertube it by 
                       adding random noise (sampled from U(0, 1/num_points)).
-        fine_ts: [B x N x num_points x 1] tensor of the time increment for each sample. 
+        fine_ts: [B x Nr x num_points x 1] tensor of the time increment for each sample. 
     """
     device = ray_orig.device
     B, N, C, _ = ts.shape
@@ -100,14 +65,17 @@ def inverse_transform_sampling(ray_orig: torch.Tensor, ray_dir: torch.Tensor, we
 
     fine_ts = lower_bins + (upper_bins - lower_bins) * torch.rand((B, N, num_points, 1), device=device)
     fine_samples = ray_orig.unsqueeze(2) + fine_ts * ray_dir.unsqueeze(2)
-    
+
     # Combine coarse and fine samples
     coarse_coords = ray_orig.unsqueeze(2) + ts * ray_dir.unsqueeze(2)
     fine_coords = torch.cat([fine_samples, coarse_coords], dim=2)
     fine_z_vals = torch.cat([fine_ts, ts], dim=2)
     fine_z_vals, idxs = torch.sort(fine_z_vals, dim=2)
     fine_coords = torch.gather(fine_coords, 2, idxs.expand(-1, -1, -1, 3))
-    fine_deltas = z_vals.diff(dim=-1, prepend=(torch.zeros(B, Nr, 1, device=z_vals.device)+ near)) 
+    fine_deltas = fine_z_vals.squeeze(-1).diff(
+        dim=-1,
+        prepend=(torch.zeros(B, ray_orig.shape[1], 1, device=fine_z_vals.device) + near))
+    fine_deltas = fine_deltas[..., None]
     # fine_deltas = generate_deltas(fine_z_vals)
     
     return fine_coords, fine_z_vals, fine_deltas
@@ -167,7 +135,7 @@ class Trainer(nn.Module):
 
         z_vals = near * (1.0 - t) + far * t
         points = ray_orig[:, :, None, :] + ray_dir[:, :, None, :] * z_vals[..., None]
-        deltas = z_vals.diff(dim=-1, prepend=(torch.zeros(B, Nr, 1, device=z_vals.device)+ near))
+        deltas = z_vals.diff(dim=-1, prepend=(torch.zeros(B, Nr, 1, device=z_vals.device) + near))
 
         coarse_coords, coarse_z_vals, coarse_deltas = points, z_vals[..., None], deltas[..., None]
 
@@ -175,14 +143,14 @@ class Trainer(nn.Module):
         rgb, sigma = self.predict_radience(coarse_coords, ray_dir, model=self.coarse_model)
             
         # Step 3 : Volume rendering to compute the RGB color at the given rays
-        ray_colors, ray_depth, ray_alpha, ray_weights = self.volume_render(rgb, sigma, coarse_z_vals, coarse_deltas)
-
+        ray_colors, coarse_ray_depth, coarse_ray_alpha, ray_weights = self.volume_render(rgb, sigma, coarse_z_vals, coarse_deltas)
+        print(coarse_ray_depth.shape)
         # Step 4 : Compositing with background color
         if self.cfg.bg_color == 'white':
             bg = torch.ones(B, Nr, 3, device=ray_colors.device)
-            coarse_rgb = (1 - ray_alpha) * bg + ray_alpha * ray_colors
+            coarse_rgb = (1 - coarse_ray_alpha) * bg + coarse_ray_alpha * ray_colors
         else:
-            coarse_rgb = ray_alpha * ray_colors
+            coarse_rgb = coarse_ray_alpha * ray_colors
 
         fine_coords, fine_z_vals, fine_deltas = inverse_transform_sampling(
             ray_orig, ray_dir, ray_weights, coarse_z_vals, num_points, near, far)
@@ -216,8 +184,6 @@ class Trainer(nn.Module):
         else:
             ray_dir = ray_dir / torch.linalg.norm(ray_dir, dim=-1, keepdim=True)  # unit direction
             ray_dir = ray_dir.unsqueeze(2).repeat(1, 1, coords.shape[-2], 1)
-            # ray_dir = ray_dir.unsqueeze(2)  # Adds an extra dimensione
-            # ray_dir = ray_dir.expand(*ray_dir.shape[:-2], coords.shape[-2], ray_dir.shape[-1])
             input_shape = coords.shape
             input_shape_ray_dir = ray_dir.shape
 
@@ -244,9 +210,8 @@ class Trainer(nn.Module):
         # Sample points along the rays
 
         tau = sigma * deltas
-        ray_colors, ray_dapth, ray_alpha, weights = exponential_integration(rgb, tau, depth, exclusive=True)
-
-        return ray_colors, ray_dapth, ray_alpha, weights
+        ray_colors, ray_depth, ray_alpha, weights = exponential_integration(rgb, tau, depth, exclusive=True)
+        return ray_colors, ray_depth, ray_alpha, weights
 
     def forward(self):
         """Forward pass of the network. 
@@ -264,9 +229,14 @@ class Trainer(nn.Module):
                                 num_points=self.cfg.num_pts_per_ray)
 
         self.coarse_rgb = coarse_rgb
+        self.coarse_ray_depth = coarse_ray_depth
+        self.coarse_ray_alpha = coarse_ray_alpha
 
         rgb, sigma = self.predict_radience(fine_coords, ray_dir, model=self.fine_model)
         ray_colors, ray_depth, ray_alpha, _ = self.volume_render(rgb, sigma, fine_z_vals, fine_deltas)
+
+        self.fine_ray_depth = ray_depth
+        self.fine_ray_alpha = ray_alpha
 
         # Step 4 : Compositing with background color
         if self.cfg.bg_color == 'white':
@@ -274,12 +244,6 @@ class Trainer(nn.Module):
             self.fine_rgb = (1 - ray_alpha) * bg + ray_alpha * ray_colors
         else:
             self.fine_rgb = ray_alpha * ray_colors
-
-        self.coarse_depth_loss = self.depth_smoothness_loss(coarse_ray_depth)
-        self.coarse_color_loss = self.color_flow_loss(coarse_rgb.view(B, Nr, -1, 3))
-
-        self.fine_depth_loss = self.depth_smoothness_loss(ray_depth)
-        self.fine_color_loss = self.color_flow_loss(fine_rgb.view(B, Nr, -1, 3))
 
     def backward(self):
         """Backward pass of the network.
@@ -296,12 +260,14 @@ class Trainer(nn.Module):
 
         loss = rgb_loss
 
-        loss += lambda_D * self.coarse_depth_loss
-        loss += lambda_N * self.coarse_color_loss
-        
-        loss += lambda_D * self.fine_depth_loss
-        loss += lambda_N * self.fine_color_loss
-
+        ps = 8
+        coarse_ray_depth_patches = self.coarse_ray_depth.unfold(1, ps, ps).unfold(2, ps, ps)
+        coarse_ray_alpha_patches = self.coarse_ray_alpha.unfold(1, ps, ps).unfold(2, ps, ps)
+        georeg_loss = 0.0
+        if self.cfg.depth_tvnorm_loss_mult != 0.0:
+            weighting = coarse_ray_alpha_patches[..., :-1, :-1]
+            georeg_loss = self.compute_tv_norm(coarse_ray_depth_patches, weighting, ps)
+            georeg_loss *= self.cfg.depth_tvnorm_loss_mult
 
         self.log_dict['rgb_loss'] += rgb_loss.item()
         self.log_dict['total_loss'] += loss.item()
@@ -365,9 +331,6 @@ class Trainer(nn.Module):
         voxels = torch.cat(voxels, dim=0)
 
         np_sigma = torch.clip(voxels, 0.0).reshape(RES, RES, RES).cpu().numpy()
-
-        # Apply Gaussian smoothing
-        # np_sigma_smoothed = gaussian_filter(np_sigma, sigma=smoothing_sigma)
 
         vertices, faces = mcubes.marching_cubes(np_sigma, sigma_threshold)
         #vertices = ((vertices - 0.5) / (res/2)) - 1.0

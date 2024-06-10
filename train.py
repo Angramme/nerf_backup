@@ -90,7 +90,6 @@ def main(config):
         coarse_network = torch.load(os.path.join(config.pretrained_root, 'coarse_' + config.model_name))
         fine_network = torch.load(os.path.join(config.pretrained_root, 'fine_' + config.model_name))
     else:
-        print(pe.out_dim)
         # coarse_network = MLP(pe.out_dim, pe.out_dim, config.out_dim, activation=get_activation_class(config.activation), 
         #             num_layers= config.num_layers , hidden_dim=config.hidden_dim,
         #             skip=[config.skip])
