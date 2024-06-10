@@ -49,8 +49,8 @@ class NeRFModel(nn.Module):
             nn.Linear(hidden_dim + self.position_dim, hidden_dim),
             nn.ReLU(),
             nn.Linear(hidden_dim, hidden_dim),
-            # nn.ReLU(),
-            # nn.Linear(128, 128),
+            nn.ReLU(),
+            nn.Linear(hidden_dim, hidden_dim),
         )
 
         self.density_fn = nn.Sequential(
@@ -59,9 +59,9 @@ class NeRFModel(nn.Module):
         )
 
         self.rgb_fn = nn.Sequential(
-            nn.Linear(hidden_dim + self.direction_dim, hidden_dim),
+            nn.Linear(hidden_dim + self.direction_dim, 128),
             nn.ReLU(),
-            nn.Linear(hidden_dim, 3),
+            nn.Linear(128, 3),
             nn.Sigmoid()
         )
 

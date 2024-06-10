@@ -28,13 +28,13 @@ def main(config):
 
     img_shape = test_dataset.img_shape # Height and width of the rendered image
 
-    pe = PositionalEncoding (config.num_freq, config.max_freq)
-
+    pe_coord = PositionalEncoding (config.num_freq_coord, config.max_freq_coord)
+    pe_ray_dir = PositionalEncoding (config.num_freq_ray_dir, config.max_freq_ray_dir)
 
     coarse_network = torch.load(os.path.join(config.pretrained_root, 'coarse_' + config.model_name))
     fine_network = torch.load(os.path.join(config.pretrained_root, 'fine_' + config.model_name))
 
-    trainer = Trainer(config, coarse_network, fine_network, pe, config.pretrained_root)
+    trainer = Trainer(config, coarse_network, fine_network, pe_coord, pe_ray_dir, config.pretrained_root)
     test_save_path = os.path.join(config.pretrained_root, 'test')
     if not os.path.exists(test_save_path):
             os.makedirs(test_save_path)

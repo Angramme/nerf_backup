@@ -15,7 +15,7 @@ optimizer:
 
 
 train:
-  epochs: 2520
+  epochs: 5020
   # epochs: 40
   batch_size: 2
   workers: 4
@@ -35,8 +35,10 @@ network:
   hidden_dim: 128
   activation: 'relu'
   skip: 2
-  num_freq: 5
-  max_freq: 5
+  num_freq_coord: 10
+  max_freq_coord: 9
+  num_freq_ray_dir: 4
+  max_freq_ray_dir: 3
 
 
 validation:

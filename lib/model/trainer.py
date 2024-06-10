@@ -82,11 +82,12 @@ def inverse_transform_sampling(ray_orig: torch.Tensor, ray_dir: torch.Tensor, we
 
 class Trainer(nn.Module):
 
-    def __init__(self, config, coarse_model, fine_model, pe, log_dir):
+    def __init__(self, config, coarse_model, fine_model, pe_pos, pe_ray_dir, log_dir):
         super().__init__()
 
         self.cfg = config
-        self.pos_enc = pe.cuda()
+        self.pe_pos = pe_pos.cuda()
+        self.pe_ray_dir = pe_ray_dir.cuda()
         self.coarse_model = coarse_model.cuda()
         self.fine_model = fine_model.cuda()
 
@@ -177,16 +178,16 @@ class Trainer(nn.Module):
         if model is None:
             model = self.fine_model
         if len(coords.shape) == 2:
-            coords = self.pos_enc(coords)
-            ray_dir = self.pos_enc(ray_dir)
+            coords = self.pe_pos(coords)
+            ray_dir = self.pe_ray_dir(ray_dir)
         else:
             ray_dir = ray_dir / torch.linalg.norm(ray_dir, dim=-1, keepdim=True)  # unit direction
             ray_dir = ray_dir.unsqueeze(2).repeat(1, 1, coords.shape[-2], 1)
             input_shape = coords.shape
             input_shape_ray_dir = ray_dir.shape
 
-            coords = self.pos_enc(coords.view(-1, 3)).view(*input_shape[:-1], -1)
-            ray_dir = self.pos_enc(ray_dir.contiguous().view(-1, 3)).view(*input_shape_ray_dir[:-1], -1)
+            coords = self.pe_pos(coords.view(-1, 3)).view(*input_shape[:-1], -1)
+            ray_dir = self.pe_ray_dir(ray_dir.contiguous().view(-1, 3)).view(*input_shape_ray_dir[:-1], -1)
         rgb, sigma = model(coords, ray_dir)
 
         return rgb, sigma

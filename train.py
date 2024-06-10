@@ -84,7 +84,8 @@ def main(config):
 
     # Initialize network and trainer.
 
-    pe = PositionalEncoding (config.num_freq, config.max_freq)
+    pe_coord = PositionalEncoding (config.num_freq_coord, config.max_freq_coord)
+    pe_ray_dir = PositionalEncoding (config.num_freq_ray_dir, config.max_freq_ray_dir)
 
     if config.pretrained_root:
         coarse_network = torch.load(os.path.join(config.pretrained_root, 'coarse_' + config.model_name))
@@ -96,11 +97,11 @@ def main(config):
         # fine_network = MLP(pe.out_dim, pe.out_dim, config.out_dim, activation=get_activation_class(config.activation), 
         #             num_layers= config.num_layers , hidden_dim=config.hidden_dim,
         #             skip=[config.skip])
-        coarse_network = NeRFModel(pe.out_dim, pe.out_dim, hidden_dim=config.hidden_dim)
-        fine_network = NeRFModel(pe.out_dim, pe.out_dim, hidden_dim=config.hidden_dim)
+        coarse_network = NeRFModel(pe_coord.out_dim, pe_ray_dir.out_dim, hidden_dim=config.hidden_dim)
+        fine_network = NeRFModel(pe_coord.out_dim, pe_ray_dir.out_dim, hidden_dim=config.hidden_dim)
 
 
-    trainer = Trainer(config, coarse_network, fine_network, pe, log_dir)
+    trainer = Trainer(config, coarse_network, fine_network, pe_coord, pe_ray_dir, log_dir)
 
     # Setup wandb for logging
 
