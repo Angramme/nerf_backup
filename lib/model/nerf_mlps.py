@@ -21,7 +21,7 @@ class NeRFModel(nn.Module):
     activation.
     """
 
-    def __init__(self, position_dim=10, direction_dim=4):
+    def __init__(self, position_dim=10, direction_dim=4, hidden_dim=256):
         """NeRF Constructor.
 
         Args:
@@ -35,33 +35,33 @@ class NeRFModel(nn.Module):
         self.direction_dim = direction_dim
         # first MLP is a simple multi-layer perceptron 
         self.mlp = nn.Sequential(
-            nn.Linear(self.position_dim, 256),
+            nn.Linear(self.position_dim, hidden_dim),
             nn.ReLU(),
-            nn.Linear(256, 256),
+            nn.Linear(hidden_dim, hidden_dim),
             nn.ReLU(),
-            nn.Linear(256, 256),
+            nn.Linear(hidden_dim, hidden_dim),
             nn.ReLU(),
-            nn.Linear(256, 256),
+            nn.Linear(hidden_dim, hidden_dim),
             nn.ReLU()
         )
 
         self.feature_fn = nn.Sequential(
-            nn.Linear(256 + self.position_dim, 256),
+            nn.Linear(hidden_dim + self.position_dim, hidden_dim),
             nn.ReLU(),
-            nn.Linear(256, 256),
+            nn.Linear(hidden_dim, hidden_dim),
             # nn.ReLU(),
             # nn.Linear(128, 128),
         )
 
         self.density_fn = nn.Sequential(
-            nn.Linear(256, 1),
+            nn.Linear(hidden_dim, 1),
             nn.ReLU() # rectified to ensure nonnegative density
         )
 
         self.rgb_fn = nn.Sequential(
-            nn.Linear(256 + self.direction_dim, 256),
+            nn.Linear(hidden_dim + self.direction_dim, hidden_dim),
             nn.ReLU(),
-            nn.Linear(256, 3),
+            nn.Linear(hidden_dim, 3),
             nn.Sigmoid()
         )
 
@@ -84,4 +84,4 @@ class NeRFModel(nn.Module):
         # final rgb predictor
         dim_features = torch.cat((x_features, pos_enc_ray_dir), dim=-1)
         rgb = self.rgb_fn(dim_features)
-        return rgb, density 
+        return rgb, density
