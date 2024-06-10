@@ -145,7 +145,7 @@ def main(config):
     wandb.finish()
 
 if __name__ == "__main__":
-
+    print('hi')
     parser = parse_options()
     parser.add_argument('--pretrained-root', type=str, required=False, help='pretrained model path')
     parser.add_argument('--model-name', type=str, required=False, help='load model name')

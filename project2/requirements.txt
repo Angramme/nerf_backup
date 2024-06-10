@@ -1,6 +1,0 @@
-wandb
-trimesh
-tqdm
-PyMCubes
-opencv-python
-scikit-image

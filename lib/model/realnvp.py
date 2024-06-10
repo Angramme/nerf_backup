@@ -1,70 +1,81 @@
-# realnvp.py
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.distributions import Normal
 
 class RealNVP(nn.Module):
-    def __init__(self, num_scales, in_channels, mid_channels, num_blocks):
+    def __init__(self, num_scales=2, in_channels=3, mid_channels=64, num_blocks=8):
         super(RealNVP, self).__init__()
-        self.num_scales = num_scales
-        self.transforms = nn.ModuleList()
-        for _ in range(num_scales):
-            self.transforms.append(RealNVPBlock(in_channels, mid_channels, num_blocks))
 
-    def forward(self, x, reverse=False):
+        self.flows = nn.ModuleList()
+        self.prior = torch.distributions.Normal(0, 1)
+
+        for _ in range(num_scales):
+            self.flows.append(FlowStep(in_channels, mid_channels, num_blocks))
+            self.flows.append(FlowStep(in_channels, mid_channels, num_blocks))
+
+    def forward(self, x):
         log_det_jacobian = 0
-        for transform in (self.transforms if not reverse else reversed(self.transforms)):
-            x, log_det_jacobian = transform(x, reverse, log_det_jacobian)
+
+        for flow in self.flows:
+            x, log_det_jacobian = flow(x, log_det_jacobian)
+
         return x, log_det_jacobian
+
+    def inverse(self, z):
+        for flow in reversed(self.flows):
+            z = flow.inverse(z)
+        return z
 
     def log_prob(self, x):
-        z, log_det_jacobian = self(x)
-        log_prob_z = Normal(0, 1).log_prob(z).sum([1, 2, 3])
-        return log_prob_z + log_det_jacobian
+        z, log_det_jacobian = self.forward(x)
+        log_pz = self.prior.log_prob(z).sum(dim=[1, 2, 3])
+        return log_pz + log_det_jacobian
 
-class RealNVPBlock(nn.Module):
+class FlowStep(nn.Module):
     def __init__(self, in_channels, mid_channels, num_blocks):
-        super(RealNVPBlock, self).__init__()
-        self.s = nn.ModuleList()
-        self.t = nn.ModuleList()
+        super(FlowStep, self).__init__()
+        self.s = nn.ModuleList([self._create_network(in_channels, mid_channels, num_blocks) for _ in range(2)])
+        self.t = nn.ModuleList([self._create_network(in_channels, mid_channels, num_blocks) for _ in range(2)])
+        self.mask = torch.zeros((1, in_channels, 8, 8), dtype=torch.float32)
+        self.mask[:, :, ::2, ::2] = 1
+        self.mask[:, :, 1::2, 1::2] = 1
+
+    def _create_network(self, in_channels, mid_channels, num_blocks):
+        network = [nn.Conv2d(in_channels, mid_channels, kernel_size=3, padding=1), nn.ReLU(inplace=True)]
         for _ in range(num_blocks):
-            self.s.append(self._create_net(in_channels, mid_channels))
-            self.t.append(self._create_net(in_channels, mid_channels))
+            network.append(nn.Conv2d(mid_channels, mid_channels, kernel_size=3, padding=1))
+            network.append(nn.ReLU(inplace=True))
+        network.append(nn.Conv2d(mid_channels, in_channels, kernel_size=3, padding=1))
+        return nn.Sequential(*network)
 
-    def forward(self, x, reverse=False, log_det_jacobian=0):
-        if not reverse:
-            return self._forward(x, log_det_jacobian)
-        else:
-            return self._reverse(x, log_det_jacobian)
+    def forward(self, x, log_det_jacobian):
+        x_a, x_b = x * self.mask, x * (1 - self.mask)
+        s_a, t_a = self.s[0](x_a), self.t[0](x_a)
+        y_a = x_a
+        y_b = x_b * torch.exp(s_a) + t_a
+        x = y_a + y_b
+        log_det_jacobian += s_a.sum(dim=[1, 2, 3])
 
-    def _forward(self, x, log_det_jacobian):
-        for s, t in zip(self.s, self.t):
-            x1, x2 = x.chunk(2, 1)
-            s_out = s(x1)
-            t_out = t(x1)
-            z1 = x1
-            z2 = x2 * torch.exp(s_out) + t_out
-            x = torch.cat([z1, z2], 1)
-            log_det_jacobian += s_out.sum([1, 2, 3])
+        x_a, x_b = x * (1 - self.mask), x * self.mask
+        s_b, t_b = self.s[1](x_b), self.t[1](x_b)
+        y_a = x_a
+        y_b = x_b * torch.exp(s_b) + t_b
+        x = y_a + y_b
+        log_det_jacobian += s_b.sum(dim=[1, 2, 3])
+
         return x, log_det_jacobian
 
-    def _reverse(self, z, log_det_jacobian):
-        for s, t in zip(reversed(self.s), reversed(self.t)):
-            z1, z2 = z.chunk(2, 1)
-            s_out = s(z1)
-            t_out = t(z1)
-            x1 = z1
-            x2 = (z2 - t_out) * torch.exp(-s_out)
-            z = torch.cat([x1, x2], 1)
-            log_det_jacobian -= s_out.sum([1, 2, 3])
-        return z, log_det_jacobian
+    def inverse(self, z):
+        z_a, z_b = z * (1 - self.mask), z * self.mask
+        s_b, t_b = self.s[1](z_b), self.t[1](z_b)
+        y_a = z_a
+        y_b = (z_b - t_b) * torch.exp(-s_b)
+        z = y_a + y_b
 
-    def _create_net(self, in_channels, mid_channels):
-        return nn.Sequential(
-            nn.Conv2d(in_channels // 2, mid_channels, 3, padding=1),
-            nn.ReLU(),
-            nn.Conv2d(mid_channels, mid_channels, 1),
-            nn.ReLU(),
-            nn.Conv2d(mid_channels, in_channels // 2, 3, padding=1)
-        )
+        z_a, z_b = z * self.mask, z * (1 - self.mask)
+        s_a, t_a = self.s[0](z_a), self.t[0](z_a)
+        y_a = z_a
+        y_b = (z_b - t_a) * torch.exp(-s_a)
+        z = y_a + y_b
+
+        return z

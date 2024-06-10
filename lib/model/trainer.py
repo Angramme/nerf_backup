@@ -17,6 +17,23 @@ from ..utils.metrics import psnr
 
 # Warning: you MUST NOT change the resolution of marching cube
 RES = 256
+lambda_D: 0.1
+lambda_N: 1e-6
+
+def depth_smoothness_loss(depth, patch_size=8):
+    """Compute depth smoothness loss."""
+    B, Nr, Np, _ = depth.shape
+    depth = depth.view(B, Nr, Np // patch_size, patch_size, -1)
+    loss = torch.mean((depth[:, :, 1:, :, :] - depth[:, :, :-1, :, :])**2) + \
+           torch.mean((depth[:, :, :, 1:, :] - depth[:, :, :, :-1, :])**2)
+    return loss
+
+def color_flow_loss(rgb_patches):
+    """Compute color normalizing flow loss."""
+    B, Nr, Np, C = rgb_patches.shape
+    rgb_patches = rgb_patches.view(-1, Np, C)
+    log_prob = self.flow_model.log_prob(rgb_patches)
+    return -log_prob.mean()
 
 def generate_deltas(ts: torch.Tensor):
     """Calculates the difference between each 'time' in ray samples.
@@ -90,7 +107,8 @@ def inverse_transform_sampling(ray_orig: torch.Tensor, ray_dir: torch.Tensor, we
     fine_z_vals = torch.cat([fine_ts, ts], dim=2)
     fine_z_vals, idxs = torch.sort(fine_z_vals, dim=2)
     fine_coords = torch.gather(fine_coords, 2, idxs.expand(-1, -1, -1, 3))
-    fine_deltas = generate_deltas(fine_z_vals)
+    fine_deltas = z_vals.diff(dim=-1, prepend=(torch.zeros(B, Nr, 1, device=z_vals.device)+ near)) 
+    # fine_deltas = generate_deltas(fine_z_vals)
     
     return fine_coords, fine_z_vals, fine_deltas
 
@@ -103,7 +121,8 @@ class Trainer(nn.Module):
         self.pos_enc = pe.cuda()
         self.coarse_model = coarse_model.cuda()
         self.fine_model = fine_model.cuda()
-        
+        self.flow_model = RealNVP().cuda()
+
         self.log_dir = log_dir
         self.log_dict = {}
 
@@ -140,7 +159,6 @@ class Trainer(nn.Module):
             points (torch.FloatTensor): 3D coordinates of the points of shape [B, Nr, Np, 3].
             z_vals (torch.FloatTensor): Depth values of the points of shape [B, Nr, Np, 1].
             deltas (torch.FloatTensor): Distance between the points of shape [B, Nr, Np, 1].
-
         """
 
         B, Nr = ray_orig.shape[:2]
@@ -167,8 +185,8 @@ class Trainer(nn.Module):
             coarse_rgb = ray_alpha * ray_colors
 
         fine_coords, fine_z_vals, fine_deltas = inverse_transform_sampling(
-            ray_orig, ray_dir, ray_weights, coarse_z_vals, 2 * num_points, near, far)
-        return fine_coords, fine_z_vals, fine_deltas, coarse_rgb
+            ray_orig, ray_dir, ray_weights, coarse_z_vals, num_points, near, far)
+        return fine_coords, fine_z_vals, fine_deltas, coarse_rgb, coarse_ray_depth, coarse_ray_alpha
 
     def predict_radience(self, coords, ray_dir, model=None):
         """Predict radiance at the given coordinates.
@@ -241,7 +259,7 @@ class Trainer(nn.Module):
         B, Nr = self.ray_orig.shape[:2]
         ray_dir = self.ray_dir
         # Step 1 : Sample points along the rays
-        fine_coords, fine_z_vals, fine_deltas, coarse_rgb = self.sample_points(
+        fine_coords, fine_z_vals, fine_deltas, coarse_rgb, coarse_ray_depth, coarse_ray_alpha = self.sample_points(
                                 self.ray_orig, ray_dir, near=self.cfg.near, far=self.cfg.far,
                                 num_points=self.cfg.num_pts_per_ray)
 
@@ -257,6 +275,12 @@ class Trainer(nn.Module):
         else:
             self.fine_rgb = ray_alpha * ray_colors
 
+        self.coarse_depth_loss = self.depth_smoothness_loss(coarse_ray_depth)
+        self.coarse_color_loss = self.color_flow_loss(coarse_rgb.view(B, Nr, -1, 3))
+
+        self.fine_depth_loss = self.depth_smoothness_loss(ray_depth)
+        self.fine_color_loss = self.color_flow_loss(fine_rgb.view(B, Nr, -1, 3))
+
     def backward(self):
         """Backward pass of the network.
         TODO: You can also desgin your own loss function.
@@ -267,8 +291,17 @@ class Trainer(nn.Module):
         # loss = rgb_loss # + any other loss terms
         fine_loss = nn.functional.mse_loss(self.fine_rgb, self.img_gts)
         coarse_loss = nn.functional.mse_loss(self.coarse_rgb, self.img_gts)
+
         rgb_loss = coarse_loss + fine_loss
+
         loss = rgb_loss
+
+        loss += lambda_D * self.coarse_depth_loss
+        loss += lambda_N * self.coarse_color_loss
+        
+        loss += lambda_D * self.fine_depth_loss
+        loss += lambda_N * self.fine_color_loss
+
 
         self.log_dict['rgb_loss'] += rgb_loss.item()
         self.log_dict['total_loss'] += loss.item()
@@ -320,6 +353,7 @@ class Trainer(nn.Module):
         window_z = torch.linspace(-1., 1., steps=RES, device='cuda')
         
         coord = torch.stack(torch.meshgrid(window_x, window_y, window_z)).permute(1, 2, 3, 0).reshape(-1, 3).contiguous()
+        # torch.tensor([0.0, 0.0, 1.0], device=coords.device).view(1, 3).expand(coords.shape[0], 3)
         ray_dir = torch.zeros_like(coord)
         _points = torch.split(coord, int(chunk_size), dim=0)
         _ray_dirs = torch.split(ray_dir, int(chunk_size), dim=0)
