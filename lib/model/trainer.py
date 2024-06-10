@@ -259,15 +259,6 @@ class Trainer(nn.Module):
 
         loss = rgb_loss
 
-        ps = 8
-        coarse_ray_depth_patches = self.coarse_ray_depth.unfold(1, ps, ps).unfold(2, ps, ps)
-        coarse_ray_alpha_patches = self.coarse_ray_alpha.unfold(1, ps, ps).unfold(2, ps, ps)
-        georeg_loss = 0.0
-        if self.cfg.depth_tvnorm_loss_mult != 0.0:
-            weighting = coarse_ray_alpha_patches[..., :-1, :-1]
-            georeg_loss = self.compute_tv_norm(coarse_ray_depth_patches, weighting, ps)
-            georeg_loss *= self.cfg.depth_tvnorm_loss_mult
-
         self.log_dict['rgb_loss'] += rgb_loss.item()
         self.log_dict['total_loss'] += loss.item()
 
@@ -295,7 +286,7 @@ class Trainer(nn.Module):
         """Render a full image for evaluation.
         """
         B, Nr = ray_orig.shape[:2]
-        coords, depth, deltas, _ = self.sample_points(ray_orig, ray_dir, near=self.cfg.near, far=self.cfg.far,
+        coords, depth, deltas, _, _, _ = self.sample_points(ray_orig, ray_dir, near=self.cfg.near, far=self.cfg.far,
                                 num_points=self.cfg.num_pts_per_ray_render)
         rgb, sigma = self.predict_radience(coords, ray_dir)
         ray_colors, ray_depth, ray_alpha, _ = self.volume_render(rgb, sigma, depth, deltas)

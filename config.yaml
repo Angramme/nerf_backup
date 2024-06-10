@@ -15,7 +15,7 @@ optimizer:
 
 
 train:
-  epochs: 35020
+  epochs: 2520
   # epochs: 40
   batch_size: 2
   workers: 4
