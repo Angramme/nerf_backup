@@ -27,3 +27,4 @@ config: {'config': 'config.yaml', 'save_root': 'checkpoints', 'exp_name': 'mp-20
 2024-06-11 12:09:23,838 INFO    MainThread:1157065 [wandb_init.py:init():838] run started, returning control to user process
 2024-06-11 12:09:23,839 INFO    MainThread:1157065 [wandb_watch.py:watch():51] Watching
 2024-06-11 12:09:23,839 INFO    MainThread:1157065 [wandb_watch.py:watch():51] Watching
+2024-06-11 13:00:35,802 WARNING MsgRouterThr:1157065 [router.py:message_loop():77] message_loop has been closed
