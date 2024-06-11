@@ -1,0 +1,23 @@
+2024-06-11 12:09:25,626|    INFO| STEP 0 - EPOCH 0/10020 | total loss: 4.987E-01 | rgb loss: 4.987E-01
+2024-06-11 12:09:25,927|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240611-120844/fine_model-0.pth
+2024-06-11 12:09:25,988|    INFO| Beginning validation...
+2024-06-11 12:09:25,989|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-11 12:09:25,989|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240611-120844/mesh
+/usr/local/lib/python3.10/dist-packages/torch/functional.py:507: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3549.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+
+
+
+ 80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                | 4/5 [00:06<00:01,  1.50s/it]
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:07<00:00,  1.52s/it]
+2024-06-11 12:10:01,508|    INFO| STEP 100 - EPOCH 25/10020 | total loss: 1.633E-01 | rgb loss: 1.633E-01
+2024-06-11 12:10:26,746|    INFO| STEP 200 - EPOCH 50/10020 | total loss: 5.348E-02 | rgb loss: 5.348E-02
+2024-06-11 12:10:53,970|    INFO| STEP 300 - EPOCH 75/10020 | total loss: 3.292E-02 | rgb loss: 3.292E-02
+2024-06-11 12:11:41,298|    INFO| STEP 400 - EPOCH 100/10020 | total loss: 2.403E-02 | rgb loss: 2.403E-02
+2024-06-11 12:12:19,308|    INFO| STEP 500 - EPOCH 125/10020 | total loss: 1.870E-02 | rgb loss: 1.870E-02
+2024-06-11 12:12:45,326|    INFO| STEP 600 - EPOCH 150/10020 | total loss: 1.528E-02 | rgb loss: 1.528E-02
+2024-06-11 12:13:11,408|    INFO| STEP 700 - EPOCH 175/10020 | total loss: 1.357E-02 | rgb loss: 1.357E-02
+2024-06-11 12:13:36,809|    INFO| STEP 800 - EPOCH 200/10020 | total loss: 1.270E-02 | rgb loss: 1.270E-02
+2024-06-11 12:14:02,198|    INFO| STEP 900 - EPOCH 225/10020 | total loss: 1.114E-02 | rgb loss: 1.114E-02
+2024-06-11 12:14:29,235|    INFO| STEP 1000 - EPOCH 250/10020 | total loss: 1.058E-02 | rgb loss: 1.058E-02

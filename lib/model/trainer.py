@@ -453,4 +453,4 @@ class Trainer(nn.Module):
 
 
 # first shell is generate_delta
-# second is from np untouched.
+# second is from mp untouched.

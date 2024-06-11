@@ -1,0 +1,36 @@
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_setup.py:_flush():76] Current SDK version is 0.17.1
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_setup.py:_flush():76] Configure stats pid to 918357
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_setup.py:_flush():76] Loading settings from /workspace/StrawberryPudding/wandb/settings
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program_abspath': '/workspace/StrawberryPudding/train.py', 'program': '/workspace/StrawberryPudding/train.py'}
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_init.py:_log_setup():520] Logging user logs to checkpoints/mp-2024/20240611-073655/wandb/run-20240611_073734-m46qw3mu/logs/debug.log
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_init.py:_log_setup():521] Logging internal logs to checkpoints/mp-2024/20240611-073655/wandb/run-20240611_073734-m46qw3mu/logs/debug-internal.log
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_init.py:init():560] calling init triggers
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {'config': 'config.yaml', 'save_root': 'checkpoints', 'exp_name': 'mp-2024', 'seed': 123, 'log_level': 20, 'data_root': 'data/public', 'num_rays_per_img': 512, 'bg_color': 'white', 'lr': 0.001, 'lr_start': 0.0005, 'lr_end': 5e-05, 'beta1': 0.9, 'beta2': 0.999, 'weight_decay': 0, 'epochs': 12020, 'batch_size': 2, 'workers': 4, 'save_every': 500, 'log_every': 100, 'num_pts_per_ray': 64, 'near': 1.0, 'far': 3.0, 'out_dim': 4, 'num_layers': 4, 'hidden_dim': 256, 'activation': 'relu', 'skip': 2, 'num_freq': 5, 'max_freq': 5, 'num_freq_coord': 10, 'max_freq_coord': 9, 'num_freq_ray_dir': 4, 'max_freq_ray_dir': 3, 'valid_every': 500, 'mip': 2, 'sigma_thres': 50.0, 'chunk_size': 10240, 'num_pts_per_ray_render': 128, 'save_img': False, 'wandb_id': None, 'wandb': True, 'wandb_name': 'mp_test', 'pretrained_root': None, 'model_name': None}
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_init.py:init():610] starting backend
+2024-06-11 07:37:34,964 INFO    MainThread:918357 [wandb_init.py:init():614] setting up manager
+2024-06-11 07:37:34,966 INFO    MainThread:918357 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: fork
+2024-06-11 07:37:34,967 INFO    MainThread:918357 [wandb_init.py:init():622] backend started and connected
+2024-06-11 07:37:34,970 INFO    MainThread:918357 [wandb_init.py:init():711] updated telemetry
+2024-06-11 07:37:34,978 INFO    MainThread:918357 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout
+2024-06-11 07:37:36,480 INFO    MainThread:918357 [wandb_run.py:_on_init():2402] communicating current version
+2024-06-11 07:37:36,607 INFO    MainThread:918357 [wandb_run.py:_on_init():2411] got version response 
+2024-06-11 07:37:36,608 INFO    MainThread:918357 [wandb_init.py:init():795] starting run threads in backend
+2024-06-11 07:37:36,835 INFO    MainThread:918357 [wandb_run.py:_console_start():2380] atexit reg
+2024-06-11 07:37:36,835 INFO    MainThread:918357 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2024-06-11 07:37:36,835 INFO    MainThread:918357 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2024-06-11 07:37:36,836 INFO    MainThread:918357 [wandb_run.py:_redirect():2325] Redirects installed.
+2024-06-11 07:37:36,838 INFO    MainThread:918357 [wandb_init.py:init():838] run started, returning control to user process
+2024-06-11 07:37:36,838 INFO    MainThread:918357 [wandb_watch.py:watch():51] Watching
+2024-06-11 07:37:36,839 INFO    MainThread:918357 [wandb_watch.py:watch():51] Watching
+2024-06-11 10:42:13,551 INFO    MainThread:918357 [wandb_run.py:_finish():2109] finishing run georgye/mp_test/m46qw3mu
+2024-06-11 10:42:13,552 INFO    MainThread:918357 [wandb_run.py:_atexit_cleanup():2349] got exitcode: 0
+2024-06-11 10:42:13,552 INFO    MainThread:918357 [wandb_run.py:_restore():2332] restore
+2024-06-11 10:42:13,552 INFO    MainThread:918357 [wandb_run.py:_restore():2338] restore done
+2024-06-11 10:42:20,374 INFO    MainThread:918357 [wandb_run.py:_footer_history_summary_info():4008] rendering history
+2024-06-11 10:42:20,376 INFO    MainThread:918357 [wandb_run.py:_footer_history_summary_info():4040] rendering summary
+2024-06-11 10:42:20,383 INFO    MainThread:918357 [wandb_run.py:_footer_sync_info():3967] logging synced files
