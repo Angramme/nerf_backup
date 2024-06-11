@@ -177,7 +177,7 @@ class Trainer(nn.Module):
             coarse_rgb = coarse_ray_alpha * ray_colors
 
         fine_coords, fine_z_vals, fine_deltas = inverse_transform_sampling(
-            ray_orig, ray_dir, ray_weights, coarse_z_vals, 2 * num_points, near, far)
+            ray_orig, ray_dir, ray_weights, coarse_z_vals, 3 * num_points, near, far)
         return fine_coords, fine_z_vals, fine_deltas, coarse_rgb, coarse_ray_depth, coarse_ray_alpha
 
     def predict_radience(self, coords, ray_dir, model=None):
