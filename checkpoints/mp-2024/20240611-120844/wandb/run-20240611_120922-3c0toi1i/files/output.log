@@ -21,3 +21,182 @@
 2024-06-11 12:13:36,809|    INFO| STEP 800 - EPOCH 200/10020 | total loss: 1.270E-02 | rgb loss: 1.270E-02
 2024-06-11 12:14:02,198|    INFO| STEP 900 - EPOCH 225/10020 | total loss: 1.114E-02 | rgb loss: 1.114E-02
 2024-06-11 12:14:29,235|    INFO| STEP 1000 - EPOCH 250/10020 | total loss: 1.058E-02 | rgb loss: 1.058E-02
+2024-06-11 12:14:55,336|    INFO| STEP 1100 - EPOCH 275/10020 | total loss: 9.657E-03 | rgb loss: 9.657E-03
+2024-06-11 12:15:20,513|    INFO| STEP 1200 - EPOCH 300/10020 | total loss: 9.798E-03 | rgb loss: 9.798E-03
+2024-06-11 12:15:46,766|    INFO| STEP 1300 - EPOCH 325/10020 | total loss: 9.380E-03 | rgb loss: 9.380E-03
+2024-06-11 12:16:13,777|    INFO| STEP 1400 - EPOCH 350/10020 | total loss: 9.452E-03 | rgb loss: 9.452E-03
+2024-06-11 12:16:40,433|    INFO| STEP 1500 - EPOCH 375/10020 | total loss: 8.572E-03 | rgb loss: 8.572E-03
+2024-06-11 12:17:04,709|    INFO| STEP 1600 - EPOCH 400/10020 | total loss: 8.287E-03 | rgb loss: 8.287E-03
+2024-06-11 12:17:26,608|    INFO| STEP 1700 - EPOCH 425/10020 | total loss: 8.413E-03 | rgb loss: 8.413E-03
+2024-06-11 12:17:48,263|    INFO| STEP 1800 - EPOCH 450/10020 | total loss: 7.965E-03 | rgb loss: 7.965E-03
+2024-06-11 12:18:09,848|    INFO| STEP 1900 - EPOCH 475/10020 | total loss: 7.877E-03 | rgb loss: 7.877E-03
+2024-06-11 12:18:31,132|    INFO| STEP 2000 - EPOCH 500/10020 | total loss: 7.794E-03 | rgb loss: 7.794E-03
+2024-06-11 12:18:31,435|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240611-120844/fine_model-500.pth
+2024-06-11 12:18:31,925|    INFO| Beginning validation...
+2024-06-11 12:18:31,926|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-11 12:18:31,926|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240611-120844/mesh
+
+
+
+ 80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                | 4/5 [00:06<00:01,  1.48s/it]
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:07<00:00,  1.49s/it]
+2024-06-11 12:19:04,714|    INFO| STEP 2100 - EPOCH 525/10020 | total loss: 7.732E-03 | rgb loss: 7.732E-03
+2024-06-11 12:19:27,767|    INFO| STEP 2200 - EPOCH 550/10020 | total loss: 7.378E-03 | rgb loss: 7.378E-03
+2024-06-11 12:19:50,993|    INFO| STEP 2300 - EPOCH 575/10020 | total loss: 7.376E-03 | rgb loss: 7.376E-03
+2024-06-11 12:20:13,980|    INFO| STEP 2400 - EPOCH 600/10020 | total loss: 7.559E-03 | rgb loss: 7.559E-03
+2024-06-11 12:20:37,008|    INFO| STEP 2500 - EPOCH 625/10020 | total loss: 7.260E-03 | rgb loss: 7.260E-03
+2024-06-11 12:20:59,435|    INFO| STEP 2600 - EPOCH 650/10020 | total loss: 7.090E-03 | rgb loss: 7.090E-03
+2024-06-11 12:21:22,628|    INFO| STEP 2700 - EPOCH 675/10020 | total loss: 6.794E-03 | rgb loss: 6.794E-03
+2024-06-11 12:21:46,471|    INFO| STEP 2800 - EPOCH 700/10020 | total loss: 6.860E-03 | rgb loss: 6.860E-03
+2024-06-11 12:22:10,786|    INFO| STEP 2900 - EPOCH 725/10020 | total loss: 6.716E-03 | rgb loss: 6.716E-03
+2024-06-11 12:22:34,113|    INFO| STEP 3000 - EPOCH 750/10020 | total loss: 6.927E-03 | rgb loss: 6.927E-03
+2024-06-11 12:22:57,544|    INFO| STEP 3100 - EPOCH 775/10020 | total loss: 6.387E-03 | rgb loss: 6.387E-03
+2024-06-11 12:23:20,558|    INFO| STEP 3200 - EPOCH 800/10020 | total loss: 6.669E-03 | rgb loss: 6.669E-03
+2024-06-11 12:23:43,870|    INFO| STEP 3300 - EPOCH 825/10020 | total loss: 6.606E-03 | rgb loss: 6.606E-03
+2024-06-11 12:24:07,631|    INFO| STEP 3400 - EPOCH 850/10020 | total loss: 6.651E-03 | rgb loss: 6.651E-03
+2024-06-11 12:24:30,527|    INFO| STEP 3500 - EPOCH 875/10020 | total loss: 6.348E-03 | rgb loss: 6.348E-03
+2024-06-11 12:24:53,024|    INFO| STEP 3600 - EPOCH 900/10020 | total loss: 6.306E-03 | rgb loss: 6.306E-03
+2024-06-11 12:25:15,735|    INFO| STEP 3700 - EPOCH 925/10020 | total loss: 6.094E-03 | rgb loss: 6.094E-03
+2024-06-11 12:25:38,915|    INFO| STEP 3800 - EPOCH 950/10020 | total loss: 6.308E-03 | rgb loss: 6.308E-03
+2024-06-11 12:26:01,790|    INFO| STEP 3900 - EPOCH 975/10020 | total loss: 6.010E-03 | rgb loss: 6.010E-03
+2024-06-11 12:26:24,972|    INFO| STEP 4000 - EPOCH 1000/10020 | total loss: 6.109E-03 | rgb loss: 6.109E-03
+2024-06-11 12:26:25,274|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240611-120844/fine_model-1000.pth
+2024-06-11 12:26:25,349|    INFO| Beginning validation...
+2024-06-11 12:26:25,350|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-11 12:26:25,350|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240611-120844/mesh
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:07<00:00,  1.41s/it]
+2024-06-11 12:26:35,276|    INFO| EPOCH 1000/10020 PSNR | 26.92
+2024-06-11 12:26:59,732|    INFO| STEP 4100 - EPOCH 1025/10020 | total loss: 5.900E-03 | rgb loss: 5.900E-03
+2024-06-11 12:27:23,833|    INFO| STEP 4200 - EPOCH 1050/10020 | total loss: 5.875E-03 | rgb loss: 5.875E-03
+2024-06-11 12:27:47,666|    INFO| STEP 4300 - EPOCH 1075/10020 | total loss: 6.084E-03 | rgb loss: 6.084E-03
+2024-06-11 12:28:11,827|    INFO| STEP 4400 - EPOCH 1100/10020 | total loss: 5.901E-03 | rgb loss: 5.901E-03
+2024-06-11 12:28:35,629|    INFO| STEP 4500 - EPOCH 1125/10020 | total loss: 5.614E-03 | rgb loss: 5.614E-03
+2024-06-11 12:28:59,636|    INFO| STEP 4600 - EPOCH 1150/10020 | total loss: 5.726E-03 | rgb loss: 5.726E-03
+2024-06-11 12:29:23,887|    INFO| STEP 4700 - EPOCH 1175/10020 | total loss: 5.912E-03 | rgb loss: 5.912E-03
+2024-06-11 12:29:47,962|    INFO| STEP 4800 - EPOCH 1200/10020 | total loss: 5.896E-03 | rgb loss: 5.896E-03
+2024-06-11 12:30:12,670|    INFO| STEP 4900 - EPOCH 1225/10020 | total loss: 5.551E-03 | rgb loss: 5.551E-03
+2024-06-11 12:30:36,459|    INFO| STEP 5000 - EPOCH 1250/10020 | total loss: 5.778E-03 | rgb loss: 5.778E-03
+2024-06-11 12:30:59,786|    INFO| STEP 5100 - EPOCH 1275/10020 | total loss: 5.429E-03 | rgb loss: 5.429E-03
+2024-06-11 12:31:23,350|    INFO| STEP 5200 - EPOCH 1300/10020 | total loss: 5.419E-03 | rgb loss: 5.419E-03
+2024-06-11 12:31:46,724|    INFO| STEP 5300 - EPOCH 1325/10020 | total loss: 5.382E-03 | rgb loss: 5.382E-03
+2024-06-11 12:32:10,134|    INFO| STEP 5400 - EPOCH 1350/10020 | total loss: 5.578E-03 | rgb loss: 5.578E-03
+2024-06-11 12:32:33,435|    INFO| STEP 5500 - EPOCH 1375/10020 | total loss: 5.526E-03 | rgb loss: 5.526E-03
+2024-06-11 12:32:56,005|    INFO| STEP 5600 - EPOCH 1400/10020 | total loss: 5.315E-03 | rgb loss: 5.315E-03
+2024-06-11 12:33:18,348|    INFO| STEP 5700 - EPOCH 1425/10020 | total loss: 5.357E-03 | rgb loss: 5.357E-03
+2024-06-11 12:33:41,025|    INFO| STEP 5800 - EPOCH 1450/10020 | total loss: 5.351E-03 | rgb loss: 5.351E-03
+2024-06-11 12:34:04,053|    INFO| STEP 5900 - EPOCH 1475/10020 | total loss: 5.160E-03 | rgb loss: 5.160E-03
+2024-06-11 12:34:27,511|    INFO| STEP 6000 - EPOCH 1500/10020 | total loss: 5.239E-03 | rgb loss: 5.239E-03
+2024-06-11 12:34:27,817|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240611-120844/fine_model-1500.pth
+2024-06-11 12:34:27,892|    INFO| Beginning validation...
+2024-06-11 12:34:27,892|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-11 12:34:27,892|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240611-120844/mesh
+
+
+ 60%|█████████████████████████████████████▊                         | 3/5 [00:04<00:02,  1.40s/it]
+
+100%|███████████████████████████████████████████████████████████████| 5/5 [00:07<00:00,  1.42s/it]
+2024-06-11 12:35:01,996|    INFO| STEP 6100 - EPOCH 1525/10020 | total loss: 5.200E-03 | rgb loss: 5.200E-03
+2024-06-11 12:35:26,192|    INFO| STEP 6200 - EPOCH 1550/10020 | total loss: 5.167E-03 | rgb loss: 5.167E-03
+2024-06-11 12:35:51,009|    INFO| STEP 6300 - EPOCH 1575/10020 | total loss: 5.261E-03 | rgb loss: 5.261E-03
+2024-06-11 12:36:15,516|    INFO| STEP 6400 - EPOCH 1600/10020 | total loss: 5.319E-03 | rgb loss: 5.319E-03
+2024-06-11 12:36:40,195|    INFO| STEP 6500 - EPOCH 1625/10020 | total loss: 5.129E-03 | rgb loss: 5.129E-03
+2024-06-11 12:37:04,335|    INFO| STEP 6600 - EPOCH 1650/10020 | total loss: 5.157E-03 | rgb loss: 5.157E-03
+2024-06-11 12:37:28,887|    INFO| STEP 6700 - EPOCH 1675/10020 | total loss: 5.089E-03 | rgb loss: 5.089E-03
+2024-06-11 12:37:53,650|    INFO| STEP 6800 - EPOCH 1700/10020 | total loss: 5.170E-03 | rgb loss: 5.170E-03
+2024-06-11 12:38:18,693|    INFO| STEP 6900 - EPOCH 1725/10020 | total loss: 4.987E-03 | rgb loss: 4.987E-03
+2024-06-11 12:38:42,558|    INFO| STEP 7000 - EPOCH 1750/10020 | total loss: 4.931E-03 | rgb loss: 4.931E-03
+2024-06-11 12:39:06,711|    INFO| STEP 7100 - EPOCH 1775/10020 | total loss: 4.965E-03 | rgb loss: 4.965E-03
+2024-06-11 12:39:30,193|    INFO| STEP 7200 - EPOCH 1800/10020 | total loss: 4.814E-03 | rgb loss: 4.814E-03
+2024-06-11 12:39:53,840|    INFO| STEP 7300 - EPOCH 1825/10020 | total loss: 4.791E-03 | rgb loss: 4.791E-03
+2024-06-11 12:40:17,493|    INFO| STEP 7400 - EPOCH 1850/10020 | total loss: 4.846E-03 | rgb loss: 4.846E-03
+2024-06-11 12:40:40,490|    INFO| STEP 7500 - EPOCH 1875/10020 | total loss: 4.842E-03 | rgb loss: 4.842E-03
+2024-06-11 12:41:04,204|    INFO| STEP 7600 - EPOCH 1900/10020 | total loss: 4.900E-03 | rgb loss: 4.900E-03
+2024-06-11 12:41:27,941|    INFO| STEP 7700 - EPOCH 1925/10020 | total loss: 4.698E-03 | rgb loss: 4.698E-03
+2024-06-11 12:41:51,655|    INFO| STEP 7800 - EPOCH 1950/10020 | total loss: 4.819E-03 | rgb loss: 4.819E-03
+2024-06-11 12:42:15,615|    INFO| STEP 7900 - EPOCH 1975/10020 | total loss: 4.852E-03 | rgb loss: 4.852E-03
+2024-06-11 12:42:39,473|    INFO| STEP 8000 - EPOCH 2000/10020 | total loss: 4.816E-03 | rgb loss: 4.816E-03
+2024-06-11 12:42:39,778|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240611-120844/fine_model-2000.pth
+2024-06-11 12:42:39,919|    INFO| Beginning validation...
+2024-06-11 12:42:39,920|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-11 12:42:39,920|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240611-120844/mesh
+
+
+
+ 80%|██████████████████████████████████████████████████▍            | 4/5 [00:05<00:01,  1.40s/it]
+
+100%|███████████████████████████████████████████████████████████████| 5/5 [00:07<00:00,  1.45s/it]
+2024-06-11 12:43:15,051|    INFO| STEP 8100 - EPOCH 2025/10020 | total loss: 4.848E-03 | rgb loss: 4.848E-03
+2024-06-11 12:43:39,636|    INFO| STEP 8200 - EPOCH 2050/10020 | total loss: 4.892E-03 | rgb loss: 4.892E-03
+2024-06-11 12:44:04,911|    INFO| STEP 8300 - EPOCH 2075/10020 | total loss: 4.730E-03 | rgb loss: 4.730E-03
+2024-06-11 12:44:29,838|    INFO| STEP 8400 - EPOCH 2100/10020 | total loss: 4.588E-03 | rgb loss: 4.588E-03
+2024-06-11 12:44:53,419|    INFO| STEP 8500 - EPOCH 2125/10020 | total loss: 4.711E-03 | rgb loss: 4.711E-03
+2024-06-11 12:45:17,053|    INFO| STEP 8600 - EPOCH 2150/10020 | total loss: 4.608E-03 | rgb loss: 4.608E-03
+2024-06-11 12:45:40,053|    INFO| STEP 8700 - EPOCH 2175/10020 | total loss: 4.603E-03 | rgb loss: 4.603E-03
+2024-06-11 12:46:03,865|    INFO| STEP 8800 - EPOCH 2200/10020 | total loss: 4.583E-03 | rgb loss: 4.583E-03
+2024-06-11 12:46:27,413|    INFO| STEP 8900 - EPOCH 2225/10020 | total loss: 4.750E-03 | rgb loss: 4.750E-03
+2024-06-11 12:46:50,886|    INFO| STEP 9000 - EPOCH 2250/10020 | total loss: 4.596E-03 | rgb loss: 4.596E-03
+2024-06-11 12:47:14,944|    INFO| STEP 9100 - EPOCH 2275/10020 | total loss: 4.534E-03 | rgb loss: 4.534E-03
+2024-06-11 12:47:38,601|    INFO| STEP 9200 - EPOCH 2300/10020 | total loss: 4.440E-03 | rgb loss: 4.440E-03
+2024-06-11 12:48:02,754|    INFO| STEP 9300 - EPOCH 2325/10020 | total loss: 4.614E-03 | rgb loss: 4.614E-03
+2024-06-11 12:48:26,416|    INFO| STEP 9400 - EPOCH 2350/10020 | total loss: 4.542E-03 | rgb loss: 4.542E-03
+2024-06-11 12:48:50,445|    INFO| STEP 9500 - EPOCH 2375/10020 | total loss: 4.381E-03 | rgb loss: 4.381E-03
+2024-06-11 12:49:13,823|    INFO| STEP 9600 - EPOCH 2400/10020 | total loss: 4.489E-03 | rgb loss: 4.489E-03
+2024-06-11 12:49:36,324|    INFO| STEP 9700 - EPOCH 2425/10020 | total loss: 4.332E-03 | rgb loss: 4.332E-03
+2024-06-11 12:49:58,996|    INFO| STEP 9800 - EPOCH 2450/10020 | total loss: 4.420E-03 | rgb loss: 4.420E-03
+2024-06-11 12:50:21,445|    INFO| STEP 9900 - EPOCH 2475/10020 | total loss: 4.399E-03 | rgb loss: 4.399E-03
+2024-06-11 12:50:43,957|    INFO| STEP 10000 - EPOCH 2500/10020 | total loss: 4.460E-03 | rgb loss: 4.460E-03
+2024-06-11 12:50:44,253|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240611-120844/fine_model-2500.pth
+2024-06-11 12:50:44,328|    INFO| Beginning validation...
+2024-06-11 12:50:44,329|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-11 12:50:44,329|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240611-120844/mesh
+
+
+
+ 80%|██████████████████████████████████████████████████▍            | 4/5 [00:05<00:01,  1.40s/it]
+
+100%|███████████████████████████████████████████████████████████████| 5/5 [00:07<00:00,  1.41s/it]
+2024-06-11 12:51:18,235|    INFO| STEP 10100 - EPOCH 2525/10020 | total loss: 4.376E-03 | rgb loss: 4.376E-03
+2024-06-11 12:51:41,878|    INFO| STEP 10200 - EPOCH 2550/10020 | total loss: 4.389E-03 | rgb loss: 4.389E-03
+2024-06-11 12:52:06,379|    INFO| STEP 10300 - EPOCH 2575/10020 | total loss: 4.318E-03 | rgb loss: 4.318E-03
+2024-06-11 12:52:30,265|    INFO| STEP 10400 - EPOCH 2600/10020 | total loss: 4.278E-03 | rgb loss: 4.278E-03
+2024-06-11 12:52:52,812|    INFO| STEP 10500 - EPOCH 2625/10020 | total loss: 4.330E-03 | rgb loss: 4.330E-03
+2024-06-11 12:53:15,827|    INFO| STEP 10600 - EPOCH 2650/10020 | total loss: 4.284E-03 | rgb loss: 4.284E-03
+2024-06-11 12:53:39,013|    INFO| STEP 10700 - EPOCH 2675/10020 | total loss: 4.292E-03 | rgb loss: 4.292E-03
+2024-06-11 12:54:01,911|    INFO| STEP 10800 - EPOCH 2700/10020 | total loss: 4.230E-03 | rgb loss: 4.230E-03
+2024-06-11 12:54:24,557|    INFO| STEP 10900 - EPOCH 2725/10020 | total loss: 4.165E-03 | rgb loss: 4.165E-03
+2024-06-11 12:54:48,333|    INFO| STEP 11000 - EPOCH 2750/10020 | total loss: 4.306E-03 | rgb loss: 4.306E-03
+2024-06-11 12:55:12,833|    INFO| STEP 11100 - EPOCH 2775/10020 | total loss: 4.277E-03 | rgb loss: 4.277E-03
+2024-06-11 12:55:37,047|    INFO| STEP 11200 - EPOCH 2800/10020 | total loss: 4.148E-03 | rgb loss: 4.148E-03
+2024-06-11 12:56:00,674|    INFO| STEP 11300 - EPOCH 2825/10020 | total loss: 4.175E-03 | rgb loss: 4.175E-03
+2024-06-11 12:56:24,410|    INFO| STEP 11400 - EPOCH 2850/10020 | total loss: 4.192E-03 | rgb loss: 4.192E-03
+2024-06-11 12:56:48,166|    INFO| STEP 11500 - EPOCH 2875/10020 | total loss: 4.103E-03 | rgb loss: 4.103E-03
+2024-06-11 12:57:12,428|    INFO| STEP 11600 - EPOCH 2900/10020 | total loss: 4.048E-03 | rgb loss: 4.048E-03
+2024-06-11 12:57:36,609|    INFO| STEP 11700 - EPOCH 2925/10020 | total loss: 4.015E-03 | rgb loss: 4.015E-03
+2024-06-11 12:58:01,243|    INFO| STEP 11800 - EPOCH 2950/10020 | total loss: 4.250E-03 | rgb loss: 4.250E-03
+2024-06-11 12:58:25,664|    INFO| STEP 11900 - EPOCH 2975/10020 | total loss: 4.053E-03 | rgb loss: 4.053E-03
+2024-06-11 12:58:49,398|    INFO| STEP 12000 - EPOCH 3000/10020 | total loss: 4.113E-03 | rgb loss: 4.113E-03
+2024-06-11 12:58:49,704|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240611-120844/fine_model-3000.pth
+2024-06-11 12:58:50,036|    INFO| Beginning validation...
+2024-06-11 12:58:50,037|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-11 12:58:50,037|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240611-120844/mesh
+
+
+
+ 80%|██████████████████████████████████████████████████▍            | 4/5 [00:05<00:01,  1.47s/it]
+
+100%|███████████████████████████████████████████████████████████████| 5/5 [00:07<00:00,  1.47s/it]
+2024-06-11 12:59:25,085|    INFO| STEP 12100 - EPOCH 3025/10020 | total loss: 4.071E-03 | rgb loss: 4.071E-03
+2024-06-11 12:59:48,666|    INFO| STEP 12200 - EPOCH 3050/10020 | total loss: 4.058E-03 | rgb loss: 4.058E-03
+2024-06-11 13:00:12,327|    INFO| STEP 12300 - EPOCH 3075/10020 | total loss: 3.955E-03 | rgb loss: 3.955E-03
+Traceback (most recent call last):
+  File "/workspace/StrawberryPudding/train.py", line 158, in <module>
+    main(args)
+  File "/workspace/StrawberryPudding/train.py", line 132, in main
+    trainer.step(data)
+  File "/workspace/StrawberryPudding/lib/model/trainer.py", line 297, in step
+    self.ray_orig = data['rays'][..., :3].cuda()
+KeyboardInterrupt
