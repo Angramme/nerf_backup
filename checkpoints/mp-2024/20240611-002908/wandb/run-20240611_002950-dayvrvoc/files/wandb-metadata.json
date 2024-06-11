@@ -1,0 +1,454 @@
+{
+    "os": "Linux-5.15.0-105-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-06-11T00:29:51.247079",
+    "startedAt": "2024-06-11T00:29:50.485664",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--save-root",
+        "checkpoints",
+        "--data-root",
+        "data/public",
+        "--wandb"
+    ],
+    "state": "running",
+    "program": "/workspace/StrawberryPudding/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "git@gitlab.inf.ethz.ch:course-mp2024/StrawberryPudding.git",
+        "commit": "90189f8839c64b254c504e5b078bd3b57c27cc0d"
+    },
+    "email": "you@example.com",
+    "root": "/workspace/StrawberryPudding",
+    "host": "b5b47b92cedf",
+    "username": "root",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 80,
+    "cpu_count_logical": 80,
+    "cpu_freq": {
+        "current": 2500.0299999999993,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2500.03,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 20.0,
+            "used": 0.9595718383789062
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4090",
+            "memory_total": 25757220864
+        }
+    ],
+    "memory": {
+        "total": 245.7715606689453
+    }
+}

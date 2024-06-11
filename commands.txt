@@ -6,7 +6,7 @@ python3 train.py --pretrained-root checkpoints/mp-2024/20240609-191413 --model-n
 python3 train.py --pretrained-root checkpoints/mp-2024/20240607-225709 --model-name model-7500.pth --save-root checkpoints --data-root data/public --wandb
 python3 train.py --save-root checkpoints --data-root data/private --wandb
 
-python3 test.py --pretrained-root checkpoints/mp-2024/20240609-221221 --model-name model-5000.pth --data-root data/public
+python3 test.py --pretrained-root checkpoints/mp-2024/20240610-200525 --model-name model-13000.pth --data-root data/public
 python3 test.py --pretrained-root checkpoints/mp-2024/20240607-160614 --model-name model-7500.pth --data-root data/private
 
 tar -zcvf folder.tar.gz -C folder .

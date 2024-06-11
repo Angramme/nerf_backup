@@ -1,0 +1,38 @@
+2024-06-11 00:29:53,727|    INFO| STEP 0 - EPOCH 0/12020 | total loss: 4.608E-01 | rgb loss: 4.608E-01
+2024-06-11 00:29:54,193|    INFO| Saving model checkpoint to: checkpoints/mp-2024/20240611-002908/fine_model-0.pth
+2024-06-11 00:29:54,248|    INFO| Beginning validation...
+2024-06-11 00:29:54,249|    INFO| Loaded validation dataset with 5 images at resolution 256x256
+2024-06-11 00:29:54,249|    INFO| Saving reconstruction result to checkpoints/mp-2024/20240611-002908/mesh
+/usr/local/lib/python3.10/dist-packages/torch/functional.py:507: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3549.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+  0%|                                                                                                                                                                                                                                                                                              | 0/5 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/workspace/StrawberryPudding/train.py", line 158, in <module>
+    main(args)
+  File "/workspace/StrawberryPudding/train.py", line 141, in main
+    trainer.validate(valid_loader, rander_shape, step=global_step, epoch=epoch,
+  File "/workspace/StrawberryPudding/lib/model/trainer.py", line 414, in validate
+    ray_rgb, ray_depth, ray_alpha = self.render(ray_orig, ray_dir)
+  File "/workspace/StrawberryPudding/lib/model/trainer.py", line 316, in render
+    rgb, sigma = self.predict_radience(coords, ray_dir)
+  File "/workspace/StrawberryPudding/lib/model/trainer.py", line 216, in predict_radience
+    rgb, sigma = model(coords, ray_dir)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/workspace/StrawberryPudding/lib/model/nerf_mlps.py", line 79, in forward
+    x_features = self.mlp(pos_enc_samples)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.75 GiB. GPU 0 has a total capacity of 23.65 GiB of which 2.09 GiB is free. Process 4027354 has 18.08 GiB memory in use. Process 4036106 has 3.46 GiB memory in use. Of the allocated memory 1.42 GiB is allocated by PyTorch, and 1.58 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

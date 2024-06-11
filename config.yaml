@@ -17,7 +17,7 @@ optimizer:
 
 
 train:
-  epochs: 20020
+  epochs: 12020
   # epochs: 40
   batch_size: 2
   workers: 4
@@ -26,7 +26,7 @@ train:
 
 
 sampling:
-  num_pts_per_ray: 128
+  num_pts_per_ray: 64
   near: 1.0
   far: 3.0
 
@@ -34,7 +34,7 @@ sampling:
 network:
   out_dim: 4
   num_layers: 4
-  hidden_dim: 128
+  hidden_dim: 256
   activation: 'relu'
   skip: 2
   num_freq_coord: 10

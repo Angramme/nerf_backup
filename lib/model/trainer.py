@@ -16,6 +16,22 @@ from ..utils.metrics import psnr
 # Warning: you MUST NOT change the resolution of marching cube
 RES = 256
 
+def generate_deltas(ts: torch.Tensor):
+    """Calculates the difference between each 'time' in ray samples.
+
+    Rays will go to infinity unless obstructed. Therefore, the delta
+    between the ts and infinity is expressed as 1e10
+
+    Args:
+        ts: [B x N x num_samples x 1] tensor of times. The values are increasing from [near,far] along
+            the num_samples dimension.
+    Returns:
+        deltas: [B x N x num_samples x 1]  where delta_i = t_i+1 - t_i.
+    """
+    B, N, _, _ = ts.shape
+    deltas = torch.cat([ts[:, :, 1:, :] - ts[:, :, :-1, :], torch.full((B, N, 1, 1), 1e10, device=ts.device)], dim=2)
+    return deltas
+
 def inverse_transform_sampling(ray_orig: torch.Tensor, ray_dir: torch.Tensor, weights, ts,
                                num_points: int=128, near=1.0, far=3.0):
     """Performs inverse transform sampling according to the weights.
@@ -72,9 +88,15 @@ def inverse_transform_sampling(ray_orig: torch.Tensor, ray_dir: torch.Tensor, we
     fine_z_vals = torch.cat([fine_ts, ts], dim=2)
     fine_z_vals, idxs = torch.sort(fine_z_vals, dim=2)
     fine_coords = torch.gather(fine_coords, 2, idxs.expand(-1, -1, -1, 3))
+    # fine_deltas = generate_deltas(fine_z_vals)
+
     fine_deltas = fine_z_vals.squeeze(-1).diff(
         dim=-1,
         prepend=(torch.zeros(B, ray_orig.shape[1], 1, device=fine_z_vals.device) + near))
+
+    # t_dists = fine_z_vals[..., 1:] - fine_z_vals[..., :-1]  # Shape: [batch_size, Nr, num_samples]
+    # fine_deltas = t_dists * torch.linalg.norm(ray_dir[..., None, :], dim=-1)
+    
     fine_deltas = fine_deltas[..., None]
     # fine_deltas = generate_deltas(fine_z_vals)
     
@@ -137,6 +159,7 @@ class Trainer(nn.Module):
 
         z_vals = near * (1.0 - t) + far * t
         points = ray_orig[:, :, None, :] + ray_dir[:, :, None, :] * z_vals[..., None]
+        # deltas = generate_deltas(z_vals)
         deltas = z_vals.diff(dim=-1, prepend=(torch.zeros(B, Nr, 1, device=z_vals.device) + near))
 
         coarse_coords, coarse_z_vals, coarse_deltas = points, z_vals[..., None], deltas[..., None]
@@ -154,7 +177,7 @@ class Trainer(nn.Module):
             coarse_rgb = coarse_ray_alpha * ray_colors
 
         fine_coords, fine_z_vals, fine_deltas = inverse_transform_sampling(
-            ray_orig, ray_dir, ray_weights, coarse_z_vals, num_points, near, far)
+            ray_orig, ray_dir, ray_weights, coarse_z_vals, 2 * num_points, near, far)
         return fine_coords, fine_z_vals, fine_deltas, coarse_rgb, coarse_ray_depth, coarse_ray_alpha
 
     def predict_radience(self, coords, ray_dir, model=None):
@@ -427,3 +450,7 @@ class Trainer(nn.Module):
         log.info(f'Saving model checkpoint to: {fine_fname}')
         torch.save(self.coarse_model, coarse_fname)
         torch.save(self.fine_model, fine_fname)
+
+
+# first shell is generate_delta
+# second is from np untouched.
